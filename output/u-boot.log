@@ -1,0 +1,48 @@
+U-Boot TPL 2021.04 (Apr 30 2021 - 12:55:51)
+Trying to boot from BOOTROM
+Returning to boot ROM...
+
+U-Boot SPL 2021.04 (Apr 30 2021 - 12:55:51 +0000)
+Trying to boot from MMC2
+NOTICE:  BL31: v2.4(release):v2.4-467-g2e0e51f42
+NOTICE:  BL31: Built : 12:34:41, Apr 30 2021
+
+U-Boot 2021.04 (Apr 30 2021 - 12:55:51 +0000)
+
+SoC: Rockchip rk3399
+Reset cause: RST
+Model: Radxa ROCK Pi N10
+DRAM:  3.9 GiB
+PMIC:  RK8090 (on=0x10, off=0x00)
+MMC:   mmc@fe320000: 1, sdhci@fe330000: 0
+Loading Environment from MMC... OK
+stdio_add_devices: Video device failed (ret=-22)
+In:    serial@ff1a0000
+Out:   serial@ff1a0000
+Err:   serial@ff1a0000
+Model: Radxa ROCK Pi N10
+Net:   eth0: ethernet@fe300000
+Hit any key to stop autoboot:  2  1  0 
+switch to partitions #0, OK
+mmc0(part 0) is current device
+Scanning mmc 0:1...
+Found /extlinux/extlinux.conf
+Retrieving file: /extlinux/extlinux.conf
+790 bytes read in 20 ms (38.1 KiB/s)
+select kernel
+1:	kernel-5.12
+2:	kernel-4.4
+3:	kernel-5.12a
+4:	kernel-5.12b
+Enter choice: 4:	kernel-5.12b
+Retrieving file: /vmlinuz-5.12.0b
+22413320 bytes read in 2228 ms (9.6 MiB/s)
+append: earlycon=uart8250,mmio32,0xff1a0000 root=/dev/mmcblk2p2 rw rootwait
+Retrieving file: /dtbs/5.12/rockchip/rk3399pro-rock-pi-n10.dtb
+54241 bytes read in 33 ms (1.6 MiB/s)
+Moving Image from 0x2080000 to 0x2200000, end=37f0000
+## Flattened Device Tree blob at 01f00000
+   Booting using the fdt blob at 0x1f00000
+   Loading Device Tree to 00000000f1f15000, end 00000000f1f253e0 ... OK
+
+Starting kernel ...
