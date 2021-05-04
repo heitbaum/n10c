@@ -1,0 +1,44 @@
+What I discovered is that now I’m running mainline, pressing space on the serial line actually works to stop boot. This was not the case on the 2017 u-boot.
+
+Steps to do this are using these 2 reference documents:
+
+- https://wiki.amarulasolutions.com/bsp/rockchip/rk3399pro/rock-pi-n10.html
+- https://u-boot.readthedocs.io/en/latest/board/rockchip/rockchip.html
+
+Start with a Ubuntu 18.04 system
+
+# add the extra dev packages 
+apt-get update
+apt-get install flex bison libsdl2-dev libssl-dev u-boot-tools git
+apt-get install dtc python python-dev ia32-libs lib32ncurses5 lib32z1 swig xz
+apt-get install gcc-arm-none-eabi
+
+# Cross Compiler
+dir=`pwd`
+get gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu.tar.xz from https://releases.linaro.org/components/toolchain/binaries/6.3-2017.02/aarch64-linux-gnu
+mkdir toolchain
+cd toolchain
+tar xf ../gcc-linaro-6.3.1-2017.02-i686_aarch64-linux-gnu.tar.xz
+export PATH=${dir}/toolchain/gcc-linaro-6.3.1-2017.02-x86_64_aarch64-linux-gnu/bin:$PATH
+export CROSS_COMPILE=aarch64-linux-gnu-
+
+# ATF
+git clone https://git.trustedfirmware.org/TF-A/trusted-firmware-a.git
+cd ${dir}/trusted-firmware-a
+make distclean
+make CROSS_COMPILE=aarch64-linux-gnu- PLAT=rk3399 bl31
+
+# u-boot 
+get v2021.04.tar.gz from https://github.com/u-boot/u-boot/releases
+tar xf v2021.04.tar.gz 
+export BL31=${dir}/trusted-firmware-a/build/rk3399/release/bl31/bl31.elf
+make distclean
+make rock-pi-n10-rk3399pro_defconfig
+make
+
+there will be a ~9MB file in this directory.
+-rw-rw-r--   1 x x 9309292 Apr 30 12:56 u-boot-rockchip.bin
+
+you will need to follow the instructions - https://u-boot.readthedocs.io/en/latest/board/rockchip/rockchip.html#flashing to flash this to your SD or eMMC.
+
+Happy u-booting

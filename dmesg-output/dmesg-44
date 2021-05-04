@@ -1,0 +1,2585 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.4.167-14-rockchip-g53bdb2fa44e8 (root@0b523876c1d3) (gcc version 7.3.1 20180425 [linaro-7.3-2018.05 revision d29120a424ecfbc167ef90065c0eeb7f91977701] (Linaro GCC 7.3-2018.05) ) #1 SMP Fri May 22 09:11:08 UTC 2020
+[    0.000000] Boot CPU: AArch64 Processor [410fd034]
+[    0.000000] earlycon: Early serial console at MMIO32 0xff1a0000 (options '')
+[    0.000000] bootconsole [uart0] enabled
+[    0.000000] Reserved memory: failed to reserve memory for node 'drm-logo@00000000': base 0x0000000000000000, size 0 MiB
+[    0.000000] cma: Reserved 256 MiB at 0x00000000e1c00000
+[    0.000000] On node 0 totalpages: 1015296
+[    0.000000]   DMA zone: 15864 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 1015296 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] PERCPU: Embedded 21 pages/cpu @ffffffc0f7ed0000 s46120 r8192 d31704 u86016
+[    0.000000] pcpu-alloc: s46120 r8192 d31704 u86016 alloc=21*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 999432
+[    0.000000] Kernel command line: earlycon=uart8250,mmio32,0xff1a0000 root=/dev/mmcblk2p2 rw rootwait
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] software IO TLB [mem 0xddc00000-0xe1c00000] (64MB) mapped at [ffffffc0ddc00000-ffffffc0e1bfffff]
+[    0.000000] Memory: 3638188K/4061184K available (12542K kernel code, 1590K rwdata, 4432K rodata, 1152K init, 2076K bss, 160852K reserved, 262144K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+                   modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB)
+                   vmalloc : 0xffffff8008000000 - 0xffffffbdbfff0000   (   246 GB)
+                     .init : 0xffffff8009120000 - 0xffffff8009240000   (  1152 KB)
+                     .text : 0xffffff8008080000 - 0xffffff8008cc0000   ( 12544 KB)
+                   .rodata : 0xffffff8008cc0000 - 0xffffff8009120000   (  4480 KB)
+                     .data : 0xffffff8009240000 - 0xffffff80093cd808   (  1591 KB)
+                   vmemmap : 0xffffffbdc0000000 - 0xffffffbfc0000000   (     8 GB maximum)
+                             0xffffffbdc0008000 - 0xffffffbdc3e00000   (    61 MB actual)
+                   fixed   : 0xffffffbffe7fb000 - 0xffffffbffec00000   (  4116 KB)
+                   PCI I/O : 0xffffffbffee00000 - 0xffffffbfffe00000   (    16 MB)
+                   memory  : 0xffffffc000200000 - 0xffffffc0f8000000   (  3966 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=6, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 64.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=6.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=6
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] ITS: /interrupt-controller@fee00000/interrupt-controller@fee20000
+[    0.000000] ITS: allocated 65536 Devices @f3100000 (psz 64K, shr 0)
+[    0.000000] ITS: using cache flushing for cmd queue
+[    0.000000] GIC: using LPI property table @0x00000000f3090000
+[    0.000000] ITS: Allocated 1792 chunks for LPIs
+[    0.000000] CPU0: found redistributor 0 region 0:0x00000000fef00000
+[    0.000000] CPU0: using LPI pending table @0x00000000f30a0000
+[    0.000000] GIC: using cache flushing for LPI property table
+[    0.000000] GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@1[1] /cpus/cpu@2[2] /cpus/cpu@3[3] }
+[    0.000000] GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@100[4] /cpus/cpu@101[5] }
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_mmc_get_phase: invalid clk rate
+[    0.000000] rockchip_clk_register_frac_branch: could not find dclk_vop0_frac as parent of dclk_vop0, rate changes may not work
+[    0.000000] rockchip_clk_register_frac_branch: could not find dclk_vop1_frac as parent of dclk_vop1, rate changes may not work
+[    0.000000] Architected cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000006] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.002243] Console: colour dummy device 80x25
+[    0.002673] console [tty0] enabled
+[    0.003008] bootconsole [uart0] disabled
+[    0.003404] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=96000)
+[    0.003433] pid_max: default: 32768 minimum: 301
+[    0.003562] Security Framework initialized
+[    0.003578] Yama: becoming mindful.
+[    0.003606] AppArmor: AppArmor disabled by boot time parameter
+[    0.003670] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.003691] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.004475] Initializing cgroup subsys memory
+[    0.004513] Initializing cgroup subsys devices
+[    0.004535] Initializing cgroup subsys freezer
+[    0.004559] Initializing cgroup subsys net_cls
+[    0.004578] Initializing cgroup subsys perf_event
+[    0.004598] Initializing cgroup subsys net_prio
+[    0.004618] Initializing cgroup subsys hugetlb
+[    0.004639] Initializing cgroup subsys pids
+[    0.004687] ftrace: allocating 44481 entries in 174 pages
+[    0.123663] sched-energy: Sched-energy-costs installed from DT
+[    0.123694] CPU0: update cpu_capacity 401
+[    0.123755] ASID allocator initialised with 32768 entries
+[    0.126921] PCI/MSI: /interrupt-controller@fee00000/interrupt-controller@fee20000 domain created
+[    0.127481] Platform MSI: /interrupt-controller@fee00000/interrupt-controller@fee20000 domain created
+[    0.128905] Detected VIPT I-cache on CPU1
+[    0.128939] CPU1: found redistributor 1 region 0:0x00000000fef20000
+[    0.128970] CPU1: using LPI pending table @0x00000000f3340000
+[    0.129016] CPU1: update cpu_capacity 401
+[    0.129021] CPU1: Booted secondary processor [410fd034]
+[    0.129562] Detected VIPT I-cache on CPU2
+[    0.129583] CPU2: found redistributor 2 region 0:0x00000000fef40000
+[    0.129610] CPU2: using LPI pending table @0x00000000f3360000
+[    0.129638] CPU2: update cpu_capacity 401
+[    0.129641] CPU2: Booted secondary processor [410fd034]
+[    0.130170] Detected VIPT I-cache on CPU3
+[    0.130190] CPU3: found redistributor 3 region 0:0x00000000fef60000
+[    0.130217] CPU3: using LPI pending table @0x00000000f33c0000
+[    0.130243] CPU3: update cpu_capacity 401
+[    0.130247] CPU3: Booted secondary processor [410fd034]
+[    0.130821] Detected PIPT I-cache on CPU4
+[    0.130849] CPU4: found redistributor 100 region 0:0x00000000fef80000
+[    0.130888] CPU4: using LPI pending table @0x00000000f33f0000
+[    0.130927] CPU4: update cpu_capacity 1024
+[    0.130930] CPU4: Booted secondary processor [410fd082]
+[    0.131494] Detected PIPT I-cache on CPU5
+[    0.131512] CPU5: found redistributor 101 region 0:0x00000000fefa0000
+[    0.131548] CPU5: using LPI pending table @0x00000000f2830000
+[    0.131575] CPU5: update cpu_capacity 1024
+[    0.131578] CPU5: Booted secondary processor [410fd082]
+[    0.131666] Brought up 6 CPUs
+[    0.132353] SMP: Total of 6 processors activated.
+[    0.132384] CPU features: detected feature: GIC system register CPU interface
+[    0.132420] CPU features: detected feature: 32-bit EL0 Support
+[    0.132455] CPU: All CPU(s) started at EL2
+[    0.132524] alternatives: patching kernel code
+[    0.133959] devtmpfs: initialized
+[    0.151243] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.151299] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.156960] xor: measuring software checksum speed
+[    0.194649]    8regs     :  2854.000 MB/sec
+[    0.234711]    8regs_prefetch:  2560.000 MB/sec
+[    0.274770]    32regs    :  3191.000 MB/sec
+[    0.314831]    32regs_prefetch:  2844.000 MB/sec
+[    0.314851] xor: using function: 32regs (3191.000 MB/sec)
+[    0.314888] pinctrl core: initialized pinctrl subsystem
+[    0.315165] regulator-dummy: no parameters
+[    0.315749] NET: Registered protocol family 16
+[    0.323221] cpuidle: using governor ladder
+[    0.331225] cpuidle: using governor menu
+[    0.331260] Registered FIQ tty driver
+[    0.331398] vdso: 2 pages (1 code @ ffffff8008cc6000, 1 data @ ffffff8009244000)
+[    0.331453] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.332277] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.348002] gpiochip_add_data: registered GPIOs 0 to 31 on device: gpio0
+[    0.348078] gpiochip_add_data: registered GPIOs 32 to 63 on device: gpio1
+[    0.348154] gpiochip_add_data: registered GPIOs 64 to 95 on device: gpio2
+[    0.348226] gpiochip_add_data: registered GPIOs 96 to 127 on device: gpio3
+[    0.348304] gpiochip_add_data: registered GPIOs 128 to 159 on device: gpio4
+[    0.356017] console [pstore-1] enabled
+[    0.356043] pstore: Registered ramoops as persistent store backend
+[    0.356067] ramoops: attached 0xf0000@0x110000, ecc: 0/0
+[    0.455173] raid6: int64x1  gen()   475 MB/s
+[    0.523199] raid6: int64x1  xor()   420 MB/s
+[    0.591308] raid6: int64x2  gen()   656 MB/s
+[    0.659393] raid6: int64x2  xor()   601 MB/s
+[    0.727533] raid6: int64x4  gen()   916 MB/s
+[    0.795614] raid6: int64x4  xor()   672 MB/s
+[    0.863704] raid6: int64x8  gen()   752 MB/s
+[    0.931808] raid6: int64x8  xor()   629 MB/s
+[    0.999894] raid6: neonx1   gen()   994 MB/s
+[    1.068002] raid6: neonx1   xor()   674 MB/s
+[    1.136134] raid6: neonx2   gen()  1324 MB/s
+[    1.204248] raid6: neonx2   xor()   990 MB/s
+[    1.272331] raid6: neonx4   gen()  1763 MB/s
+[    1.340445] raid6: neonx4   xor()  1199 MB/s
+[    1.408537] raid6: neonx8   gen()  1699 MB/s
+[    1.476640] raid6: neonx8   xor()  1251 MB/s
+[    1.476661] raid6: using algorithm neonx4 gen() 1763 MB/s
+[    1.476683] raid6: .... xor() 1199 MB/s, rmw enabled
+[    1.476703] raid6: using intx1 recovery algorithm
+[    1.477707] of_get_named_gpiod_flags: parsed 'rockchip,power-ctrl' property of node '/rockchip-suspend[0]' - status (0)
+[    1.477760] of_get_named_gpiod_flags: parsed 'rockchip,power-ctrl' property of node '/rockchip-suspend[1]' - status (0)
+[    1.478038] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/vcc-phy-regulator[0]'
+[    1.478064] vcc_phy: no parameters
+[    1.478247] reg-fixed-voltage vcc-phy-regulator: vcc_phy supplying 0uV
+[    1.478303] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/vccsys[0]'
+[    1.478321] vcc5v0_sys: 5000 mV 
+[    1.478481] reg-fixed-voltage vccsys: vcc5v0_sys supplying 5000000uV
+[    1.478541] of_get_named_gpiod_flags: can't parse 'gpio' property of node '/vcc5v0-usb[0]'
+[    1.478558] vcc5v0_usb: 5000 mV 
+[    1.478705] reg-fixed-voltage vcc5v0-usb: vcc5v0_usb supplying 5000000uV
+[    1.478828] rockchip-pinctrl pinctrl: unsupported driver strength 10
+[    1.478856] rockchip-pinctrl pinctrl: pin_config_set op failed for pin 153
+[    1.478880] reg-fixed-voltage host-5v: Error applying setting, reverse things back
+[    1.478971] of_get_named_gpiod_flags: parsed 'gpio' property of node '/host-5v[0]' - status (0)
+[    1.479017] reg-fixed-voltage host-5v: Looking up vin-supply from device tree
+[    1.479065] host_5v: supplied by vcc5v0_usb
+[    1.479119] host_5v: at 5000 mV 
+[    1.479285] reg-fixed-voltage host-5v: host_5v supplying 0uV
+[    1.479371] rockchip-pinctrl pinctrl: unsupported driver strength 10
+[    1.479396] rockchip-pinctrl pinctrl: pin_config_set op failed for pin 154
+[    1.479420] reg-fixed-voltage vbus-typec: Error applying setting, reverse things back
+[    1.479509] of_get_named_gpiod_flags: parsed 'gpio' property of node '/vbus-typec[0]' - status (0)
+[    1.479546] reg-fixed-voltage vbus-typec: Looking up vin-supply from device tree
+[    1.479585] vbus_typec: supplied by vcc5v0_usb
+[    1.479631] vbus_typec: at 5000 mV 
+[    1.479800] reg-fixed-voltage vbus-typec: vbus_typec supplying 0uV
+[    1.479931] of_get_named_gpiod_flags: parsed 'gpio' property of node '/vcc-pcie-regulator[0]' - status (0)
+[    1.479975] vcc_pcie: no parameters
+[    1.480128] reg-fixed-voltage vcc-pcie-regulator: vcc_pcie supplying 0uV
+[    1.480756] iommu: Adding device ff650000.vpu_service to group 0
+[    1.480863] iommu: Adding device ff660000.rkvdec to group 1
+[    1.480991] iommu: Adding device ff8f0000.vop to group 2
+[    1.481100] iommu: Adding device ff900000.vop to group 3
+[    1.481210] iommu: Adding device ff910000.rkisp1 to group 4
+[    1.481709] rk_iommu ff650800.iommu: can't get sclk
+[    1.481990] rk_iommu ff660480.iommu: can't get sclk
+[    1.482221] rk_iommu ff8f3f00.iommu: can't get sclk
+[    1.482409] rk_iommu ff903f00.iommu: can't get sclk
+[    1.482601] rk_iommu ff914000.iommu: can't get sclk
+[    1.482986] SCSI subsystem initialized
+[    1.483180] usbcore: registered new interface driver usbfs
+[    1.483238] usbcore: registered new interface driver hub
+[    1.483340] usbcore: registered new device driver usb
+[    1.483424] media: Linux media interface: v0.10
+[    1.483477] Linux video capture interface: v2.00
+[    1.483583] pps_core: LinuxPPS API ver. 1 registered
+[    1.483606] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.483654] PTP clock support registered
+[    1.484744] Advanced Linux Sound Architecture Driver Initialized.
+[    1.485318] Bluetooth: Core ver 2.21
+[    1.485361] NET: Registered protocol family 31
+[    1.485383] Bluetooth: HCI device and connection manager initialized
+[    1.485411] Bluetooth: HCI socket layer initialized
+[    1.485435] Bluetooth: L2CAP socket layer initialized
+[    1.485489] Bluetooth: SCO socket layer initialized
+[    1.485870] NetLabel: Initializing
+[    1.485893] NetLabel:  domain hash size = 128
+[    1.485912] NetLabel:  protocols = UNLABELED CIPSOv4
+[    1.485964] NetLabel:  unlabeled traffic allowed by default
+[    1.486599] clocksource: Switched to clocksource arch_sys_counter
+[    1.545877] thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+[    1.546150] NET: Registered protocol family 2
+[    1.546647] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    1.546936] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes)
+[    1.547767] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.547898] UDP hash table entries: 2048 (order: 5, 196608 bytes)
+[    1.548094] UDP-Lite hash table entries: 2048 (order: 5, 196608 bytes)
+[    1.548464] NET: Registered protocol family 1
+[    1.548520] PCI: CLS 0 bytes, default 64
+[    1.549440] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    1.549556] hw perfevents: enabled with armv8_cortex_a72 PMU driver, 7 counters available
+[    1.552633] audit: initializing netlink subsys (disabled)
+[    1.552711] audit: type=2000 audit(1.472:1): initialized
+[    1.553131] Initialise system trusted keyring
+[    1.553517] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    1.560845] VFS: Disk quotas dquot_6.6.0
+[    1.561025] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.562494] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.563076] fuse init (API version 7.23)
+[    1.563809] JFS: nTxBlock = 8192, nTxLock = 65536
+[    1.569816] SGI XFS with ACLs, security attributes, realtime, no debug enabled
+[    1.572187] Key type big_key registered
+[    1.572251] 
+               TEE Core Framework initialization (ver 1:0.1)
+[    1.572296] TEE armv7 Driver initialization
+[    1.572757] tz_tee_probe: name="armv7sec", id=0, pdev_name="armv7sec.0"
+[    1.572784] TEE core: Alloc the misc device "opteearmtz00" (id=0)
+[    1.572999] TEE Core: Register the misc device "opteearmtz00" (id=0,minor=62)
+[    1.577218] NET: Registered protocol family 38
+[    1.577264] Key type asymmetric registered
+[    1.577290] Asymmetric key parser 'x509' registered
+[    1.577497] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    1.577538] io scheduler noop registered
+[    1.577563] io scheduler deadline registered (default)
+[    1.577713] io scheduler cfq registered
+[    1.578641] phy phy-ff770000.syscon:usb2-phy@e450.0: Looking up phy-supply from device tree
+[    1.579030] phy phy-ff770000.syscon:usb2-phy@e450.1: Looking up phy-supply from device tree
+[    1.579045] phy phy-ff770000.syscon:usb2-phy@e450.1: Looking up phy-supply property in node /syscon@ff770000/usb2-phy@e450/otg-port failed
+[    1.579278] phy phy-ff770000.syscon:usb2-phy@e450.1: Looking up vbus-supply from device tree
+[    1.580097] phy phy-ff770000.syscon:usb2-phy@e460.2: Looking up phy-supply from device tree
+[    1.580421] phy phy-ff770000.syscon:usb2-phy@e460.3: Looking up phy-supply from device tree
+[    1.580435] phy phy-ff770000.syscon:usb2-phy@e460.3: Looking up phy-supply property in node /syscon@ff770000/usb2-phy@e460/otg-port failed
+[    1.580657] phy phy-ff770000.syscon:usb2-phy@e460.3: Looking up vbus-supply from device tree
+[    1.580670] phy phy-ff770000.syscon:usb2-phy@e460.3: Looking up vbus-supply property in node /syscon@ff770000/usb2-phy@e460/otg-port failed
+[    1.580685] phy phy-ff770000.syscon:usb2-phy@e460.3: Failed to get VBUS supply regulator
+[    1.582333] rockchip-mipi-dphy-rx ff770000.syscon:mipi-dphy-rx0: invalid resource
+[    1.582804] phy phy-ff770000.syscon:phy@f780.4: Looking up phy-supply from device tree
+[    1.582818] phy phy-ff770000.syscon:phy@f780.4: Looking up phy-supply property in node /syscon@ff770000/phy@f780 failed
+[    1.583575] phy phy-ff7c0000.phy.5: Looking up phy-supply from device tree
+[    1.583588] phy phy-ff7c0000.phy.5: Looking up phy-supply property in node /phy@ff7c0000/dp-port failed
+[    1.583682] phy phy-ff7c0000.phy.6: Looking up phy-supply from device tree
+[    1.583694] phy phy-ff7c0000.phy.6: Looking up phy-supply property in node /phy@ff7c0000/usb3-port failed
+[    1.583800] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_tcpc0-supply from device tree
+[    1.583814] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_tcpc0-supply property in node /power-management@ff310000/power-controller failed
+[    1.584104] phy phy-ff800000.phy.7: Looking up phy-supply from device tree
+[    1.584116] phy phy-ff800000.phy.7: Looking up phy-supply property in node /phy@ff800000/dp-port failed
+[    1.584211] phy phy-ff800000.phy.8: Looking up phy-supply from device tree
+[    1.584222] phy phy-ff800000.phy.8: Looking up phy-supply property in node /phy@ff800000/usb3-port failed
+[    1.584539] phy phy-pcie-phy.9: Looking up phy-supply from device tree
+[    1.584551] phy phy-pcie-phy.9: Looking up phy-supply property in node /pcie-phy failed
+[    1.586041] rockchip-pcie f8000000.pcie: GPIO lookup for consumer ep
+[    1.586053] rockchip-pcie f8000000.pcie: using device tree for GPIO lookup
+[    1.586083] of_get_named_gpiod_flags: parsed 'ep-gpios' property of node '/pcie@f8000000[0]' - status (0)
+[    1.586334] rockchip-pcie f8000000.pcie: Looking up vpcie3v3-supply from device tree
+[    1.586347] rockchip-pcie f8000000.pcie: Looking up vpcie3v3-supply property in node /pcie@f8000000 failed
+[    1.586362] rockchip-pcie f8000000.pcie: no vpcie3v3 regulator found
+[    1.586390] rockchip-pcie f8000000.pcie: Looking up vpcie1v8-supply from device tree
+[    1.586402] rockchip-pcie f8000000.pcie: Looking up vpcie1v8-supply property in node /pcie@f8000000 failed
+[    1.586415] rockchip-pcie f8000000.pcie: no vpcie1v8 regulator found
+[    1.586439] rockchip-pcie f8000000.pcie: Looking up vpcie0v9-supply from device tree
+[    1.586450] rockchip-pcie f8000000.pcie: Looking up vpcie0v9-supply property in node /pcie@f8000000 failed
+[    1.586464] rockchip-pcie f8000000.pcie: no vpcie0v9 regulator found
+[    1.586488] rockchip-pcie f8000000.pcie: missing "memory-region" property
+[    1.586519] PCI host bridge /pcie@f8000000 ranges:
+[    1.586554]   MEM 0xfa000000..0xfbdfffff -> 0xfa000000
+[    1.586580]    IO 0xfbe00000..0xfbefffff -> 0xfbe00000
+[    1.586711] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_tcpc1-supply from device tree
+[    1.586725] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_tcpc1-supply property in node /power-management@ff310000/power-controller failed
+[    1.651117] rockchip-pcie f8000000.pcie: PCI host bridge to bus 0000:00
+[    1.651175] pci_bus 0000:00: root bus resource [bus 00-1f]
+[    1.651214] pci_bus 0000:00: root bus resource [mem 0xfa000000-0xfbdfffff]
+[    1.651256] pci_bus 0000:00: root bus resource [io  0x0000-0xfffff] (bus address [0xfbe00000-0xfbefffff])
+[    1.651346] pci 0000:00:00.0: [1d87:0100] type 01 class 0x060400
+[    1.651463] pci 0000:00:00.0: supports D1
+[    1.651476] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[    1.651852] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    1.652043] pci_bus 0000:01: busn_res: can not insert [bus 01-ff] under [bus 00-1f] (conflicts with (null) [bus 00-1f])
+[    1.652082] pci 0000:01:00.0: [1344:5410] type 00 class 0x010802
+[    1.652148] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x00003fff 64bit]
+[    1.658660] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    1.658708] pci 0000:00:00.0: BAR 8: assigned [mem 0xfa000000-0xfa0fffff]
+[    1.658753] pci 0000:01:00.0: BAR 0: assigned [mem 0xfa000000-0xfa003fff 64bit]
+[    1.658823] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    1.658864] pci 0000:00:00.0:   bridge window [mem 0xfa000000-0xfa0fffff]
+[    1.658973] pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+[    1.659310] pcieport 0000:00:00.0: Signaling PME through PCIe PME interrupt
+[    1.659350] pci 0000:01:00.0: Signaling PME through PCIe PME interrupt
+[    1.659390] pcie_pme 0000:00:00.0:pcie01: service driver pcie_pme loaded
+[    1.659529] aer 0000:00:00.0:pcie02: service driver aer loaded
+[    1.660638] rk-vcodec ff650000.vpu_service: Looking up vcodec-supply from device tree
+[    1.660656] rk-vcodec ff650000.vpu_service: Looking up vcodec-supply property in node /vpu_service@ff650000 failed
+[    1.660682] rk-vcodec ff650000.vpu_service: no regulator for vcodec
+[    1.661106] rk-vcodec ff650000.vpu_service: probe device
+[    1.661412] rk-vcodec ff650000.vpu_service: drm allocator with mmu enabled
+[    1.662190] rk-vcodec ff650000.vpu_service: could not find power_model node
+[    1.662220] rk-vcodec ff650000.vpu_service: init success
+[    1.662477] rk-vcodec ff660000.rkvdec: Looking up vcodec-supply from device tree
+[    1.662491] rk-vcodec ff660000.rkvdec: Looking up vcodec-supply property in node /rkvdec@ff660000 failed
+[    1.662508] rk-vcodec ff660000.rkvdec: no regulator for vcodec
+[    1.663188] rk-vcodec ff660000.rkvdec: probe device
+[    1.663493] rk-vcodec ff660000.rkvdec: drm allocator with mmu enabled
+[    1.664029] rk-vcodec ff660000.rkvdec: could not find power_model node
+[    1.664069] rk-vcodec ff660000.rkvdec: init success
+[    1.666428] dma-pl330 ff6d0000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    1.666491] dma-pl330 ff6d0000.dma-controller: 	DBUFF-32x8bytes Num_Chans-6 Num_Peri-12 Num_Events-12
+[    1.668631] dma-pl330 ff6e0000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    1.668692] dma-pl330 ff6e0000.dma-controller: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-20 Num_Events-16
+[    1.670837] Serial: 8250/16550 driver, 5 ports, IRQ sharing disabled
+[    1.671710] ff180000.serial: ttyS0 at MMIO 0xff180000 (irq = 35, base_baud = 1500000) is a 16550A
+[    1.673446] [drm] Initialized drm 1.1.0 20060810
+[    1.678574] [drm] Rockchip DRM driver version: v1.0.1
+[    1.679205] rockchip-drm display-subsystem: defer getting devfreq
+[    1.679672] rockchip-vop ff900000.vop: missing rockchip,grf property
+[    1.680110] rockchip-drm display-subsystem: bound ff900000.vop (ops 0xffffff8008d82c10)
+[    1.680214] rockchip-vop ff8f0000.vop: missing rockchip,grf property
+[    1.680504] rockchip-drm display-subsystem: bound ff8f0000.vop (ops 0xffffff8008d82c10)
+[    1.680902] i2c i2c-9: of_i2c: modalias failure on /hdmi@ff940000/ports
+[    1.680949] dwhdmi-rockchip ff940000.hdmi: registered DesignWare HDMI I2C bus driver
+[    1.681144] dwhdmi-rockchip ff940000.hdmi: Detected HDMI TX controller v2.11a with HDCP (DWC HDMI 2.0 TX PHY)
+[    1.682234] rockchip-drm display-subsystem: bound ff940000.hdmi (ops 0xffffff8008d77710)
+[    1.682294] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    1.682328] [drm] No driver support for vblank timestamp query.
+[    1.682725] rockchip-drm display-subsystem: failed to parse loader memory
+[    1.682818] rockchip-drm display-subsystem: No connectors reported connected with modes
+[    1.682907] [drm] Cannot find any crtc or sizes - going 1024x768
+[    1.702907] Console: switching to colour frame buffer device 128x48
+[    1.710244] rockchip-drm display-subsystem: fb0:  frame buffer device
+[    1.721980] Unable to detect cache hierarchy for CPU 0
+[    1.722866] brd: module loaded
+[    1.728166] loop: module loaded
+[    1.728575] lkdtm: No crash points registered, enable through debugfs
+[    1.729466] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[    1.730639] CAN device driver interface
+[    1.731577] rk_gmac-dwmac fe300000.ethernet: Looking up phy-supply from device tree
+[    1.731659] rk_gmac-dwmac fe300000.ethernet: clock input or output? (input).
+[    1.731776] rk_gmac-dwmac fe300000.ethernet: TX delay(0x28).
+[    1.731869] rk_gmac-dwmac fe300000.ethernet: RX delay(0x11).
+[    1.731976] rk_gmac-dwmac fe300000.ethernet: integrated PHY? (no).
+[    1.732257] rk_gmac-dwmac fe300000.ethernet: cannot get clock clk_mac_speed
+[    1.732366] rk_gmac-dwmac fe300000.ethernet: clock input from PHY
+[    1.737470] rk_gmac-dwmac fe300000.ethernet: init for RGMII
+[    1.737693] stmmac - user ID: 0x10, Synopsys ID: 0x35
+[    1.737775]  Ring mode enabled
+[    1.737828]  DMA HW capability register supported
+[    1.737903]  Normal descriptors
+[    1.737965]  RX Checksum Offload Engine supported (type 2)
+[    1.738051]  TX Checksum insertion supported
+[    1.738120]  Wake-Up On Lan supported
+[    1.738216]  Enable RX Mitigation via HW Watchdog Timer
+[    1.738397] of_get_named_gpiod_flags: parsed 'snps,reset-gpio' property of node '/ethernet@fe300000[0]' - status (0)
+[    1.809825] libphy: stmmac: probed
+[    1.812948] eth%d: PHY ID 001cc915 at 0 IRQ POLL (stmmac-0:00) active
+[    1.816076] eth%d: PHY ID 001cc915 at 1 IRQ POLL (stmmac-0:01)
+[    1.820482] usbcore: registered new interface driver rndis_wlan
+[    1.823757] Rockchip WiFi SYS interface (V1.00) ... 
+[    1.826924] usbcore: registered new interface driver rtl8150
+[    1.830042] usbcore: registered new interface driver r8152
+[    1.833222] usbcore: registered new interface driver asix
+[    1.836334] usbcore: registered new interface driver ax88179_178a
+[    1.839307] usbcore: registered new interface driver cdc_ether
+[    1.842208] usbcore: registered new interface driver rndis_host
+[    1.845072] usbcore: registered new interface driver cdc_ncm
+[    1.847847] usbcore: registered new interface driver cdc_mbim
+[    1.857084] rockchip-dwc3 usb0: fail to get drvdata hcd
+[    1.861154] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_usb3-supply from device tree
+[    1.861174] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_usb3-supply property in node /power-management@ff310000/power-controller failed
+[    1.865691] rockchip-dwc3 usb1: fail to get drvdata hcd
+[    1.865821]  nvme0n1: p1 p2 p3 p4 p5
+[    1.872024] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.874539] ehci-pci: EHCI PCI platform driver
+[    1.877200] ehci-platform: EHCI generic platform driver
+[    1.883321] ehci-platform fe380000.usb: EHCI Host Controller
+[    1.885929] ehci-platform fe380000.usb: new USB bus registered, assigned bus number 1
+[    1.888639] ehci-platform fe380000.usb: irq 28, io mem 0xfe380000
+[    1.902623] ehci-platform fe380000.usb: USB 2.0 started, EHCI 1.00
+[    1.905115] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.907488] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.909837] usb usb1: Product: EHCI Host Controller
+[    1.912160] usb usb1: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 ehci_hcd
+[    1.914518] usb usb1: SerialNumber: fe380000.usb
+[    1.917340] hub 1-0:1.0: USB hub found
+[    1.919727] hub 1-0:1.0: 1 port detected
+[    1.925985] ehci-platform fe3c0000.usb: EHCI Host Controller
+[    1.928501] ehci-platform fe3c0000.usb: new USB bus registered, assigned bus number 2
+[    1.931059] ehci-platform fe3c0000.usb: irq 30, io mem 0xfe3c0000
+[    1.942622] ehci-platform fe3c0000.usb: USB 2.0 started, EHCI 1.00
+[    1.945058] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.947444] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.949841] usb usb2: Product: EHCI Host Controller
+[    1.952251] usb usb2: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 ehci_hcd
+[    1.954730] usb usb2: SerialNumber: fe3c0000.usb
+[    1.957641] hub 2-0:1.0: USB hub found
+[    1.960140] hub 2-0:1.0: 1 port detected
+[    1.963170] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.965668] ohci-platform: OHCI generic platform driver
+[    1.968499] ohci-platform fe3a0000.usb: Generic Platform OHCI controller
+[    1.971187] ohci-platform fe3a0000.usb: new USB bus registered, assigned bus number 3
+[    1.973873] ohci-platform fe3a0000.usb: irq 29, io mem 0xfe3a0000
+[    2.034754] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+[    2.037318] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.039892] usb usb3: Product: Generic Platform OHCI controller
+[    2.042435] usb usb3: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 ohci_hcd
+[    2.045071] usb usb3: SerialNumber: fe3a0000.usb
+[    2.048120] hub 3-0:1.0: USB hub found
+[    2.050750] hub 3-0:1.0: 1 port detected
+[    2.053871] ohci-platform fe3e0000.usb: Generic Platform OHCI controller
+[    2.056685] ohci-platform fe3e0000.usb: new USB bus registered, assigned bus number 4
+[    2.059560] ohci-platform fe3e0000.usb: irq 31, io mem 0xfe3e0000
+[    2.118752] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001
+[    2.121521] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    2.124339] usb usb4: Product: Generic Platform OHCI controller
+[    2.127188] usb usb4: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 ohci_hcd
+[    2.130115] usb usb4: SerialNumber: fe3e0000.usb
+[    2.133453] hub 4-0:1.0: USB hub found
+[    2.136441] hub 4-0:1.0: 1 port detected
+[    2.140328] usbcore: registered new interface driver cdc_wdm
+[    2.144472] usbcore: registered new interface driver usbtouchscreen
+[    2.147692] .. rk pwm remotectl v1.1 init
+[    2.150946] input: ff420030.pwm as /devices/platform/ff420030.pwm/input/input0
+[    2.154153] remotectl-pwm ff420030.pwm: set irq err, set support_psci to 0 !!
+[    2.157820] i2c /dev entries driver
+[    2.162054] rk808 0-0020: Pmic Chip id: 0x8090
+[    2.165410] rk808 0-0020: source: on=0x40, off=0x00
+[    2.169052] rk808 0-0020: support dcdc3 fb mode:-22, -594601984
+[    2.172290] rk808 0-0020: support pmic reset mode:0,0
+[    2.175450] rk808 0-0020: no pinctrl handle
+[    2.179769] rk808 0-0020: GPIO lookup for consumer dvs
+[    2.179780] rk808 0-0020: using device tree for GPIO lookup
+[    2.179794] of_get_named_gpiod_flags: can't parse 'dvs-gpios' property of node '/i2c@ff3c0000/pmic@20[0]'
+[    2.179806] of_get_named_gpiod_flags: can't parse 'dvs-gpio' property of node '/i2c@ff3c0000/pmic@20[0]'
+[    2.179816] rk808 0-0020: using lookup tables for GPIO lookup
+[    2.179827] rk808 0-0020: lookup for GPIO dvs failed
+[    2.179837] rk808-regulator rk808-regulator: there is no dvs0 gpio
+[    2.182716] rk808 0-0020: GPIO lookup for consumer dvs
+[    2.182726] rk808 0-0020: using device tree for GPIO lookup
+[    2.182737] of_get_named_gpiod_flags: can't parse 'dvs-gpios' property of node '/i2c@ff3c0000/pmic@20[1]'
+[    2.182748] of_get_named_gpiod_flags: can't parse 'dvs-gpio' property of node '/i2c@ff3c0000/pmic@20[1]'
+[    2.182757] rk808 0-0020: using lookup tables for GPIO lookup
+[    2.182765] rk808 0-0020: lookup for GPIO dvs failed
+[    2.182775] rk808-regulator rk808-regulator: there is no dvs1 gpio
+[    2.185635] rk808 0-0020: Looking up vcc1-supply from device tree
+[    2.185695] DCDC_REG1: supplied by vcc5v0_sys
+[    2.189416] vdd_log: 750 <--> 1350 mV at 900 mV 
+[    2.189984] rk808 0-0020: Looking up vcc2-supply from device tree
+[    2.190030] DCDC_REG2: supplied by vcc5v0_sys
+[    2.193832] vdd_cpu_l: 750 <--> 1350 mV at 800 mV 
+[    2.194367] rk808 0-0020: Looking up vcc3-supply from device tree
+[    2.194412] DCDC_REG3: supplied by vcc5v0_sys
+[    2.197876] vcc_ddr: at 500 mV 
+[    2.198418] rk808 0-0020: Looking up vcc4-supply from device tree
+[    2.198460] DCDC_REG4: supplied by vcc5v0_sys
+[    2.201878] vcc3v3_sys: 3300 mV 
+[    2.202408] rk808 0-0020: Looking up vcc9-supply from device tree
+[    2.202450] DCDC_REG5: supplied by vcc5v0_sys
+[    2.205706] vcc_buck5: 2200 mV 
+[    2.206219] rk808 0-0020: Looking up vcc5-supply from device tree
+[    2.206241] LDO_REG1: supplied by vcc_buck5
+[    2.210114] vcca_0v9: 900 mV 
+[    2.210657] rk808 0-0020: Looking up vcc5-supply from device tree
+[    2.210678] LDO_REG2: supplied by vcc_buck5
+[    2.214486] vcc_1v8: 1800 mV 
+[    2.215024] rk808 0-0020: Looking up vcc5-supply from device tree
+[    2.215044] LDO_REG3: supplied by vcc_buck5
+[    2.218798] vcc0v9_soc: 900 mV 
+[    2.219319] rk808 0-0020: Looking up vcc6-supply from device tree
+[    2.219340] LDO_REG4: supplied by vcc_buck5
+[    2.223030] vcca_1v8: 1850 mV 
+[    2.223559] rk808 0-0020: Looking up vcc6-supply from device tree
+[    2.223580] LDO_REG5: supplied by vcc_buck5
+[    2.227196] vdd1v5_dvp: 1500 mV 
+[    2.227732] rk808 0-0020: Looking up vcc6-supply from device tree
+[    2.227752] LDO_REG6: supplied by vcc_buck5
+[    2.231328] vcc_1v5: 1500 mV 
+[    2.231873] rk808 0-0020: Looking up vcc7-supply from device tree
+[    2.231936] LDO_REG7: supplied by vcc5v0_sys
+[    2.235371] vcc_3v0: 3000 mV 
+[    2.235897] rk808 0-0020: Looking up vcc7-supply from device tree
+[    2.235939] LDO_REG8: supplied by vcc5v0_sys
+[    2.239524] vccio_sd: 1800 <--> 3300 mV at 3300 mV 
+[    2.240064] rk808 0-0020: Looking up vcc7-supply from device tree
+[    2.240113] LDO_REG9: supplied by vcc5v0_sys
+[    2.243441] vcc_sd: 3300 mV 
+[    2.243991] rk808 0-0020: Looking up vcc9-supply from device tree
+[    2.244033] SWITCH_REG1: supplied by vcc5v0_sys
+[    2.246429] vcc5v0_usb2.0: 5000 mV 
+[    2.246681] rk808 0-0020: Looking up vcc8-supply from device tree
+[    2.246701] SWITCH_REG2: supplied by vcc3v3_sys
+[    2.249589] vccio_3v3: 3300 mV 
+[    2.250050] rk817-battery rk817-battery: Failed to find matching dt id
+[    2.252461] rk817-charger rk817-charger: Failed to find matching dt id
+[    2.256798] input: rk8xx_pwrkey as /devices/platform/ff3c0000.i2c/i2c-0/0-0020/input/input1
+[    2.259335] rk808-rtc rk808-rtc: device is disabled
+[    2.261559] rk808-rtc: probe of rk808-rtc failed with error -22
+[    2.264180] fan53555-regulator 0-001c: GPIO lookup for consumer vsel
+[    2.264191] fan53555-regulator 0-001c: using device tree for GPIO lookup
+[    2.264224] of_get_named_gpiod_flags: parsed 'vsel-gpios' property of node '/i2c@ff3c0000/tcs452x@1c[0]' - status (0)
+[    2.264590] fan53555-regulator 0-001c: FAN53555 Option[12] Rev[15] Detected!
+[    2.266854] fan53555-regulator 0-001c: Looking up vin-supply from device tree
+[    2.266903] fan53555-reg: supplied by vcc5v0_sys
+[    2.269313] vdd_cpu_b: override max_uV, 1500000 -> 1387500
+[    2.270388] vdd_cpu_b: 712 <--> 1387 mV at 1025 mV 
+[    2.270984] fan53555-regulator 0-0010: GPIO lookup for consumer vsel
+[    2.270995] fan53555-regulator 0-0010: using device tree for GPIO lookup
+[    2.271024] of_get_named_gpiod_flags: parsed 'vsel-gpios' property of node '/i2c@ff3c0000/tcs452x@10[0]' - status (0)
+[    2.271385] fan53555-regulator 0-0010: FAN53555 Option[0] Rev[15] Detected!
+[    2.273688] fan53555-regulator 0-0010: Looking up vin-supply from device tree
+[    2.273732] fan53555-reg: supplied by vcc5v0_sys
+[    2.276170] vdd_gpu: override min_uV, 735000 -> 737500
+[    2.276180] vdd_gpu: override max_uV, 1400000 -> 1387500
+[    2.277250] vdd_gpu: 737 <--> 1387 mV at 1150 mV 
+[    2.277643] rk3x-i2c ff3c0000.i2c: Initialized RK3xxx I2C bus at ffffff8009f5c000
+[    2.283657] rtc-hym8563 2-0051: rtc core: registered hym8563 as rtc0
+[    2.286385] rk3x-i2c ff120000.i2c: Initialized RK3xxx I2C bus at ffffff8009f5e000
+[    2.289553] rk3x-i2c ff3d0000.i2c: Initialized RK3xxx I2C bus at ffffff8009f60000
+[    2.292315] rk3x-i2c ff3e0000.i2c: Initialized RK3xxx I2C bus at ffffff8009f62000
+[    2.295501] imx219 4-0010: Reading register 100 from 10 failed
+[    2.297904] imx219 4-0010: Reading register 100 from 10 failed
+[    2.306577] imx219 4-0010: Error -5 setting default controls
+[    2.308776] imx219: probe of 4-0010 failed with error -5
+[    2.311535] IR NEC protocol handler initialized
+[    2.314531] rkisp1 ff910000.rkisp1: rkisp1 driver version: v00.01.01
+[    2.316813] rkisp1 ff910000.rkisp1: Missing rockchip,grf property
+[    2.320199] rkisp1 ff910000.rkisp1: GPIO lookup for consumer vsirq
+[    2.320211] rkisp1 ff910000.rkisp1: using device tree for GPIO lookup
+[    2.320224] of_get_named_gpiod_flags: can't parse 'vsirq-gpios' property of node '/rkisp1@ff910000[0]'
+[    2.320235] of_get_named_gpiod_flags: can't parse 'vsirq-gpio' property of node '/rkisp1@ff910000[0]'
+[    2.320245] rkisp1 ff910000.rkisp1: using lookup tables for GPIO lookup
+[    2.320255] rkisp1 ff910000.rkisp1: lookup for GPIO vsirq failed
+[    2.320504] usbcore: registered new interface driver uvcvideo
+[    2.322733] USB Video Class driver (1.1.1)
+[    2.325478] rockchip-iodomain ff320000.syscon:io-domains: Looking up pmu1830-supply from device tree
+[    2.325982] rockchip-iodomain ff770000.syscon:io-domains: Looking up bt656-supply from device tree
+[    2.326332] rockchip-iodomain ff770000.syscon:io-domains: Looking up audio-supply from device tree
+[    2.326683] rockchip-iodomain ff770000.syscon:io-domains: Looking up sdmmc-supply from device tree
+[    2.327036] rockchip-iodomain ff770000.syscon:io-domains: Looking up gpio1830-supply from device tree
+[    2.328117] Boot mode: normal
+[    2.331333] rk_tsadcv2_temp_to_code: Invalid conversion table: code=1023, temperature=2147483647
+[    2.333736] rockchip-thermal ff260000.tsadc: tsadc is probed successfully!
+[    2.336605] dw_wdt ff848000.watchdog: Should better to setup a 'resets' property in dt, that must been named with reset
+[    2.339273] Bluetooth: Virtual HCI driver ver 1.5
+[    2.341870] Bluetooth: HCI UART driver ver 2.3
+[    2.344302] Bluetooth: HCI UART protocol H4 registered
+[    2.346695] Bluetooth: HCI UART protocol LL registered
+[    2.349076] Bluetooth: HCI UART protocol ATH3K registered
+[    2.351499] usbcore: registered new interface driver bfusb
+[    2.353965] usbcore: registered new interface driver btusb
+[    2.356383] rtk_btusb: Realtek Bluetooth USB driver ver 3.1.1d788ad.20181218-175024
+[    2.358908] rtk_btcoex: rtk_btcoex_init: version: 1.2
+[    2.358915] rtk_btcoex: create workqueue
+[    2.358922] rtk_btcoex: Coex over UDP
+[    2.361718] rtk_btcoex: alloc buffers 1792, 2432 for ev and l2
+[    2.361786] usbcore: registered new interface driver rtk_btusb
+[    2.364895] cpu cpu0: leakage=21
+[    2.367538] cpu cpu0: Looking up cpu-supply from device tree
+[    2.380232] cpu cpu0: temp=52222, pvtm=143397 (142671 + 726)
+[    2.383905] cpu cpu0: pvtm-volt-sel=0
+[    2.386964] cpu cpu4: leakage=34
+[    2.389678] cpu cpu4: Looking up cpu-supply from device tree
+[    2.402292] cpu cpu4: temp=52222, pvtm=154156 (153771 + 385)
+[    2.408719] cpu cpu4: pvtm-volt-sel=1
+[    2.411820] cpu cpu0: Looking up cpu-supply from device tree
+[    2.412233] cpu cpu0: Looking up cpu-supply from device tree
+[    2.413024] cpu cpu0: l=0 h=2147483647 hyst=5000 l_limit=0 h_limit=0
+[    2.417349] cpu cpu0: failed to find power_model node
+[    2.420605] cpu cpu4: Looking up cpu-supply from device tree
+[    2.421346] cpu cpu4: l=0 h=2147483647 hyst=5000 l_limit=0 h_limit=0
+[    2.425567] cpu cpu4: failed to find power_model node
+[    2.429431] sdhci: Secure Digital Host Controller Interface driver
+[    2.432416] sdhci: Copyright(c) Pierre Ossman
+[    2.435408] Synopsys Designware Multimedia Card Interface Driver
+[    2.439319] dwmmc_rockchip fe310000.dwmmc: IDMAC supports 32-bit address mode.
+[    2.442393] dwmmc_rockchip fe310000.dwmmc: Using internal DMA controller.
+[    2.445388] dwmmc_rockchip fe310000.dwmmc: Version ID is 270a
+[    2.448407] dwmmc_rockchip fe310000.dwmmc: DW MMC controller at irq 25,32 bit host data width,256 deep fifo
+[    2.451469] dwmmc_rockchip fe310000.dwmmc: 'clock-freq-min-max' property was deprecated.
+[    2.454458] dwmmc_rockchip fe310000.dwmmc: Looking up vmmc-supply from device tree
+[    2.454472] dwmmc_rockchip fe310000.dwmmc: Looking up vmmc-supply property in node /dwmmc@fe310000 failed
+[    2.454511] dwmmc_rockchip fe310000.dwmmc: Looking up vqmmc-supply from device tree
+[    2.454522] dwmmc_rockchip fe310000.dwmmc: Looking up vqmmc-supply property in node /dwmmc@fe310000 failed
+[    2.454546] dwmmc_rockchip fe310000.dwmmc: No vmmc regulator found
+[    2.457487] dwmmc_rockchip fe310000.dwmmc: No vqmmc regulator found
+[    2.460402] dwmmc_rockchip fe310000.dwmmc: GPIO lookup for consumer wp
+[    2.460412] dwmmc_rockchip fe310000.dwmmc: using device tree for GPIO lookup
+[    2.460425] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/dwmmc@fe310000[0]'
+[    2.460436] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/dwmmc@fe310000[0]'
+[    2.460446] dwmmc_rockchip fe310000.dwmmc: using lookup tables for GPIO lookup
+[    2.460456] dwmmc_rockchip fe310000.dwmmc: lookup for GPIO wp failed
+[    2.460675] platform sdio-pwrseq: GPIO lookup for consumer reset
+[    2.460685] platform sdio-pwrseq: using device tree for GPIO lookup
+[    2.460713] of_get_named_gpiod_flags: parsed 'reset-gpios' property of node '/sdio-pwrseq[0]' - status (0)
+[    2.460748] dwmmc_rockchip fe310000.dwmmc: allocated mmc-pwrseq
+[    2.478644] mmc_host mmc0: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    2.494736] dwmmc_rockchip fe310000.dwmmc: 1 slots initialized
+[    2.497684] dwmmc_rockchip fe320000.dwmmc: IDMAC supports 32-bit address mode.
+[    2.501213] dwmmc_rockchip fe320000.dwmmc: Using internal DMA controller.
+[    2.503632] dwmmc_rockchip fe320000.dwmmc: Version ID is 270a
+[    2.508089] dwmmc_rockchip fe320000.dwmmc: DW MMC controller at irq 26,32 bit host data width,256 deep fifo
+[    2.510598] dwmmc_rockchip fe320000.dwmmc: 'clock-freq-min-max' property was deprecated.
+[    2.513088] dwmmc_rockchip fe320000.dwmmc: Looking up vmmc-supply from device tree
+[    2.513100] dwmmc_rockchip fe320000.dwmmc: Looking up vmmc-supply property in node /dwmmc@fe320000 failed
+[    2.513130] dwmmc_rockchip fe320000.dwmmc: Looking up vqmmc-supply from device tree
+[    2.513510] dwmmc_rockchip fe320000.dwmmc: No vmmc regulator found
+[    2.516059] dwmmc_rockchip fe320000.dwmmc: GPIO lookup for consumer cd
+[    2.516069] dwmmc_rockchip fe320000.dwmmc: using device tree for GPIO lookup
+[    2.516080] of_get_named_gpiod_flags: can't parse 'cd-gpios' property of node '/dwmmc@fe320000[0]'
+[    2.516091] of_get_named_gpiod_flags: can't parse 'cd-gpio' property of node '/dwmmc@fe320000[0]'
+[    2.516099] dwmmc_rockchip fe320000.dwmmc: using lookup tables for GPIO lookup
+[    2.516107] dwmmc_rockchip fe320000.dwmmc: lookup for GPIO cd failed
+[    2.516117] dwmmc_rockchip fe320000.dwmmc: GPIO lookup for consumer wp
+[    2.516124] dwmmc_rockchip fe320000.dwmmc: using device tree for GPIO lookup
+[    2.516133] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/dwmmc@fe320000[0]'
+[    2.516141] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/dwmmc@fe320000[0]'
+[    2.516149] dwmmc_rockchip fe320000.dwmmc: using lookup tables for GPIO lookup
+[    2.516156] dwmmc_rockchip fe320000.dwmmc: lookup for GPIO wp failed
+[    2.519279] rockchip-iodomain ff770000.syscon:io-domains: Setting to 3300000 done
+[    2.521672] rockchip-iodomain ff770000.syscon:io-domains: Setting to 3300000 done
+[    2.534691] mmc_host mmc0: Bus speed (slot 0) = 300000Hz (slot req 300000Hz, actual 300000HZ div = 0)
+[    2.538801] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    2.559718] dwmmc_rockchip fe320000.dwmmc: 1 slots initialized
+[    2.568472] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.578539] sdhci-arasan fe330000.sdhci: GPIO lookup for consumer wp
+[    2.578556] sdhci-arasan fe330000.sdhci: using device tree for GPIO lookup
+[    2.578572] of_get_named_gpiod_flags: can't parse 'wp-gpios' property of node '/sdhci@fe330000[0]'
+[    2.578587] of_get_named_gpiod_flags: can't parse 'wp-gpio' property of node '/sdhci@fe330000[0]'
+[    2.578619] sdhci-arasan fe330000.sdhci: using lookup tables for GPIO lookup
+[    2.578633] sdhci-arasan fe330000.sdhci: lookup for GPIO wp failed
+[    2.578734] mmc_host mmc0: Bus speed (slot 0) = 200000Hz (slot req 200000Hz, actual 200000HZ div = 0)
+[    2.585054] sdhci-arasan fe330000.sdhci: Looking up vmmc-supply from device tree
+[    2.585075] sdhci-arasan fe330000.sdhci: Looking up vmmc-supply property in node /sdhci@fe330000 failed
+[    2.585135] sdhci-arasan fe330000.sdhci: Looking up vqmmc-supply from device tree
+[    2.585150] sdhci-arasan fe330000.sdhci: Looking up vqmmc-supply property in node /sdhci@fe330000 failed
+[    2.585176] sdhci-arasan fe330000.sdhci: No vmmc regulator found
+[    2.590358] sdhci-arasan fe330000.sdhci: No vqmmc regulator found
+[    2.619157] ------------[ cut here ]------------
+[    2.625016] WARNING: at drivers/clk/clk.c:681
+[    2.626710] mmc2: SDHCI controller on fe330000.sdhci [fe330000.sdhci] using ADMA
+[    2.627760] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.627950] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.628451] usbcore: registered new interface driver usbhid
+[    2.628453] usbhid: USB HID core driver
+[    2.631256] rockchip-dmc dmc: unable to get devfreq-event device : dfi
+[    2.633052] rockchip-saradc ff100000.saradc: Looking up vref-supply from device tree
+[    2.667876] Modules linked in:
+
+[    2.680014] CPU: 5 PID: 119 Comm: kworker/5:1 Not tainted 4.4.167-14-rockchip-g53bdb2fa44e8 #1
+[    2.686304] Hardware name: Radxa ROCK Pi N10 (DT)
+[    2.692600] Workqueue: events_freezable mmc_rescan
+[    2.698951] task: ffffffc0dd71c600 task.stack: ffffffc0dd738000
+[    2.705354] PC is at clk_core_disable+0x28/0x128
+[    2.711751] LR is at clk_disable+0x34/0x48
+[    2.718074] pc : [<ffffff8008a0a398>] lr : [<ffffff8008a0a4cc>] pstate: 600000c5
+[    2.724544] sp : ffffffc0dd73bc70
+[    2.730923] x29: ffffffc0dd73bc70 x28: 0000000000000000 
+[    2.737354] x27: 0000000000000000 x26: ffffff8009391000 
+[    2.743724] x25: 0000000000000000 x24: ffffffc0dd657db0 
+[    2.750016] x23: 0000000000030d40 x22: 0000000000000002 
+[    2.756250] x21: ffffffc0dc8c84a0 x20: 0000000000000040 
+[    2.762395] x19: ffffffc0dc910600 x18: 0000000030d00800 
+[    2.768487] x17: 0000000000000000 x16: 0000000000000000 
+[    2.774561] x15: 0000000000000000 x14: ffffffc0f32ec600 
+[    2.780542] x13: 00000040eed2f000 x12: 0000000034d5d91d 
+[    2.786447] x11: 0000000000000000 x10: 0000000000000a10 
+[    2.792287] x9 : ffffffc0dd73b9a0 x8 : 000000000000005b 
+[    2.798131] x7 : 0000000000000000 x6 : 0000000000000492 
+[    2.803966] x5 : 0000000000000001 x4 : 0000000008000000 
+[    2.809629] x3 : 0000000000000000 x2 : 00000040eed2f000 
+[    2.815123] x1 : ffffffc0dd71c600 x0 : 0000000000000000 
+[    2.820603] 
+               PC: 0xffffff8008a0a318:
+[    2.831308] a318  9ac22421 36000101 f9401014 b40000d4 a9400282 aa1303e1 d63f0040 f8418e80
+[    2.837002] a338  b5ffff80 34000115 f9401260 97ffff6b 2a1503e0 a94153f3 a9425bf5 a8c37bfd
+[    2.842688] a358  d65f03c0 b9407a60 11000400 b9007a60 52800015 17fffff7 a9bd7bfd 910003fd
+[    2.848407] a378  a90153f3 f90013f5 aa0003f3 aa1e03e0 d503201f b4000093 b9407660 350000c0
+[    2.854110] a398  d4210000 a94153f3 f94013f5 a8c37bfd d65f03c0 51000400 b9007660 35ffff40
+[    2.859945] a3b8  90004c95 913ea2a1 b9400820 7100001f 5400028d 90004000 91000000 d538d082
+[    2.865713] a3d8  b8626802 52800800 b00015e3 f9450463 1ac00c40 937d7c00 f8606860 9ac22400
+[    2.871620] a3f8  36000100 f9401034 b40000d4 a9400282 aa1303e1 d63f0040 f8418e80 b5ffff80
+[    2.877477] 
+               LR: 0xffffff8008a0a44c:
+[    2.888453] a44c  b8626822 52800801 b00015e3 f9450463 1ac10c41 937d7c21 f8616861 9ac22421
+[    2.894179] a46c  36000101 f9401014 b40000d4 a9400282 aa1303e1 d63f0040 f8418e80 b5ffff80
+[    2.899983] a48c  f9401260 97ffffb8 17ffffc2 a9be7bfd 910003fd a90153f3 aa0003f3 aa1e03e0
+[    2.905830] a4ac  d503201f b4000133 b140067f 540000e8 97fff8ca aa0003f4 f9400260 97ffffaa
+[    2.911729] a4cc  aa1403e0 97fff8ff a94153f3 a8c27bfd d65f03c0 a9bd7bfd 910003fd a90153f3
+[    2.917629] a4ec  f90013f5 aa0003f4 aa0103f3 aa1e03e0 d503201f b9407a80 34000160 97fff8b7
+[    2.923511] a50c  aa0003f5 aa1403e0 97ffff97 aa1303e0 97ffff95 aa1503e0 97fff8ea aa1303e0
+[    2.929408] a52c  97fffef1 a94153f3 f94013f5 a8c37bfd d65f03c0 a9bd7bfd 910003fd a90153f3
+[    2.935366] 
+               SP: 0xffffffc0dd73bbf0:
+[    2.946663] bbf0  00000002 00000000 00030d40 00000000 dd657db0 ffffffc0 00000000 00000000
+[    2.952647] bc10  09391000 ffffff80 00000000 00000000 00000000 00000000 dd73bc70 ffffffc0
+[    2.958716] bc30  08a0a4cc ffffff80 dd73bc70 ffffffc0 08a0a398 ffffff80 600000c5 00000000
+[    2.964713] bc50  dd73bc70 ffffffc0 08a0881c ffffff80 ffffffff ffffffff 089ce270 ffffff80
+[    2.970656] bc70  dd73bca0 ffffffc0 08a0a4cc ffffff80 dc97f480 ffffffc0 00000040 00000000
+[    2.976586] bc90  dc8c84a0 ffffffc0 000002e1 00000000 dd73bcc0 ffffffc0 089ce2d0 ffffff80
+[    2.982497] bcb0  dc97f440 ffffffc0 dc97f480 ffffffc0 dd73bce0 ffffffc0 089ce184 ffffff80
+[    2.988335] bcd0  dc8c8000 ffffffc0 08ddd960 ffffff80 dd73bd00 ffffffc0 089c1c2c ffffff80
+[    2.994175] 
+               X1: 0xffffffc0dd71c580:
+[    3.005136] c580  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.011008] c5a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.016817] c5c0  00000000 00000000 00000000 00000000 ffffffff ffffffff ffffffff ffffffff
+[    3.022680] c5e0  ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff
+[    3.028576] c600  00000010 00000000 ffffffff ffffffff 00000000 00000000 00000000 00000000
+[    3.034560] c620  dd738000 ffffffc0 00000002 04208060 00000000 00000000 00000000 00000000
+[    3.040583] c640  00000001 00000005 00000016 00000000 fffedc80 00000000 f2808e00 ffffffc0
+[    3.046648] c660  00000005 00000001 00000078 00000078 00000078 00000000 08cc85a0 ffffff80
+[    3.052756] 
+               X9: 0xffffffc0dd73b920:
+[    3.064492] b920  dd73b960 ffffffc0 08085024 ffffff80 dd73ba20 ffffffc0 dd73b938 ffffffc0
+[    3.070802] b940  08f6a875 ffffff80 08fcbc96 ffffff80 08f6a87c ffffff80 092a6e30 ffffff80
+[    3.077149] b960  dd73b9b0 ffffffc0 080853b0 ffffff80 dd73bb40 ffffffc0 0000000a 00000000
+[    3.083570] b980  08f6a913 ffffff80 00000000 00000080 dd73bb40 ffffffc0 0000003d 00000000
+[    3.090027] b9a0  0000ffff 00000000 ffffffff ffffffff dd73b9f0 ffffffc0 08085430 ffffff80
+[    3.096545] b9c0  dd73bb40 ffffffc0 090b5dd0 ffffff80 08a0a398 ffffff80 000002a9 00000000
+[    3.103092] b9e0  00000001 00000000 092a6e30 ff003958 dd73ba10 ffffffc0 085131c4 ffffff80
+[    3.109728] ba00  08fbeb92 ffffff80 092a6e30 ffffff80 dd73ba50 ffffffc0 08088ddc ffffff80
+[    3.116276] 
+               X14: 0xffffffc0f32ec580:
+[    3.128696] c580  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.135213] c5a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.141632] c5c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.147902] c5e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.154027] c600  00000010 00000000 ffffffff ffffffff 00000000 00000000 00000000 00000000
+[    3.160067] c620  f3304000 ffffffc0 00000002 00200040 00000000 00000000 00000000 00000000
+[    3.166014] c640  00000000 00000005 00000014 00000000 fffedc88 00000000 dd71c600 ffffffc0
+[    3.172017] c660  00000005 00000001 00000078 00000078 00000078 00000000 08cc84d8 ffffff80
+[    3.177930] 
+               X19: 0xffffffc0dc910580:
+[    3.189006] 0580  f2a5f000 ffffffc0 f2a611c0 ffffffc0 00000002 00000000 f28539c0 ffffffc0
+[    3.194846] 05a0  fe90e0b0 ffffffbf 00000003 00000000 f2a573c0 ffffffc0 f2a5efc0 ffffffc0
+[    3.200632] 05c0  f2a61200 ffffffc0 00000002 00000000 00000000 00000000 00000000 00000000
+[    3.206389] 05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.212072] 0600  dc91e740 ffffffc0 08dc65e0 ffffff80 dc91c240 ffffffc0 00000000 00000000
+[    3.217722] 0620  00000000 00000000 00000010 00000000 00000000 00000000 00000000 00000000
+[    3.223303] 0640  00008000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.228848] 0660  00000000 00000000 00000010 00000000 00000000 00000000 00000000 00000000
+[    3.234228] 
+               X21: 0xffffffc0dc8c8420:
+[    3.244347] 8420  089c33c0 ffffff80 dc8c8000 ffffffc0 00000005 ffffffff ffffffff 00000000
+[    3.249769] 8440  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.255210] 8460  00000000 00000000 00050005 dead4ead ffffffff 00000000 ffffffff ffffffff
+[    3.260647] 8480  dc8c8480 ffffffc0 dc8c8480 ffffffc0 dd71c600 ffffffc0 00000001 00000000
+[    3.266189] 84a0  00000140 00000000 dc8c84a8 ffffffc0 dc8c84a8 ffffffc0 089c24dc ffffff80
+[    3.271773] 84c0  00000000 00000000 00000000 00000000 00000000 00000000 080b3db4 ffffff80
+[    3.277276] 84e0  dc8c84a0 ffffffc0 00200005 ffffffff ffffffff 00000000 00000000 00000000
+[    3.282854] 8500  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.288355] 
+               X24: 0xffffffc0dd657d30:
+[    3.298965] 7d30  00000000 00000000 f28bc108 ffffffc0 dd657ec0 ffffffc0 dd657c80 ffffffc0
+[    3.304664] 7d50  00000001 00000000 00000000 00000000 092ba020 ffffff80 00000000 00000000
+[    3.310349] 7d70  00000000 00000000 00000000 00000000 00000000 00000000 f7f42b60 ffffffc0
+[    3.316023] 7d90  dc8c84a0 ffffffc0 089c24dc ffffff80 f7f47500 ffffffc0 00000000 00000000
+[    3.321730] 7db0  dd657db0 ffffffc0 dd657db0 ffffffc0 dd71c600 ffffffc0 f7f429c0 ffffffc0
+[    3.327471] 7dd0  f25f6650 ffffffc0 f3199d10 ffffffc0 fffedd43 00000000 00000000 00000001
+[    3.333152] 7df0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.338889] 7e10  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.344479] 
+               X26: 0xffffff8009390f80:
+[    3.355079] 0f80  09178358 ffffff80 00000000 00000000 f2464ed0 ffffffc0 f2464e70 ffffffc0
+[    3.360776] 0fa0  08157b20 ffffff80 08e5ca3b ffffff80 08c7dd90 ffffff80 08c7dc3c ffffff80
+[    3.366463] 0fc0  08157db8 ffffff80 09178214 ffffff80 00000000 00000000 f2465030 ffffffc0
+[    3.372103] 0fe0  f2464f00 ffffffc0 08157b20 ffffff80 08e5ca3b ffffff80 08c7bbf4 ffffff80
+[    3.377712] 1000  08c7a438 ffffff80 08157db8 ffffff80 09178150 ffffff80 00000000 00000000
+[    3.383338] 1020  f24650f0 ffffffc0 f2465060 ffffffc0 08157b20 ffffff80 08e5ca3b ffffff80
+[    3.388896] 1040  08c7bb54 ffffff80 08c7a364 ffffff80 08157db8 ffffff80 091780e4 ffffff80
+[    3.394482] 1060  00000000 00000000 f2465150 ffffffc0 f2465120 ffffffc0 08157b20 ffffff80
+[    3.400005] 
+               X29: 0xffffffc0dd73bbf0:
+[    3.410759] bbf0  00000002 00000000 00030d40 00000000 dd657db0 ffffffc0 00000000 00000000
+[    3.416655] bc10  09391000 ffffff80 00000000 00000000 00000000 00000000 dd73bc70 ffffffc0
+[    3.422614] bc30  08a0a4cc ffffff80 dd73bc70 ffffffc0 08a0a398 ffffff80 600000c5 00000000
+[    3.428627] bc50  dd73bc70 ffffffc0 08a0881c ffffff80 ffffffff ffffffff 089ce270 ffffff80
+[    3.434652] bc70  dd73bca0 ffffffc0 08a0a4cc ffffff80 dc97f480 ffffffc0 00000040 00000000
+[    3.440705] bc90  dc8c84a0 ffffffc0 000002e1 00000000 dd73bcc0 ffffffc0 089ce2d0 ffffff80
+[    3.446690] bcb0  dc97f440 ffffffc0 dc97f480 ffffffc0 dd73bce0 ffffffc0 089ce184 ffffff80
+[    3.452679] bcd0  dc8c8000 ffffffc0 08ddd960 ffffff80 dd73bd00 ffffffc0 089c1c2c ffffff80
+
+[    3.464150] ---[ end trace fd6b6b61c33d97ee ]---
+[    3.469798] Call trace:
+[    3.475438] Exception stack(0xffffffc0dd73baa0 to 0xffffffc0dd73bbd0)
+[    3.481200] baa0: ffffffc0dc910600 0000008000000000 ffffffc0dd73bc70 ffffff8008a0a398
+[    3.487033] bac0: ffffffc0dd73baf0 ffffff8008a0dcc0 ffffffc0f30ebd40 0000000000000040
+[    3.492950] bae0: ffffffc0dd73bb00 ffffff8008cab620 0000000000000040 0000000000000040
+[    3.498913] bb00: ffffffc0dd73bb20 ffffff8008a08968 0000000000000040 0000000000000040
+[    3.504731] bb20: ffffffc0dd73bb40 ffffff8008a0a4d4 ffffffc0f2a57840 0000000000000000
+[    3.510563] bb40: 0000000000000000 ffffffc0dd71c600 00000040eed2f000 0000000000000000
+[    3.516322] bb60: 0000000008000000 0000000000000001 0000000000000492 0000000000000000
+[    3.522046] bb80: 000000000000005b ffffffc0dd73b9a0 0000000000000a10 0000000000000000
+[    3.527738] bba0: 0000000034d5d91d 00000040eed2f000 ffffffc0f32ec600 0000000000000000
+[    3.533356] bbc0: 0000000000000000 0000000000000000
+[    3.538934] [<ffffff8008a0a398>] clk_core_disable+0x28/0x128
+[    3.544550] [<ffffff8008a0a4cc>] clk_disable+0x34/0x48
+[    3.550108] [<ffffff80089ce2d0>] mmc_pwrseq_simple_power_off+0x44/0x5c
+[    3.555714] [<ffffff80089ce184>] mmc_pwrseq_power_off+0x38/0x44
+[    3.561205] [<ffffff80089c1c2c>] mmc_power_off+0x28/0x58
+[    3.566705] [<ffffff80089c2778>] mmc_rescan+0x29c/0x2d8
+[    3.572053] [<ffffff80080b4520>] process_one_work+0x224/0x368
+[    3.577386] [<ffffff80080b5608>] worker_thread+0x2d0/0x38c
+[    3.582709] [<ffffff80080ba4b8>] kthread+0xe0/0xf0
+[    3.587940] [<ffffff8008082ef0>] ret_from_fork+0x10/0x20
+[    3.593240] mmc_host mmc1: Bus speed (slot 0) = 50000000Hz (slot req 50000000Hz, actual 50000000HZ div = 0)
+[    3.593363] ------------[ cut here ]------------
+[    3.593370] WARNING: at drivers/clk/clk.c:576
+[    3.593376] Modules linked in:
+
+[    3.593390] CPU: 5 PID: 119 Comm: kworker/5:1 Tainted: G        W       4.4.167-14-rockchip-g53bdb2fa44e8 #1
+[    3.593395] Hardware name: Radxa ROCK Pi N10 (DT)
+[    3.593411] Workqueue: events_freezable mmc_rescan
+[    3.593417] task: ffffffc0dd71c600 task.stack: ffffffc0dd738000
+[    3.593430] PC is at clk_core_unprepare+0x28/0x138
+[    3.593437] LR is at clk_unprepare+0x30/0x40
+[    3.593444] pc : [<ffffff8008a0a118>] lr : [<ffffff8008a0a7a0>] pstate: 60000045
+[    3.593447] sp : ffffffc0dd73bc70
+[    3.593458] x29: ffffffc0dd73bc70 x28: 0000000000000000 
+[    3.593468] x27: 0000000000000000 x26: ffffff8009391000 
+[    3.593477] x25: 0000000000000000 x24: ffffffc0dd657db0 
+[    3.593486] x23: 0000000000030d40 x22: 0000000000000002 
+[    3.593496] x21: ffffffc0dc8c84a0 x20: ffffffc0dc97f480 
+[    3.593505] x19: ffffffc0dc910600 x18: 0000000030d00800 
+[    3.593514] x17: 0000000000000000 x16: 0000000000000000 
+[    3.593523] x15: 0000000000000000 x14: ffffffc0f32ec600 
+[    3.593533] x13: 00000040eed2f000 x12: 0000000034d5d91d 
+[    3.593542] x11: 0000000000000000 x10: 0000000000000a10 
+[    3.593551] x9 : ffffffc0dd73b9a0 x8 : 000000000000005b 
+[    3.593560] x7 : 0000000000000000 x6 : 0000000000000492 
+[    3.593568] x5 : 0000000000000001 x4 : 0000000008000000 
+[    3.593577] x3 : 0000000000000000 x2 : 0000000000000000 
+[    3.593586] x1 : ffffffc0dd71c600 x0 : 0000000000000000 
+[    3.593591] 
+               PC: 0xffffff8008a0a098:
+[    3.593618] a098  aa0103f3 aa1e03e0 d503201f eb13029f 540001c0 b40001f4 b140069f 540001a8
+[    3.593644] a0b8  b4000193 b140067f 54000148 f9400260 f9400281 eb00003f 1a9f17e0 a94153f3
+[    3.593669] a0d8  a8c27bfd d65f03c0 52800020 17fffffc 52800000 17fffffa a9bd7bfd 910003fd
+[    3.593695] a0f8  a90153f3 f90013f5 aa0003f3 aa1e03e0 d503201f b4000093 b9407a60 350000c0
+[    3.593720] a118  d4210000 a94153f3 f94013f5 a8c37bfd d65f03c0 51000400 b9007a60 35ffff40
+[    3.593745] a138  b9407660 34000040 d4210000 90004c95 913ea2a1 91028021 b9400820 7100001f
+[    3.593771] a158  5400028d 90004000 91000000 d538d082 b8626802 52800800 b00015e3 f9450463
+[    3.593796] a178  1ac00c40 937d7c00 f8606860 9ac22400 36000100 f9401034 b40000d4 a9400282
+[    3.593801] 
+               LR: 0xffffff8008a0a720:
+[    3.593826] a720  a9be7bfd 910003fd a90153f3 aa0003f3 aa1e03e0 d503201f b4000193 97fff82a
+[    3.593852] a740  aa0003f4 f9400260 97ffff7e 2a0003f3 aa1403e0 97fff85e 2a1303e0 a94153f3
+[    3.593877] a760  a8c27bfd d65f03c0 52800013 17fffffb a9be7bfd 910003fd f9000bf3 aa0003f3
+[    3.593902] a780  aa1e03e0 d503201f b40000f3 b140067f 540000a8 97fff7e3 f9400260 97fffe55
+[    3.593927] a7a0  97fff8ea f9400bf3 a8c27bfd d65f03c0 a9be7bfd 910003fd f9000bf3 aa0003f3
+[    3.593953] a7c0  aa1e03e0 d503201f b4000153 97fff7d5 f9400260 97fffe95 2a0003f3 97fff8db
+[    3.593978] a7e0  2a1303e0 f9400bf3 a8c27bfd d65f03c0 52800013 17fffffb a9be7bfd 910003fd
+[    3.594004] a800  a90153f3 aa0003f4 aa0103f3 aa1e03e0 d503201f f9400a80 f9400414 aa1403e0
+[    3.594008] 
+               SP: 0xffffffc0dd73bbf0:
+[    3.594033] bbf0  00000002 00000000 00030d40 00000000 dd657db0 ffffffc0 00000000 00000000
+[    3.594059] bc10  09391000 ffffff80 00000000 00000000 00000000 00000000 dd73bc70 ffffffc0
+[    3.594084] bc30  08a0a7a0 ffffff80 dd73bc70 ffffffc0 08a0a118 ffffff80 60000045 00000000
+[    3.594110] bc50  ffffffff ffffffff 08a0881c ffffff80 ffffffff ffffffff 08a08748 ffffff80
+[    3.594135] bc70  dd73bca0 ffffffc0 08a0a7a0 ffffff80 dc97f480 ffffffc0 dc97f480 ffffffc0
+[    3.594161] bc90  dc8c84a0 ffffffc0 dc97f480 ffffffc0 dd73bcc0 ffffffc0 089ce2d8 ffffff80
+[    3.594186] bcb0  dc97f440 ffffffc0 dc97f480 ffffffc0 dd73bce0 ffffffc0 089ce184 ffffff80
+[    3.594211] bcd0  dc8c8000 ffffffc0 08ddd960 ffffff80 dd73bd00 ffffffc0 089c1c2c ffffff80
+[    3.594217] 
+               X1: 0xffffffc0dd71c580:
+[    3.594242] c580  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.594267] c5a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.594292] c5c0  00000000 00000000 00000000 00000000 ffffffff ffffffff ffffffff ffffffff
+[    3.594318] c5e0  ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff
+[    3.594343] c600  00000012 00000000 ffffffff ffffffff 00000000 00000000 00000000 00000000
+[    3.594368] c620  dd738000 ffffffc0 00000002 04208060 00000000 00000000 00000000 00000000
+[    3.594393] c640  00000001 00000005 00000016 00000000 fffedc80 00000000 f2808e00 ffffffc0
+[    3.594419] c660  00000005 00000001 00000078 00000078 00000078 00000000 08cc85a0 ffffff80
+[    3.594428] 
+               X9: 0xffffffc0dd73b920:
+[    3.594453] b920  dd73b960 ffffffc0 08085024 ffffff80 dd73ba20 ffffffc0 dd73b938 ffffffc0
+[    3.594479] b940  08f6a875 ffffff80 08fcbc96 ffffff80 08f6a87c ffffff80 ffffffff 00000000
+[    3.594504] b960  dd73b9b0 ffffffc0 080853b0 ffffff80 dd73bb40 ffffffc0 0000000a 00000000
+[    3.594529] b980  08f6a913 ffffff80 00000000 00000080 dd73bb40 ffffffc0 0000003d 00000000
+[    3.594555] b9a0  0000ffff 00000000 ffffffff ffffffff dd73b9f0 ffffffc0 08085430 ffffff80
+[    3.594580] b9c0  dd73bb40 ffffffc0 090b5db8 ffffff80 08a0a118 ffffff80 00000240 00000000
+[    3.594606] b9e0  00000004 00000000 00000000 00003958 dd73ba10 ffffffc0 085131c4 ffffff80
+[    3.594631] ba00  08fbeb92 ffffff80 00000000 00000000 dd73ba50 ffffffc0 08088ddc ffffff80
+[    3.594639] 
+               X14: 0xffffffc0f32ec580:
+[    3.594664] c580  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.594689] c5a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.594714] c5c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.594739] c5e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.594764] c600  00000010 00000000 ffffffff ffffffff 00000000 00000000 00000000 00000000
+[    3.594789] c620  f3304000 ffffffc0 00000002 00200040 00000000 00000000 00000000 00000000
+[    3.594814] c640  00000000 00000005 00000014 00000000 fffedc88 00000000 dd71c600 ffffffc0
+[    3.594839] c660  00000005 00000001 00000078 00000078 00000078 00000000 08cc84d8 ffffff80
+[    3.594847] 
+               X19: 0xffffffc0dc910580:
+[    3.594873] 0580  f2a5f000 ffffffc0 f2a611c0 ffffffc0 00000002 00000000 f28539c0 ffffffc0
+[    3.594898] 05a0  fe90e0b0 ffffffbf 00000003 00000000 f2a573c0 ffffffc0 f2a5efc0 ffffffc0
+[    3.594923] 05c0  f2a61200 ffffffc0 00000002 00000000 00000000 00000000 00000000 00000000
+[    3.594948] 05e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.594973] 0600  dc91e740 ffffffc0 08dc65e0 ffffff80 dc91c240 ffffffc0 00000000 00000000
+[    3.594998] 0620  00000000 00000000 00000010 00000000 00000000 00000000 00000000 00000000
+[    3.595023] 0640  00008000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.595048] 0660  00000000 00000000 00000010 00000000 00000000 00000000 00000000 00000000
+[    3.595053] 
+               X20: 0xffffffc0dc97f400:
+[    3.595078] f400  30636d6d ffffff00 ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff
+[    3.595104] f420  ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff
+[    3.595129] f440  0933c1f8 ffffff80 00000001 00000000 dc97f480 ffffffc0 dc97f4c0 ffffffc0
+[    3.595154] f460  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.595179] f480  dc910600 ffffffc0 f2a6ca00 ffffffc0 09038dda ffffff80 00000000 00000000
+[    3.595204] f4a0  ffffffff ffffffff dc91e7a8 ffffffc0 dc9106b8 ffffffc0 00000000 00000000
+[    3.595229] f4c0  00000001 00000000 f2a72f60 ffffffc0 00000000 00000000 00000000 00000000
+[    3.595254] f4e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.595259] 
+               X21: 0xffffffc0dc8c8420:
+[    3.595284] 8420  089c33c0 ffffff80 dc8c8000 ffffffc0 00000005 ffffffff ffffffff 00000000
+[    3.595309] 8440  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.595334] 8460  00000000 00000000 00050005 dead4ead ffffffff 00000000 ffffffff ffffffff
+[    3.595360] 8480  dc8c8480 ffffffc0 dc8c8480 ffffffc0 dd71c600 ffffffc0 00000001 00000000
+[    3.595385] 84a0  00000140 00000000 dc8c84a8 ffffffc0 dc8c84a8 ffffffc0 089c24dc ffffff80
+[    3.595410] 84c0  00000000 00000000 00000000 00000000 00000000 00000000 080b3db4 ffffff80
+[    3.595435] 84e0  dc8c84a0 ffffffc0 00200005 ffffffff ffffffff 00000000 00000000 00000000
+[    3.595460] 8500  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.595467] 
+               X24: 0xffffffc0dd657d30:
+[    3.595492] 7d30  00000000 00000000 f28bc108 ffffffc0 dd657ec0 ffffffc0 dd657c80 ffffffc0
+[    3.595517] 7d50  00000001 00000000 00000000 00000000 092ba020 ffffff80 00000000 00000000
+[    3.595542] 7d70  00000000 00000000 00000000 00000000 00000000 00000000 f7f42b60 ffffffc0
+[    3.595567] 7d90  dc8c84a0 ffffffc0 089c24dc ffffff80 f7f47500 ffffffc0 00000000 00000000
+[    3.595593] 7db0  dd657db0 ffffffc0 dd657db0 ffffffc0 dd71c600 ffffffc0 f7f429c0 ffffffc0
+[    3.595618] 7dd0  f25f6650 ffffffc0 f3199d10 ffffffc0 fffedd43 00000000 00000000 00000001
+[    3.595643] 7df0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.595668] 7e10  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    3.595673] 
+               X26: 0xffffff8009390f80:
+[    3.595699] 0f80  09178358 ffffff80 00000000 00000000 f2464ed0 ffffffc0 f2464e70 ffffffc0
+[    3.595724] 0fa0  08157b20 ffffff80 08e5ca3b ffffff80 08c7dd90 ffffff80 08c7dc3c ffffff80
+[    3.595750] 0fc0  08157db8 ffffff80 09178214 ffffff80 00000000 00000000 f2465030 ffffffc0
+[    3.595775] 0fe0  f2464f00 ffffffc0 08157b20 ffffff80 08e5ca3b ffffff80 08c7bbf4 ffffff80
+[    3.595801] 1000  08c7a438 ffffff80 08157db8 ffffff80 09178150 ffffff80 00000000 00000000
+[    3.595826] 1020  f24650f0 ffffffc0 f2465060 ffffffc0 08157b20 ffffff80 08e5ca3b ffffff80
+[    3.595851] 1040  08c7bb54 ffffff80 08c7a364 ffffff80 08157db8 ffffff80 091780e4 ffffff80
+[    3.595877] 1060  00000000 00000000 f2465150 ffffffc0 f2465120 ffffffc0 08157b20 ffffff80
+[    3.595883] 
+               X29: 0xffffffc0dd73bbf0:
+[    3.595908] bbf0  00000002 00000000 00030d40 00000000 dd657db0 ffffffc0 00000000 00000000
+[    3.595934] bc10  09391000 ffffff80 00000000 00000000 00000000 00000000 dd73bc70 ffffffc0
+[    3.595959] bc30  08a0a7a0 ffffff80 dd73bc70 ffffffc0 08a0a118 ffffff80 60000045 00000000
+[    3.595984] bc50  ffffffff ffffffff 08a0881c ffffff80 ffffffff ffffffff 08a08748 ffffff80
+[    3.596010] bc70  dd73bca0 ffffffc0 08a0a7a0 ffffff80 dc97f480 ffffffc0 dc97f480 ffffffc0
+[    3.596035] bc90  dc8c84a0 ffffffc0 dc97f480 ffffffc0 dd73bcc0 ffffffc0 089ce2d8 ffffff80
+[    3.596060] bcb0  dc97f440 ffffffc0 dc97f480 ffffffc0 dd73bce0 ffffffc0 089ce184 ffffff80
+[    3.596086] bcd0  dc8c8000 ffffffc0 08ddd960 ffffff80 dd73bd00 ffffffc0 089c1c2c ffffff80
+
+[    3.596093] ---[ end trace fd6b6b61c33d97ef ]---
+[    3.596096] Call trace:
+[    3.596103] Exception stack(0xffffffc0dd73baa0 to 0xffffffc0dd73bbd0)
+[    3.596113] baa0: ffffffc0dc910600 0000008000000000 ffffffc0dd73bc70 ffffff8008a0a118
+[    3.596122] bac0: ffffffc0dd73baf0 ffffff8008a0dcc0 ffffffc0f30ebd40 0000000000000040
+[    3.596131] bae0: ffffffc0dd73bb00 ffffff8008cab620 0000000000000040 0000000000000040
+[    3.596139] bb00: ffffffc0dd73bb20 ffffff8008a08968 0000000000000040 0000000000000040
+[    3.596148] bb20: ffffffc0dd73bb40 ffffff8008a0a4d4 0000000000000639 0000000000000005
+[    3.596156] bb40: 0000000000000000 ffffffc0dd71c600 0000000000000000 0000000000000000
+[    3.596165] bb60: 0000000008000000 0000000000000001 0000000000000492 0000000000000000
+[    3.596173] bb80: 000000000000005b ffffffc0dd73b9a0 0000000000000a10 0000000000000000
+[    3.596182] bba0: 0000000034d5d91d 00000040eed2f000 ffffffc0f32ec600 0000000000000000
+[    3.596188] bbc0: 0000000000000000 0000000000000000
+[    3.596202] [<ffffff8008a0a118>] clk_core_unprepare+0x28/0x138
+[    3.596210] [<ffffff8008a0a7a0>] clk_unprepare+0x30/0x40
+[    3.596222] [<ffffff80089ce2d8>] mmc_pwrseq_simple_power_off+0x4c/0x5c
+[    3.596232] [<ffffff80089ce184>] mmc_pwrseq_power_off+0x38/0x44
+[    3.596242] [<ffffff80089c1c2c>] mmc_power_off+0x28/0x58
+[    3.596251] [<ffffff80089c2778>] mmc_rescan+0x29c/0x2d8
+[    3.596264] [<ffffff80080b4520>] process_one_work+0x224/0x368
+[    3.596274] [<ffffff80080b5608>] worker_thread+0x2d0/0x38c
+[    3.596284] [<ffffff80080ba4b8>] kthread+0xe0/0xf0
+[    3.596293] [<ffffff8008082ef0>] ret_from_fork+0x10/0x20
+[    3.599752] usbcore: registered new interface driver snd-usb-audio
+[    3.600817] of_get_named_gpiod_flags: can't parse 'spk-con-gpio' property of node '/i2c@ff3d0000/es8316@11[0]'
+[    3.600823] es8316 4-0011: Can not read property spk_ctl_gpio
+[    3.600828] of_get_named_gpiod_flags: can't parse 'hp-det-gpio' property of node '/i2c@ff3d0000/es8316@11[0]'
+[    3.600831] es8316 4-0011: Can not read property hp_det_gpio
+[    3.601609] rk817-codec rk817-codec: rk817_codec_parse_dt_property() Can not get child: codec
+[    3.601614] rk817-codec rk817-codec: rk817_platform_probe() parse device tree property error -19
+[    3.605627] u32 classifier
+[    3.605642] Netfilter messages via NETLINK v0.30.
+[    3.605724] ip_set: protocol 6
+[    3.605911] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.605929] Initializing XFRM netlink socket
+[    3.606498] NET: Registered protocol family 10
+[    3.607705] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    3.607712] NET: Registered protocol family 17
+[    3.607730] NET: Registered protocol family 15
+[    3.607760] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    3.607790] Bridge firewalling registered
+[    3.607795] can: controller area network core (rev 20120528 abi 9)
+[    3.607951] NET: Registered protocol family 29
+[    3.608264] Bluetooth: RFCOMM socket layer initialized
+[    3.608289] Bluetooth: RFCOMM ver 1.11
+[    3.608300] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.608308] Bluetooth: HIDP socket layer initialized
+[    3.608314] 8021q: 802.1Q VLAN Support v1.8
+[    3.608336] [WLAN_RFKILL]: Enter rfkill_wlan_init
+[    3.608783] [WLAN_RFKILL]: Enter rfkill_wlan_probe
+[    3.608871] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi_chip_type = ap6256
+[    3.608874] [WLAN_RFKILL]: wlan_platdata_parse_dt: enable wifi power control.
+[    3.608876] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi power controled by gpio.
+[    3.608883] of_get_named_gpiod_flags: can't parse 'WIFI,poweren_gpio' property of node '/wireless-wlan[0]'
+[    3.608888] of_get_named_gpiod_flags: can't parse 'WIFI,vbat_gpio' property of node '/wireless-wlan[0]'
+[    3.608892] of_get_named_gpiod_flags: can't parse 'WIFI,reset_gpio' property of node '/wireless-wlan[0]'
+[    3.608947] of_get_named_gpiod_flags: parsed 'WIFI,host_wake_irq' property of node '/wireless-wlan[0]' - status (0)
+[    3.608950] [WLAN_RFKILL]: wlan_platdata_parse_dt: get property: WIFI,host_wake_irq = 3, flags = 0.
+[    3.608958] [WLAN_RFKILL]: wlan_platdata_parse_dt: The ref_wifi_clk not found !
+[    3.608961] [WLAN_RFKILL]: rfkill_wlan_probe: init gpio
+[    3.608966] [WLAN_RFKILL]: Exit rfkill_wlan_probe
+[    3.609032] [BT_RFKILL]: Enter rfkill_rk_init
+[    3.609556] of_get_named_gpiod_flags: parsed 'uart_rts_gpios' property of node '/wireless-bluetooth[0]' - status (0)
+[    3.609559] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: uart_rts_gpios = 83.
+[    3.609566] of_get_named_gpiod_flags: can't parse 'BT,power_gpio' property of node '/wireless-bluetooth[0]'
+[    3.609586] of_get_named_gpiod_flags: parsed 'BT,reset_gpio' property of node '/wireless-bluetooth[0]' - status (0)
+[    3.609589] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,reset_gpio = 92.
+[    3.609608] of_get_named_gpiod_flags: parsed 'BT,wake_gpio' property of node '/wireless-bluetooth[0]' - status (0)
+[    3.609610] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_gpio = 90.
+[    3.609630] of_get_named_gpiod_flags: parsed 'BT,wake_host_irq' property of node '/wireless-bluetooth[0]' - status (0)
+[    3.609633] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_host_irq = 5.
+[    3.609638] [BT_RFKILL]: bluetooth_platdata_parse_dt: clk_get failed!!!.
+[    3.609698] [BT_RFKILL]: Request irq for bt wakeup host
+[    3.609755] [BT_RFKILL]: ** disable irq
+[    3.609899] [BT_RFKILL]: bt_default device registered.
+[    3.609977] Key type dns_resolver registered
+[    3.612854] Registered cp15_barrier emulation handler
+[    3.612994] Registered setend emulation handler
+[    3.613777] registered taskstats version 1
+[    3.613792] Loading compiled-in X.509 certificates
+[    3.615913] Btrfs loaded, integrity-checker=on
+[    3.616007] BTRFS: selftest: Running btrfs free space cache tests
+[    3.616032] BTRFS: selftest: Running extent only tests
+[    3.616057] BTRFS: selftest: Running bitmap only tests
+[    3.616076] BTRFS: selftest: Running bitmap and extent tests
+[    3.616100] BTRFS: selftest: Running space stealing from bitmap to extent
+[    3.616947] BTRFS: selftest: Free space cache tests finished
+[    3.616951] BTRFS: selftest: Running extent buffer operation tests
+[    3.616951] BTRFS: selftest: Running btrfs_split_item tests
+[    3.616994] BTRFS: selftest: Running find delalloc tests
+[    3.629519] mmc2: MAN_BKOPS_EN bit is not set
+[    3.642023] mmc2: new HS400 Enhanced strobe MMC card at address 0001
+[    3.642696] mmcblk2: mmc2:0001 SLD64G 57.6 GiB 
+[    3.643012] mmcblk2boot0: mmc2:0001 SLD64G partition 1 4.00 MiB
+[    3.643447] mmcblk2boot1: mmc2:0001 SLD64G partition 2 4.00 MiB
+[    3.643864] mmcblk2rpmb: mmc2:0001 SLD64G partition 3 4.00 MiB
+[    3.673072]  mmcblk2: p1 p2
+[    3.839893] BTRFS: selftest: Running btrfs_get_extent tests
+[    3.840040] BTRFS: selftest: Running hole first btrfs_get_extent test
+[    3.840057] BTRFS: selftest: Running outstanding_extents tests
+[    3.840093] BTRFS: selftest: Running qgroup tests
+[    3.840094] BTRFS: selftest: Qgroup basic add
+[    3.840130] BTRFS: selftest: Qgroup multiple refs test
+[    4.117986] vendor storage:20160801 ret = 0
+[    4.328036] mmc1: new high speed SDHC card at address aaaa
+[    4.332090] mmcblk1: mmc1:aaaa SU08G 7.40 GiB 
+[    4.342426]  mmcblk1: p1 p2 p3 p4
+[    4.358271] Key type encrypted registered
+[    4.364813] rga: Driver loaded successfully ver:3.02
+[    4.367533] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_rga-supply from device tree
+[    4.367548] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_rga-supply property in node /power-management@ff310000/power-controller failed
+[    4.367849] rga2: Module initialized.
+[    4.377145] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    4.380008] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 5
+[    4.383066] xhci-hcd xhci-hcd.8.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x06030010
+[    4.385777] xhci-hcd xhci-hcd.8.auto: irq 240, io mem 0xfe800000
+[    4.388650] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002
+[    4.391395] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.394109] usb usb5: Product: xHCI Host Controller
+[    4.396846] usb usb5: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 xhci-hcd
+[    4.399711] usb usb5: SerialNumber: xhci-hcd.8.auto
+[    4.403056] hub 5-0:1.0: USB hub found
+[    4.405883] hub 5-0:1.0: 1 port detected
+[    4.408980] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    4.411988] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 6
+[    4.414983] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    4.417998] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003
+[    4.420969] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.423958] usb usb6: Product: xHCI Host Controller
+[    4.426935] usb usb6: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 xhci-hcd
+[    4.429974] usb usb6: SerialNumber: xhci-hcd.8.auto
+[    4.433350] hub 6-0:1.0: USB hub found
+[    4.436415] hub 6-0:1.0: 1 port detected
+[    4.441281] xhci-hcd xhci-hcd.8.auto: remove, state 1
+[    4.444481] usb usb6: USB disconnect, device number 1
+[    4.445689] xhci-hcd xhci-hcd.9.auto: xHCI Host Controller
+[    4.451536] xhci-hcd xhci-hcd.9.auto: new USB bus registered, assigned bus number 7
+[    4.455058] xhci-hcd xhci-hcd.9.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x06030010
+[    4.458301] xhci-hcd xhci-hcd.9.auto: irq 241, io mem 0xfe900000
+[    4.461762] usb usb7: New USB device found, idVendor=1d6b, idProduct=0002
+[    4.465013] usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.468262] usb usb7: Product: xHCI Host Controller
+[    4.470031] xhci-hcd xhci-hcd.8.auto: Host not halted after 16000 microseconds.
+[    4.470035] xhci-hcd xhci-hcd.8.auto: Host controller not halted, aborting reset.
+[    4.470067] xhci-hcd xhci-hcd.8.auto: USB bus 6 deregistered
+[    4.481353] usb usb7: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 xhci-hcd
+[    4.484714] usb usb7: SerialNumber: xhci-hcd.9.auto
+[    4.489348] hub 7-0:1.0: USB hub found
+[    4.495286] hub 7-0:1.0: 1 port detected
+[    4.501692] xhci-hcd xhci-hcd.9.auto: xHCI Host Controller
+[    4.501892] xhci-hcd xhci-hcd.8.auto: remove, state 1
+[    4.501912] usb usb5: USB disconnect, device number 1
+[    4.502438] xhci-hcd xhci-hcd.8.auto: USB bus 5 deregistered
+[    4.517071] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    4.517273] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 5
+[    4.519578] xhci-hcd xhci-hcd.8.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x06030010
+[    4.519603] xhci-hcd xhci-hcd.8.auto: irq 240, io mem 0xfe800000
+[    4.519830] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002
+[    4.519835] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.519838] usb usb5: Product: xHCI Host Controller
+[    4.519842] usb usb5: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 xhci-hcd
+[    4.519845] usb usb5: SerialNumber: xhci-hcd.8.auto
+[    4.520414] hub 5-0:1.0: USB hub found
+[    4.520450] hub 5-0:1.0: 1 port detected
+[    4.520692] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    4.520902] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 6
+[    4.520954] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    4.521030] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003
+[    4.521034] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.521038] usb usb6: Product: xHCI Host Controller
+[    4.521041] usb usb6: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 xhci-hcd
+[    4.521045] usb usb6: SerialNumber: xhci-hcd.8.auto
+[    4.521394] hub 6-0:1.0: USB hub found
+[    4.521413] hub 6-0:1.0: 1 port detected
+[    4.521632] rockchip-dwc3 usb0: USB HOST connected
+[    4.580137] xhci-hcd xhci-hcd.9.auto: new USB bus registered, assigned bus number 8
+[    4.582375] usb usb8: We don't know the algorithms for LPM for this host, disabling LPM.
+[    4.584503] usb usb8: New USB device found, idVendor=1d6b, idProduct=0003
+[    4.586533] usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.588581] usb usb8: Product: xHCI Host Controller
+[    4.590634] usb usb8: Manufacturer: Linux 4.4.167-14-rockchip-g53bdb2fa44e8 xhci-hcd
+[    4.592718] usb usb8: SerialNumber: xhci-hcd.9.auto
+[    4.595297] hub 8-0:1.0: USB hub found
+[    4.597376] hub 8-0:1.0: 1 port detected
+[    4.600132] rockchip-dmc dmc: Looking up center-supply from device tree
+[    4.600595] rockchip-dmc dmc: Failed to get leakage
+[    4.602696] rockchip-dmc dmc: Looking up center-supply from device tree
+[    4.602720] vdd_log: could not add device link dmc err -17
+[    4.602731] vdd_log: Failed to create debugfs directory
+[    4.603026] rockchip-dmc dmc: Failed to get pvtm
+[    4.605311] rockchip-dmc dmc: could not find power_model node
+[    4.608742] of_get_named_gpiod_flags: can't parse 'simple-audio-card,hp-det-gpio' property of node '/es8316-sound[0]'
+[    4.608756] of_get_named_gpiod_flags: can't parse 'simple-audio-card,mic-det-gpio' property of node '/es8316-sound[0]'
+[    4.743546] asoc-simple-card es8316-sound: ES8316 HiFi <-> ff880000.i2s mapping ok
+[    4.755511] asoc-simple-card es8316-sound: ASoC: no source widget found for MICBIAS1
+[    4.767295] asoc-simple-card es8316-sound: ASoC: Failed to add route MICBIAS1 -> direct -> Mic Jack
+[    4.779086] asoc-simple-card es8316-sound: ASoC: no sink widget found for IN1P
+[    4.790851] asoc-simple-card es8316-sound: ASoC: Failed to add route Mic Jack -> direct -> IN1P
+[    4.803266] es8316 4-0011: ASoC: Failed to create Left Hp mixer debugfs file
+[    4.815108] es8316 4-0011: ASoC: Failed to create Right Hp mixer debugfs file
+[    4.826862] es8316 4-0011: ASoC: Failed to create HPCP L debugfs file
+[    4.838579] es8316 4-0011: ASoC: Failed to create HPCP R debugfs file
+[    4.850182] es8316 4-0011: ASoC: Failed to create HPVOL L debugfs file
+[    4.861629] es8316 4-0011: ASoC: Failed to create HPVOL R debugfs file
+[    4.875560] of_get_named_gpiod_flags: can't parse 'simple-audio-card,hp-det-gpio' property of node '/hdmi-codec[0]'
+[    4.875576] of_get_named_gpiod_flags: can't parse 'simple-audio-card,mic-det-gpio' property of node '/hdmi-codec[0]'
+[    4.876545] asoc-simple-card hdmi-codec: i2s-hifi <-> ff8a0000.i2s mapping ok
+[    4.884138] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_isp1-supply from device tree
+[    4.884167] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_isp1-supply property in node /power-management@ff310000/power-controller failed
+[    4.884272] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_edp-supply from device tree
+[    4.884286] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_edp-supply property in node /power-management@ff310000/power-controller failed
+[    4.884326] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_gpu-supply from device tree
+[    4.884340] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_gpu-supply property in node /power-management@ff310000/power-controller failed
+[    4.884393] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_iep-supply from device tree
+[    4.884406] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_iep-supply property in node /power-management@ff310000/power-controller failed
+[    4.885521] rtc-hym8563 2-0051: setting system clock to 2017-01-01 12:00:02 UTC (1483272002)
+[    4.915020] of_get_named_gpiod_flags: parsed 'headset_gpio' property of node '/rk_headset[0]' - status (0)
+[    4.915069] of_get_named_gpiod_flags: can't parse 'hook_gpio' property of node '/rk_headset[0]'
+[    4.915087] rockchip_headset_probe() headset have hook adc mode
+[    4.919422] input: rk_headset as /devices/platform/rk_headset/input/input2
+[    4.925451] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_isp0-supply from device tree
+[    4.925482] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_isp0-supply property in node /power-management@ff310000/power-controller failed
+[    4.925609] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vopb-supply from device tree
+[    4.925621] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vopb-supply property in node /power-management@ff310000/power-controller failed
+[    4.925686] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vopl-supply from device tree
+[    4.925698] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vopl-supply property in node /power-management@ff310000/power-controller failed
+[    4.925743] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vo-supply from device tree
+[    4.925755] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vo-supply property in node /power-management@ff310000/power-controller failed
+[    4.925796] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vdu-supply from device tree
+[    4.925808] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vdu-supply property in node /power-management@ff310000/power-controller failed
+[    4.925861] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vcodec-supply from device tree
+[    4.925872] rockchip-pm-domain ff310000.power-management:power-controller: Looking up pd_vcodec-supply property in node /power-management@ff310000/power-controller failed
+[    4.925932] I : [File] : drivers/gpu/arm/mali400/mali/linux/mali_kernel_linux.c; [Line] : 417; [Func] : mali_module_init(); svn_rev_string_from_arm of this mali_ko is '', rk_ko_ver is '5', built at '09:09:04', on 'May 22 2020'.
+[    4.935131] Mali: Mali device driver loaded
+[    4.941106] ALSA device list:
+[    4.945448]   #0: rockchip,es8316-codec
+[    4.949660]   #1: HDMI-CODEC
+[    4.956013] EXT4-fs (mmcblk2p2): couldn't mount as ext3 due to feature incompatibilities
+[    4.960393] EXT4-fs (mmcblk2p2): couldn't mount as ext2 due to feature incompatibilities
+[    4.972442] EXT4-fs (mmcblk2p2): mounted filesystem with ordered data mode. Opts: (null)
+[    4.976192] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    4.982675] devtmpfs: mounted
+[    4.986762] Freeing unused kernel memory: 1152K
+[    5.112948] systemd[1]: System time before build time, advancing clock.
+[    5.147086] systemd[1]: Inserted module 'autofs4'
+[    5.166402] cgroup: cgroup2: unknown option "nsdelegate"
+[    5.176839] systemd[1]: systemd 245.4-4ubuntu3.6 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    5.188367] systemd[1]: Detected architecture arm64.
+[    5.216168] systemd[1]: Set hostname to <n10c>.
+[    5.552153] random: systemd: uninitialized urandom read (16 bytes read, 61 bits of entropy available)
+[    5.556584] systemd[1]: system-modprobe.slice: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[    5.570384] systemd[1]: (This warning is only shown for the first unit using IP firewalling.)
+[    5.580751] systemd[1]: Created slice system-modprobe.slice.
+[    5.592801] random: systemd: uninitialized urandom read (16 bytes read, 62 bits of entropy available)
+[    5.597299] systemd[1]: Created slice User and Session Slice.
+[    5.604991] random: systemd: uninitialized urandom read (16 bytes read, 62 bits of entropy available)
+[    5.609041] systemd[1]: Started ntp-systemd-netif.path.
+[    5.615792] random: systemd: uninitialized urandom read (16 bytes read, 62 bits of entropy available)
+[    5.619157] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    5.625802] random: systemd: uninitialized urandom read (16 bytes read, 62 bits of entropy available)
+[    5.629248] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    5.635467] random: systemd: uninitialized urandom read (16 bytes read, 63 bits of entropy available)
+[    5.638668] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    5.644850] random: systemd: uninitialized urandom read (16 bytes read, 63 bits of entropy available)
+[    5.647966] systemd[1]: Reached target Local Encrypted Volumes.
+[    5.654244] random: systemd: uninitialized urandom read (16 bytes read, 63 bits of entropy available)
+[    5.657364] systemd[1]: Reached target Remote File Systems.
+[    5.663526] random: systemd: uninitialized urandom read (16 bytes read, 63 bits of entropy available)
+[    5.666553] systemd[1]: Reached target Slices.
+[    5.672553] random: systemd: uninitialized urandom read (16 bytes read, 64 bits of entropy available)
+[    5.675377] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    5.681278] systemd[1]: Listening on Journal Audit Socket.
+[    5.687033] systemd[1]: Listening on Journal Socket (/dev/log).
+[    5.692761] systemd[1]: Listening on Journal Socket.
+[    5.697882] systemd[1]: Listening on udev Control Socket.
+[    5.702877] systemd[1]: Listening on udev Kernel Socket.
+[    5.709358] systemd[1]: Activating swap /swapfile...
+[    5.716611] systemd[1]: Mounting Huge Pages File System...
+[    5.723656] systemd[1]: Mounting POSIX Message Queue File System...
+[    5.730397] systemd[1]: Mounting Kernel Debug File System...
+[    5.736865] systemd[1]: Mounting Kernel Trace File System...
+[    5.744376] systemd[1]: Starting Journal Service...
+[    5.751569] systemd[1]: Starting Restore / save the current clock...
+[    5.757714] systemd[1]: Starting Set the console keyboard layout...
+[    5.764041] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    5.768313] systemd[1]: Condition check resulted in Load Kernel Module drm being skipped.
+[    5.772554] systemd[1]: Started Nameserver information manager.
+[    5.777126] systemd[1]: Reached target Network (Pre).
+[    5.782922] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    5.787114] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    5.808587] systemd[1]: Starting Load Kernel Modules...
+[    5.813252] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    5.815556] systemd[1]: Starting Load/Save Random Seed...
+[    5.844593] systemd[1]: Starting Create System Users...
+[    5.851322] systemd[1]: Starting udev Coldplug all Devices...
+[    5.859907] systemd[1]: Mounted Huge Pages File System.
+[    5.863840] systemd[1]: Mounted POSIX Message Queue File System.
+[    5.867776] systemd[1]: Mounted Kernel Debug File System.
+[    5.871514] systemd[1]: Mounted Kernel Trace File System.
+[    5.875916] systemd[1]: Finished Restore / save the current clock.
+[    5.880662] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    5.886376] systemd[1]: Finished Load Kernel Modules.
+[    5.891158] systemd[1]: Finished Create System Users.
+[    5.897651] systemd[1]: Mounting FUSE Control File System...
+[    5.903556] systemd[1]: Mounting Kernel Configuration File System...
+[    5.910027] systemd[1]: Starting Apply Kernel Variables...
+[    5.916331] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    5.922754] systemd[1]: Mounted FUSE Control File System.
+[    5.926728] systemd[1]: Mounted Kernel Configuration File System.
+[    5.947718] systemd[1]: Finished Apply Kernel Variables.
+[    5.952496] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    5.956560] systemd[1]: Starting udev Kernel Device Manager...
+[    6.023007] systemd[1]: Started udev Kernel Device Manager.
+[    6.125605] systemd[1]: Finished Set the console keyboard layout.
+[    6.131996] systemd[1]: Reached target Local File Systems (Pre).
+[    6.136813] systemd[1]: Reached target Local File Systems.
+[    6.146938] systemd[1]: Starting Set console font and keymap...
+[    6.155079] systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+[    6.156741] systemd[1]: Started Journal Service.
+[    6.281523] systemd-journald[209]: Received client request to flush runtime journal.
+[    6.285046] systemd-journald[209]: File /var/log/journal/fbf0e7de42f04f0cb18a1c82b836414c/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    6.307896] mali ff9a0000.gpu: Looking up mali-supply from device tree
+[    6.308283] mali ff9a0000.gpu: leakage=27
+[    6.308314] mali ff9a0000.gpu: Looking up mali-supply from device tree
+[    6.308353] vdd_gpu: could not add device link ff9a0000.gpu err -17
+[    6.308367] vdd_gpu: Failed to create debugfs directory
+[    6.318289] Adding 8388604k swap on /swapfile.  Priority:-1 extents:41 across:36347900k SS
+[    6.346656] mali ff9a0000.gpu: temp=52777, pvtm=121719 (121587 + 132)
+[    6.347858] mali ff9a0000.gpu: pvtm-volt-sel=1
+[    6.348553] mali ff9a0000.gpu: GPU identified as 0x0860 r2p0 status 0
+[    6.348744] mali ff9a0000.gpu: Protected mode not available
+[    6.349433] mali ff9a0000.gpu: l=0 h=2147483647 hyst=5000 l_limit=0 h_limit=0
+[    6.349475] mali ff9a0000.gpu: Using configured power model mali-simple-power-model, and fallback mali-simple-power-model
+[    6.349570] I : [File] : drivers/gpu/arm/midgard/backend/gpu/mali_kbase_devfreq.c; [Line] : 414; [Func] : kbase_devfreq_init(); success initing power_model_simple.
+[    6.349925] mali ff9a0000.gpu: Probed as mali0
+[    6.514700] [BT_RFKILL]: ENABLE UART_RTS
+[    6.618750] [BT_RFKILL]: DISABLE UART_RTS
+[    6.618815] [BT_RFKILL]: bt turn on power
+[    6.633885] [BT_RFKILL]: ENABLE UART_RTS
+[    6.734653] [BT_RFKILL]: DISABLE UART_RTS
+[    6.734683] [BT_RFKILL]: bt turn on power
+[    6.759710] ttyS0 - failed to request DMA, use interrupt mode
+[    7.010080] random: nonblocking pool is initialized
+[    7.018688] usb 7-1: new high-speed USB device number 2 using xhci-hcd
+[    7.130705] usb 7-1: device descriptor read/64, error -71
+[    7.346787] usb 7-1: device descriptor read/64, error -71
+[    7.570726] usb 7-1: new high-speed USB device number 3 using xhci-hcd
+[    7.682903] usb 7-1: device descriptor read/64, error -71
+[    7.902961] usb 7-1: device descriptor read/64, error -71
+[    8.007193] usb usb7-port1: attempt power cycle
+[    8.634858] usb 7-1: new high-speed USB device number 4 using xhci-hcd
+[    8.635013] usb 7-1: Device not responding to setup address.
+[    8.839131] usb 7-1: Device not responding to setup address.
+[    9.043004] usb 7-1: device not accepting address 4, error -71
+[    9.155144] usb 7-1: new high-speed USB device number 5 using xhci-hcd
+[    9.155302] usb 7-1: Device not responding to setup address.
+[    9.359242] usb 7-1: Device not responding to setup address.
+[    9.563140] usb 7-1: device not accepting address 5, error -71
+[    9.563887] usb usb7-port1: unable to enumerate USB device
+[    9.675157] usb 7-1: new high-speed USB device number 6 using xhci-hcd
+[    9.787059] usb 7-1: device descriptor read/64, error -71
+[   10.003177] usb 7-1: device descriptor read/64, error -71
+[   10.219176] usb 7-1: new high-speed USB device number 7 using xhci-hcd
+[   10.331227] usb 7-1: device descriptor read/64, error -71
+[   10.547237] usb 7-1: device descriptor read/64, error -71
+[   10.651414] usb usb7-port1: attempt power cycle
+[   11.275211] usb 7-1: new high-speed USB device number 8 using xhci-hcd
+[   11.275371] usb 7-1: Device not responding to setup address.
+[   11.479313] usb 7-1: Device not responding to setup address.
+[   11.683119] usb 7-1: device not accepting address 8, error -71
+[   11.795228] usb 7-1: new high-speed USB device number 9 using xhci-hcd
+[   11.795388] usb 7-1: Device not responding to setup address.
+[   11.999221] usb 7-1: Device not responding to setup address.
+[   12.203163] usb 7-1: device not accepting address 9, error -71
+[   12.204007] usb usb7-port1: unable to enumerate USB device
+[   12.315250] usb 7-1: new high-speed USB device number 10 using xhci-hcd
+[   12.427300] usb 7-1: device descriptor read/64, error -71
+[   12.643290] usb 7-1: device descriptor read/64, error -71
+[   12.727660] rk_gmac-dwmac fe300000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[   12.859270] usb 7-1: new high-speed USB device number 11 using xhci-hcd
+[   12.971320] usb 7-1: device descriptor read/64, error -71
+[   13.187337] usb 7-1: device descriptor read/64, error -71
+[   13.291529] usb usb7-port1: attempt power cycle
+[   13.915209] usb 7-1: new high-speed USB device number 12 using xhci-hcd
+[   13.915383] usb 7-1: Device not responding to setup address.
+[   14.119278] usb 7-1: Device not responding to setup address.
+[   14.323209] usb 7-1: device not accepting address 12, error -71
+[   14.435224] usb 7-1: new high-speed USB device number 13 using xhci-hcd
+[   14.435398] usb 7-1: Device not responding to setup address.
+[   14.639341] usb 7-1: Device not responding to setup address.
+[   14.843304] usb 7-1: device not accepting address 13, error -71
+[   14.844084] usb usb7-port1: unable to enumerate USB device
+[   14.955182] usb 7-1: new high-speed USB device number 14 using xhci-hcd
+[   15.067789] usb 7-1: device descriptor read/64, error -71
+[   15.283750] usb 7-1: device descriptor read/64, error -71
+[   15.499199] usb 7-1: new high-speed USB device number 15 using xhci-hcd
+[   15.611805] usb 7-1: device descriptor read/64, error -71
+[   15.827816] usb 7-1: device descriptor read/64, error -71
+[   15.931453] usb usb7-port1: attempt power cycle
+[   16.559231] usb 7-1: new high-speed USB device number 16 using xhci-hcd
+[   16.559759] usb 7-1: Device not responding to setup address.
+[   16.763802] usb 7-1: Device not responding to setup address.
+[   16.967246] usb 7-1: device not accepting address 16, error -71
+[   17.079249] usb 7-1: new high-speed USB device number 17 using xhci-hcd
+[   17.080000] usb 7-1: Device not responding to setup address.
+[   17.283866] usb 7-1: Device not responding to setup address.
+[   17.487255] usb 7-1: device not accepting address 17, error -71
+[   17.487734] usb usb7-port1: unable to enumerate USB device
+[   17.599264] usb 7-1: new high-speed USB device number 18 using xhci-hcd
+[   17.711883] usb 7-1: device descriptor read/64, error -71
+[   17.927831] usb 7-1: device descriptor read/64, error -71
+[   18.147259] usb 7-1: new high-speed USB device number 19 using xhci-hcd
+[   18.263169] usb 7-1: device descriptor read/64, error -71
+[   18.479407] usb 7-1: device descriptor read/64, error -71
+[   18.583534] usb usb7-port1: attempt power cycle
+[   19.207326] usb 7-1: new high-speed USB device number 20 using xhci-hcd
+[   19.208002] usb 7-1: Device not responding to setup address.
+[   19.411934] usb 7-1: Device not responding to setup address.
+[   19.615328] usb 7-1: device not accepting address 20, error -71
+[   19.727348] usb 7-1: new high-speed USB device number 21 using xhci-hcd
+[   19.727728] usb 7-1: Device not responding to setup address.
+[   19.931910] usb 7-1: Device not responding to setup address.
+[   20.135378] usb 7-1: device not accepting address 21, error -71
+[   20.135846] usb usb7-port1: unable to enumerate USB device
+[   20.247357] usb 7-1: new high-speed USB device number 22 using xhci-hcd
+[   20.359982] usb 7-1: device descriptor read/64, error -71
+[   20.575981] usb 7-1: device descriptor read/64, error -71
+[   20.791380] usb 7-1: new high-speed USB device number 23 using xhci-hcd
+[   20.903995] usb 7-1: device descriptor read/64, error -71
+[   21.120002] usb 7-1: device descriptor read/64, error -71
+[   21.223736] usb usb7-port1: attempt power cycle
+[   21.847389] usb 7-1: new high-speed USB device number 24 using xhci-hcd
+[   21.848034] usb 7-1: Device not responding to setup address.
+[   22.052042] usb 7-1: Device not responding to setup address.
+[   22.255478] usb 7-1: device not accepting address 24, error -71
+[   22.367432] usb 7-1: new high-speed USB device number 25 using xhci-hcd
+[   22.368084] usb 7-1: Device not responding to setup address.
+[   22.572052] usb 7-1: Device not responding to setup address.
+[   22.775451] usb 7-1: device not accepting address 25, error -71
+[   22.775923] usb usb7-port1: unable to enumerate USB device
+[   22.887450] usb 7-1: new high-speed USB device number 26 using xhci-hcd
+[   23.000069] usb 7-1: device descriptor read/64, error -71
+[   23.216073] usb 7-1: device descriptor read/64, error -71
+[   23.431479] usb 7-1: new high-speed USB device number 27 using xhci-hcd
+[   23.544086] usb 7-1: device descriptor read/64, error -71
+[   23.760091] usb 7-1: device descriptor read/64, error -71
+[   23.863712] usb usb7-port1: attempt power cycle
+[   24.487509] usb 7-1: new high-speed USB device number 28 using xhci-hcd
+[   24.488160] usb 7-1: Device not responding to setup address.
+[   24.692127] usb 7-1: Device not responding to setup address.
+[   24.895512] usb 7-1: device not accepting address 28, error -71
+[   25.007527] usb 7-1: new high-speed USB device number 29 using xhci-hcd
+[   25.008176] usb 7-1: Device not responding to setup address.
+[   25.212110] usb 7-1: Device not responding to setup address.
+[   25.415538] usb 7-1: device not accepting address 29, error -71
+[   25.419028] usb usb7-port1: unable to enumerate USB device
+[   25.531545] usb 7-1: new high-speed USB device number 30 using xhci-hcd
+[   25.644156] usb 7-1: device descriptor read/64, error -71
+[   25.863624] usb 7-1: device descriptor read/64, error -71
+[   26.079567] usb 7-1: new high-speed USB device number 31 using xhci-hcd
+[   26.192180] usb 7-1: device descriptor read/64, error -71
+[   26.407763] usb 7-1: device descriptor read/64, error -71
+[   26.511801] usb usb7-port1: attempt power cycle
+[   27.135410] usb 7-1: new high-speed USB device number 32 using xhci-hcd
+[   27.135486] usb 7-1: Device not responding to setup address.
+[   27.339690] usb 7-1: Device not responding to setup address.
+[   27.543514] usb 7-1: device not accepting address 32, error -71
+[   27.655632] usb 7-1: new high-speed USB device number 33 using xhci-hcd
+[   27.656426] usb 7-1: Device not responding to setup address.
+[   27.859687] usb 7-1: Device not responding to setup address.
+[   28.063628] usb 7-1: device not accepting address 33, error -71
+[   28.066824] usb usb7-port1: unable to enumerate USB device
+[   28.183714] usb 7-1: new high-speed USB device number 34 using xhci-hcd
+[   28.295533] usb 7-1: device descriptor read/64, error -71
+[   28.515762] usb 7-1: device descriptor read/64, error -71
+[   28.735731] usb 7-1: new high-speed USB device number 35 using xhci-hcd
+[   28.847658] usb 7-1: device descriptor read/64, error -71
+[   29.067796] usb 7-1: device descriptor read/64, error -71
+[   29.176007] usb usb7-port1: attempt power cycle
+[   29.265145] dwhdmi-rockchip ff940000.hdmi: Rate 0 missing; compute N dynamically
+[   29.272552] dwhdmi-rockchip ff940000.hdmi: Rate 0 missing; compute N dynamically
+[   29.277857] dwhdmi-rockchip ff940000.hdmi: Rate 0 missing; compute N dynamically
+[   29.807793] usb 7-1: new high-speed USB device number 36 using xhci-hcd
+[   29.808004] usb 7-1: Device not responding to setup address.
+[   30.011988] usb 7-1: Device not responding to setup address.
+[   30.215760] usb 7-1: device not accepting address 36, error -71
+[   30.331566] usb 7-1: new high-speed USB device number 37 using xhci-hcd
+[   30.331719] usb 7-1: Device not responding to setup address.
+[   30.535944] usb 7-1: Device not responding to setup address.
+[   30.739769] usb 7-1: device not accepting address 37, error -71
+[   30.747892] usb usb7-port1: unable to enumerate USB device
+[   30.863805] usb 7-1: new high-speed USB device number 38 using xhci-hcd
+[   30.975715] usb 7-1: device descriptor read/64, error -71
+[   31.199740] usb 7-1: device descriptor read/64, error -71
+[   31.419991] usb 7-1: new high-speed USB device number 39 using xhci-hcd
+[   31.532349] usb 7-1: device descriptor read/64, error -71
+[   31.752466] usb 7-1: device descriptor read/64, error -71
+[   31.860097] usb usb7-port1: attempt power cycle
+[   32.483639] usb 7-1: new high-speed USB device number 40 using xhci-hcd
+[   32.483788] usb 7-1: Device not responding to setup address.
+[   32.687975] usb 7-1: Device not responding to setup address.
+[   32.892093] usb 7-1: device not accepting address 40, error -71
+[   33.008239] usb 7-1: new high-speed USB device number 41 using xhci-hcd
+[   33.008376] usb 7-1: Device not responding to setup address.
+[   33.212006] usb 7-1: Device not responding to setup address.
+[   33.415984] usb 7-1: device not accepting address 41, error -71
+[   33.422728] usb usb7-port1: unable to enumerate USB device
+[   33.543933] usb 7-1: new high-speed USB device number 42 using xhci-hcd
+[   33.656129] usb 7-1: device descriptor read/64, error -71
+[   33.876061] usb 7-1: device descriptor read/64, error -71
+[   34.095787] usb 7-1: new high-speed USB device number 43 using xhci-hcd
+[   34.207807] usb 7-1: device descriptor read/64, error -71
+[   34.427986] usb 7-1: device descriptor read/64, error -71
+[   34.535974] usb usb7-port1: attempt power cycle
+[   35.160402] usb 7-1: new high-speed USB device number 44 using xhci-hcd
+[   35.160566] usb 7-1: Device not responding to setup address.
+[   35.364118] usb 7-1: Device not responding to setup address.
+[   35.567909] usb 7-1: device not accepting address 44, error -71
+[   35.684022] usb 7-1: new high-speed USB device number 45 using xhci-hcd
+[   35.684179] usb 7-1: Device not responding to setup address.
+[   35.888032] usb 7-1: Device not responding to setup address.
+[   36.095865] usb 7-1: device not accepting address 45, error -71
+[   36.098472] usb usb7-port1: unable to enumerate USB device
+[   36.211849] usb 7-1: new high-speed USB device number 46 using xhci-hcd
+[   36.323972] usb 7-1: device descriptor read/64, error -71
+[   36.544067] usb 7-1: device descriptor read/64, error -71
+[   36.763853] usb 7-1: new high-speed USB device number 47 using xhci-hcd
+[   36.876064] usb 7-1: device descriptor read/64, error -71
+[   37.096071] usb 7-1: device descriptor read/64, error -71
+[   37.204249] usb usb7-port1: attempt power cycle
+[   37.831810] usb 7-1: new high-speed USB device number 48 using xhci-hcd
+[   37.831956] usb 7-1: Device not responding to setup address.
+[   38.036017] usb 7-1: Device not responding to setup address.
+[   38.239896] usb 7-1: device not accepting address 48, error -71
+[   38.355906] usb 7-1: new high-speed USB device number 49 using xhci-hcd
+[   38.356079] usb 7-1: Device not responding to setup address.
+[   38.559999] usb 7-1: Device not responding to setup address.
+[   38.763696] usb 7-1: device not accepting address 49, error -71
+[   38.769904] usb usb7-port1: unable to enumerate USB device
+[   38.887975] usb 7-1: new high-speed USB device number 50 using xhci-hcd
+[   38.999963] usb 7-1: device descriptor read/64, error -71
+[   39.220002] usb 7-1: device descriptor read/64, error -71
+[   39.439904] usb 7-1: new high-speed USB device number 51 using xhci-hcd
+[   39.551961] usb 7-1: device descriptor read/64, error -71
+[   39.771958] usb 7-1: device descriptor read/64, error -71
+[   39.880298] usb usb7-port1: attempt power cycle
+[   40.503911] usb 7-1: new high-speed USB device number 52 using xhci-hcd
+[   40.504088] usb 7-1: Device not responding to setup address.
+[   40.708071] usb 7-1: Device not responding to setup address.
+[   40.911892] usb 7-1: device not accepting address 52, error -71
+[   41.027904] usb 7-1: new high-speed USB device number 53 using xhci-hcd
+[   41.028078] usb 7-1: Device not responding to setup address.
+[   41.232024] usb 7-1: Device not responding to setup address.
+[   41.435895] usb 7-1: device not accepting address 53, error -71
+[   41.442130] usb usb7-port1: unable to enumerate USB device
+[   41.563865] usb 7-1: new high-speed USB device number 54 using xhci-hcd
+[   41.675946] usb 7-1: device descriptor read/64, error -71
+[   41.896209] usb 7-1: device descriptor read/64, error -71
+[   42.115902] usb 7-1: new high-speed USB device number 55 using xhci-hcd
+[   42.227991] usb 7-1: device descriptor read/64, error -71
+[   42.447966] usb 7-1: device descriptor read/64, error -71
+[   42.556249] usb usb7-port1: attempt power cycle
+[   43.179916] usb 7-1: new high-speed USB device number 56 using xhci-hcd
+[   43.180090] usb 7-1: Device not responding to setup address.
+[   43.383991] usb 7-1: Device not responding to setup address.
+[   43.587887] usb 7-1: device not accepting address 56, error -71
+[   43.703920] usb 7-1: new high-speed USB device number 57 using xhci-hcd
+[   43.704104] usb 7-1: Device not responding to setup address.
+[   43.908046] usb 7-1: Device not responding to setup address.
+[   44.111911] usb 7-1: device not accepting address 57, error -71
+[   44.118169] usb usb7-port1: unable to enumerate USB device
+[   44.235926] usb 7-1: new high-speed USB device number 58 using xhci-hcd
+[   44.348111] usb 7-1: device descriptor read/64, error -71
+[   44.567943] usb 7-1: device descriptor read/64, error -71
+[   44.787890] usb 7-1: new high-speed USB device number 59 using xhci-hcd
+[   44.899942] usb 7-1: device descriptor read/64, error -71
+[   45.119938] usb 7-1: device descriptor read/64, error -71
+[   45.228275] usb usb7-port1: attempt power cycle
+[   45.851941] usb 7-1: new high-speed USB device number 60 using xhci-hcd
+[   45.852114] usb 7-1: Device not responding to setup address.
+[   46.056052] usb 7-1: Device not responding to setup address.
+[   46.259935] usb 7-1: device not accepting address 60, error -71
+[   46.375946] usb 7-1: new high-speed USB device number 61 using xhci-hcd
+[   46.376121] usb 7-1: Device not responding to setup address.
+[   46.580051] usb 7-1: Device not responding to setup address.
+[   46.783941] usb 7-1: device not accepting address 61, error -71
+[   46.790162] usb usb7-port1: unable to enumerate USB device
+[   46.907931] usb 7-1: new high-speed USB device number 62 using xhci-hcd
+[   47.020043] usb 7-1: device descriptor read/64, error -71
+[   47.240011] usb 7-1: device descriptor read/64, error -71
+[   47.459958] usb 7-1: new high-speed USB device number 63 using xhci-hcd
+[   47.572013] usb 7-1: device descriptor read/64, error -71
+[   47.792017] usb 7-1: device descriptor read/64, error -71
+[   47.900304] usb usb7-port1: attempt power cycle
+[   48.523969] usb 7-1: new high-speed USB device number 64 using xhci-hcd
+[   48.524144] usb 7-1: Device not responding to setup address.
+[   48.728083] usb 7-1: Device not responding to setup address.
+[   48.931961] usb 7-1: device not accepting address 64, error -71
+[   49.047977] usb 7-1: new high-speed USB device number 65 using xhci-hcd
+[   49.048155] usb 7-1: Device not responding to setup address.
+[   49.252085] usb 7-1: Device not responding to setup address.
+[   49.455968] usb 7-1: device not accepting address 65, error -71
+[   49.463138] usb usb7-port1: unable to enumerate USB device
+[   49.583983] usb 7-1: new high-speed USB device number 66 using xhci-hcd
+[   49.696502] usb 7-1: device descriptor read/64, error -71
+[   50.120409] usb 7-1: device descriptor read/64, error -71
+[   50.340076] usb 7-1: new high-speed USB device number 67 using xhci-hcd
+[   50.452502] usb 7-1: device descriptor read/64, error -71
+[   50.672410] usb 7-1: device descriptor read/64, error -71
+[   50.780292] usb usb7-port1: attempt power cycle
+[   51.404108] usb 7-1: new high-speed USB device number 68 using xhci-hcd
+[   51.404584] usb 7-1: Device not responding to setup address.
+[   51.608429] usb 7-1: Device not responding to setup address.
+[   51.811994] usb 7-1: device not accepting address 68, error -71
+[   51.927955] usb 7-1: new high-speed USB device number 69 using xhci-hcd
+[   51.928437] usb 7-1: Device not responding to setup address.
+[   52.132344] usb 7-1: Device not responding to setup address.
+[   52.336106] usb 7-1: device not accepting address 69, error -71
+[   52.342265] usb usb7-port1: unable to enumerate USB device
+[   52.460120] usb 7-1: new high-speed USB device number 70 using xhci-hcd
+[   52.572514] usb 7-1: device descriptor read/64, error -71
+[   52.792618] usb 7-1: device descriptor read/64, error -71
+[   53.011992] usb 7-1: new high-speed USB device number 71 using xhci-hcd
+[   53.124547] usb 7-1: device descriptor read/64, error -71
+[   53.344544] usb 7-1: device descriptor read/64, error -71
+[   53.452331] usb usb7-port1: attempt power cycle
+[   54.076146] usb 7-1: new high-speed USB device number 72 using xhci-hcd
+[   54.076438] usb 7-1: Device not responding to setup address.
+[   54.280128] usb 7-1: Device not responding to setup address.
+[   54.484033] usb 7-1: device not accepting address 72, error -71
+[   54.600050] usb 7-1: new high-speed USB device number 73 using xhci-hcd
+[   54.600533] usb 7-1: Device not responding to setup address.
+[   54.804448] usb 7-1: Device not responding to setup address.
+[   55.008150] usb 7-1: device not accepting address 73, error -71
+[   55.014309] usb usb7-port1: unable to enumerate USB device
+[   55.132168] usb 7-1: new high-speed USB device number 74 using xhci-hcd
+[   55.244576] usb 7-1: device descriptor read/64, error -71
+[   55.464578] usb 7-1: device descriptor read/64, error -71
+[   55.684175] usb 7-1: new high-speed USB device number 75 using xhci-hcd
+[   55.796575] usb 7-1: device descriptor read/64, error -71
+[   56.016579] usb 7-1: device descriptor read/64, error -71
+[   56.124372] usb usb7-port1: attempt power cycle
+[   56.748066] usb 7-1: new high-speed USB device number 76 using xhci-hcd
+[   56.748554] usb 7-1: Device not responding to setup address.
+[   56.952608] usb 7-1: Device not responding to setup address.
+[   57.156081] usb 7-1: device not accepting address 76, error -71
+[   57.272052] usb 7-1: new high-speed USB device number 77 using xhci-hcd
+[   57.272534] usb 7-1: Device not responding to setup address.
+[   57.476596] usb 7-1: Device not responding to setup address.
+[   57.680194] usb 7-1: device not accepting address 77, error -71
+[   57.686342] usb usb7-port1: unable to enumerate USB device
+[   57.804134] usb 7-1: new high-speed USB device number 78 using xhci-hcd
+[   57.916624] usb 7-1: device descriptor read/64, error -71
+[   58.136624] usb 7-1: device descriptor read/64, error -71
+[   58.356222] usb 7-1: new high-speed USB device number 79 using xhci-hcd
+[   58.468627] usb 7-1: device descriptor read/64, error -71
+[   58.688633] usb 7-1: device descriptor read/64, error -71
+[   58.796417] usb usb7-port1: attempt power cycle
+[   59.420308] usb 7-1: new high-speed USB device number 80 using xhci-hcd
+[   59.420780] usb 7-1: Device not responding to setup address.
+[   59.624011] usb 7-1: Device not responding to setup address.
+[   59.828130] usb 7-1: device not accepting address 80, error -71
+[   59.944147] usb 7-1: new high-speed USB device number 81 using xhci-hcd
+[   59.944632] usb 7-1: Device not responding to setup address.
+[   60.148559] usb 7-1: Device not responding to setup address.
+[   60.352143] usb 7-1: device not accepting address 81, error -71
+[   60.358244] usb usb7-port1: unable to enumerate USB device
+[   60.476161] usb 7-1: new high-speed USB device number 82 using xhci-hcd
+[   60.588198] usb 7-1: device descriptor read/64, error -71
+[   60.808582] usb 7-1: device descriptor read/64, error -71
+[   61.028149] usb 7-1: new high-speed USB device number 83 using xhci-hcd
+[   61.140590] usb 7-1: device descriptor read/64, error -71
+[   61.360595] usb 7-1: device descriptor read/64, error -71
+[   61.468472] usb usb7-port1: attempt power cycle
+[   62.092189] usb 7-1: new high-speed USB device number 84 using xhci-hcd
+[   62.092669] usb 7-1: Device not responding to setup address.
+[   62.296608] usb 7-1: Device not responding to setup address.
+[   62.500183] usb 7-1: device not accepting address 84, error -71
+[   62.616199] usb 7-1: new high-speed USB device number 85 using xhci-hcd
+[   62.616686] usb 7-1: Device not responding to setup address.
+[   62.820550] usb 7-1: Device not responding to setup address.
+[   63.024115] usb 7-1: device not accepting address 85, error -71
+[   63.030209] usb usb7-port1: unable to enumerate USB device
+[   63.148207] usb 7-1: new high-speed USB device number 86 using xhci-hcd
+[   63.260629] usb 7-1: device descriptor read/64, error -71
+[   63.480638] usb 7-1: device descriptor read/64, error -71
+[   63.700222] usb 7-1: new high-speed USB device number 87 using xhci-hcd
+[   63.812645] usb 7-1: device descriptor read/64, error -71
+[   64.032644] usb 7-1: device descriptor read/64, error -71
+[   64.140530] usb usb7-port1: attempt power cycle
+[   64.764244] usb 7-1: new high-speed USB device number 88 using xhci-hcd
+[   64.764724] usb 7-1: Device not responding to setup address.
+[   64.968200] usb 7-1: Device not responding to setup address.
+[   65.172314] usb 7-1: device not accepting address 88, error -71
+[   65.288256] usb 7-1: new high-speed USB device number 89 using xhci-hcd
+[   65.288589] usb 7-1: Device not responding to setup address.
+[   65.492344] usb 7-1: Device not responding to setup address.
+[   65.696191] usb 7-1: device not accepting address 89, error -71
+[   65.702268] usb usb7-port1: unable to enumerate USB device
+[   65.820342] usb 7-1: new high-speed USB device number 90 using xhci-hcd
+[   65.932363] usb 7-1: device descriptor read/64, error -71
+[   66.152221] usb 7-1: device descriptor read/64, error -71
+[   66.372280] usb 7-1: new high-speed USB device number 91 using xhci-hcd
+[   66.484699] usb 7-1: device descriptor read/64, error -71
+[   66.704268] usb 7-1: device descriptor read/64, error -71
+[   66.812585] usb usb7-port1: attempt power cycle
+[   67.436329] usb 7-1: new high-speed USB device number 92 using xhci-hcd
+[   67.436464] usb 7-1: Device not responding to setup address.
+[   67.640721] usb 7-1: Device not responding to setup address.
+[   67.844310] usb 7-1: device not accepting address 92, error -71
+[   67.960316] usb 7-1: new high-speed USB device number 93 using xhci-hcd
+[   67.960807] usb 7-1: Device not responding to setup address.
+[   68.164298] usb 7-1: Device not responding to setup address.
+[   68.368336] usb 7-1: device not accepting address 93, error -71
+[   68.374447] usb usb7-port1: unable to enumerate USB device
+[   68.492327] usb 7-1: new high-speed USB device number 94 using xhci-hcd
+[   68.604744] usb 7-1: device descriptor read/64, error -71
+[   68.824721] usb 7-1: device descriptor read/64, error -71
+[   69.044340] usb 7-1: new high-speed USB device number 95 using xhci-hcd
+[   69.156760] usb 7-1: device descriptor read/64, error -71
+[   69.376772] usb 7-1: device descriptor read/64, error -71
+[   69.484645] usb usb7-port1: attempt power cycle
+[   70.108223] usb 7-1: new high-speed USB device number 96 using xhci-hcd
+[   70.108351] usb 7-1: Device not responding to setup address.
+[   70.312783] usb 7-1: Device not responding to setup address.
+[   70.516363] usb 7-1: device not accepting address 96, error -71
+[   70.632361] usb 7-1: new high-speed USB device number 97 using xhci-hcd
+[   70.632847] usb 7-1: Device not responding to setup address.
+[   70.836594] usb 7-1: Device not responding to setup address.
+[   71.040323] usb 7-1: device not accepting address 97, error -71
+[   71.046411] usb usb7-port1: unable to enumerate USB device
+[   71.164360] usb 7-1: new high-speed USB device number 98 using xhci-hcd
+[   71.276326] usb 7-1: device descriptor read/64, error -71
+[   71.496545] usb 7-1: device descriptor read/64, error -71
+[   71.716503] usb 7-1: new high-speed USB device number 99 using xhci-hcd
+[   71.828554] usb 7-1: device descriptor read/64, error -71
+[   72.048559] usb 7-1: device descriptor read/64, error -71
+[   72.156728] usb usb7-port1: attempt power cycle
+[   72.784385] usb 7-1: new high-speed USB device number 100 using xhci-hcd
+[   72.784567] usb 7-1: Device not responding to setup address.
+[   72.988586] usb 7-1: Device not responding to setup address.
+[   73.192456] usb 7-1: device not accepting address 100, error -71
+[   73.308541] usb 7-1: new high-speed USB device number 101 using xhci-hcd
+[   73.308699] usb 7-1: Device not responding to setup address.
+[   73.512524] usb 7-1: Device not responding to setup address.
+[   73.716410] usb 7-1: device not accepting address 101, error -71
+[   73.722790] usb usb7-port1: unable to enumerate USB device
+[   73.840396] usb 7-1: new high-speed USB device number 102 using xhci-hcd
+[   73.952854] usb 7-1: device descriptor read/64, error -71
+[   74.172666] usb 7-1: device descriptor read/64, error -71
+[   74.392569] usb 7-1: new high-speed USB device number 103 using xhci-hcd
+[   74.504618] usb 7-1: device descriptor read/64, error -71
+[   74.724626] usb 7-1: device descriptor read/64, error -71
+[   74.832981] usb usb7-port1: attempt power cycle
+[   75.456331] usb 7-1: new high-speed USB device number 104 using xhci-hcd
+[   75.456467] usb 7-1: Device not responding to setup address.
+[   75.660412] usb 7-1: Device not responding to setup address.
+[   75.864317] usb 7-1: device not accepting address 104, error -71
+[   75.980320] usb 7-1: new high-speed USB device number 105 using xhci-hcd
+[   75.980455] usb 7-1: Device not responding to setup address.
+[   76.184390] usb 7-1: Device not responding to setup address.
+[   76.388323] usb 7-1: device not accepting address 105, error -71
+[   76.394468] usb usb7-port1: unable to enumerate USB device
+[   76.512404] usb 7-1: new high-speed USB device number 106 using xhci-hcd
+[   76.624468] usb 7-1: device descriptor read/64, error -71
+[   76.844600] usb 7-1: device descriptor read/64, error -71
+[   77.064393] usb 7-1: new high-speed USB device number 107 using xhci-hcd
+[   77.176689] usb 7-1: device descriptor read/64, error -71
+[   77.396692] usb 7-1: device descriptor read/64, error -71
+[   77.504882] usb usb7-port1: attempt power cycle
+[   78.128565] usb 7-1: new high-speed USB device number 108 using xhci-hcd
+[   78.128740] usb 7-1: Device not responding to setup address.
+[   78.332501] usb 7-1: Device not responding to setup address.
+[   78.536563] usb 7-1: device not accepting address 108, error -71
+[   78.652586] usb 7-1: new high-speed USB device number 109 using xhci-hcd
+[   78.652759] usb 7-1: Device not responding to setup address.
+[   78.856653] usb 7-1: Device not responding to setup address.
+[   79.060674] usb 7-1: device not accepting address 109, error -71
+[   79.066877] usb usb7-port1: unable to enumerate USB device
+[   79.184699] usb 7-1: new high-speed USB device number 110 using xhci-hcd
+[   79.296740] usb 7-1: device descriptor read/64, error -71
+[   79.516630] usb 7-1: device descriptor read/64, error -71
+[   79.736548] usb 7-1: new high-speed USB device number 111 using xhci-hcd
+[   79.848650] usb 7-1: device descriptor read/64, error -71
+[   80.068763] usb 7-1: device descriptor read/64, error -71
+[   80.176700] usb usb7-port1: attempt power cycle
+[   80.800575] usb 7-1: new high-speed USB device number 112 using xhci-hcd
+[   80.800763] usb 7-1: Device not responding to setup address.
+[   81.004832] usb 7-1: Device not responding to setup address.
+[   81.208632] usb 7-1: device not accepting address 112, error -71
+[   81.324663] usb 7-1: new high-speed USB device number 113 using xhci-hcd
+[   81.324836] usb 7-1: Device not responding to setup address.
+[   81.528733] usb 7-1: Device not responding to setup address.
+[   81.732972] usb 7-1: device not accepting address 113, error -71
+[   81.739192] usb usb7-port1: unable to enumerate USB device
+[   81.856642] usb 7-1: new high-speed USB device number 114 using xhci-hcd
+[   81.968721] usb 7-1: device descriptor read/64, error -71
+[   82.188990] usb 7-1: device descriptor read/64, error -71
+[   82.408834] usb 7-1: new high-speed USB device number 115 using xhci-hcd
+[   82.520829] usb 7-1: device descriptor read/64, error -71
+[   82.744817] usb 7-1: device descriptor read/64, error -71
+[   82.853024] usb usb7-port1: attempt power cycle
+[   83.476709] usb 7-1: new high-speed USB device number 116 using xhci-hcd
+[   83.476883] usb 7-1: Device not responding to setup address.
+[   83.680905] usb 7-1: Device not responding to setup address.
+[   83.884708] usb 7-1: device not accepting address 116, error -71
+[   84.000721] usb 7-1: new high-speed USB device number 117 using xhci-hcd
+[   84.000897] usb 7-1: Device not responding to setup address.
+[   84.204805] usb 7-1: Device not responding to setup address.
+[   84.408699] usb 7-1: device not accepting address 117, error -71
+[   84.414977] usb usb7-port1: unable to enumerate USB device
+[   84.532836] usb 7-1: new high-speed USB device number 118 using xhci-hcd
+[   84.644887] usb 7-1: device descriptor read/64, error -71
+[   84.864797] usb 7-1: device descriptor read/64, error -71
+[   85.084725] usb 7-1: new high-speed USB device number 119 using xhci-hcd
+[   85.196765] usb 7-1: device descriptor read/64, error -71
+[   85.416909] usb 7-1: device descriptor read/64, error -71
+[   85.525182] usb usb7-port1: attempt power cycle
+[   86.148783] usb 7-1: new high-speed USB device number 120 using xhci-hcd
+[   86.148957] usb 7-1: Device not responding to setup address.
+[   86.353007] usb 7-1: Device not responding to setup address.
+[   86.556782] usb 7-1: device not accepting address 120, error -71
+[   86.672797] usb 7-1: new high-speed USB device number 121 using xhci-hcd
+[   86.672973] usb 7-1: Device not responding to setup address.
+[   86.877119] usb 7-1: Device not responding to setup address.
+[   87.080799] usb 7-1: device not accepting address 121, error -71
+[   87.087070] usb usb7-port1: unable to enumerate USB device
+[   87.204814] usb 7-1: new high-speed USB device number 122 using xhci-hcd
+[   87.316873] usb 7-1: device descriptor read/64, error -71
+[   87.536877] usb 7-1: device descriptor read/64, error -71
+[   87.757067] usb 7-1: new high-speed USB device number 123 using xhci-hcd
+[   87.868863] usb 7-1: device descriptor read/64, error -71
+[   88.092985] usb 7-1: device descriptor read/64, error -71
+[   88.201262] usb usb7-port1: attempt power cycle
+[   88.824861] usb 7-1: new high-speed USB device number 124 using xhci-hcd
+[   88.825036] usb 7-1: Device not responding to setup address.
+[   89.029014] usb 7-1: Device not responding to setup address.
+[   89.232850] usb 7-1: device not accepting address 124, error -71
+[   89.348995] usb 7-1: new high-speed USB device number 125 using xhci-hcd
+[   89.349161] usb 7-1: Device not responding to setup address.
+[   89.552984] usb 7-1: Device not responding to setup address.
+[   89.756883] usb 7-1: device not accepting address 125, error -71
+[   89.763166] usb usb7-port1: unable to enumerate USB device
+[   89.880916] usb 7-1: new high-speed USB device number 126 using xhci-hcd
+[   89.993043] usb 7-1: device descriptor read/64, error -71
+[   90.212954] usb 7-1: device descriptor read/64, error -71
+[   90.432847] usb 7-1: new high-speed USB device number 127 using xhci-hcd
+[   90.545228] usb 7-1: device descriptor read/64, error -71
+[   90.765023] usb 7-1: device descriptor read/64, error -71
+[   90.873339] usb usb7-port1: attempt power cycle
+[   91.496876] usb 7-1: new high-speed USB device number 2 using xhci-hcd
+[   91.497065] usb 7-1: Device not responding to setup address.
+[   91.701136] usb 7-1: Device not responding to setup address.
+[   91.904914] usb 7-1: device not accepting address 2, error -71
+[   92.021050] usb 7-1: new high-speed USB device number 3 using xhci-hcd
+[   92.021208] usb 7-1: Device not responding to setup address.
+[   92.225020] usb 7-1: Device not responding to setup address.
+[   92.429108] usb 7-1: device not accepting address 3, error -71
+[   92.435360] usb usb7-port1: unable to enumerate USB device
+[   92.553067] usb 7-1: new high-speed USB device number 4 using xhci-hcd
+[   92.665115] usb 7-1: device descriptor read/64, error -71
+[   92.885124] usb 7-1: device descriptor read/64, error -71
+[   93.105082] usb 7-1: new high-speed USB device number 5 using xhci-hcd
+[   93.217133] usb 7-1: device descriptor read/64, error -71
+[   93.437134] usb 7-1: device descriptor read/64, error -71
+[   93.545415] usb usb7-port1: attempt power cycle
+[   94.169114] usb 7-1: new high-speed USB device number 6 using xhci-hcd
+[   94.169274] usb 7-1: Device not responding to setup address.
+[   94.373218] usb 7-1: Device not responding to setup address.
+[   94.577123] usb 7-1: device not accepting address 6, error -71
+[   94.693135] usb 7-1: new high-speed USB device number 7 using xhci-hcd
+[   94.693295] usb 7-1: Device not responding to setup address.
+[   94.897101] usb 7-1: Device not responding to setup address.
+[   95.101136] usb 7-1: device not accepting address 7, error -71
+[   95.107404] usb usb7-port1: unable to enumerate USB device
+[   95.225130] usb 7-1: new high-speed USB device number 8 using xhci-hcd
+[   95.337203] usb 7-1: device descriptor read/64, error -71
+[   95.556937] usb 7-1: device descriptor read/64, error -71
+[   95.777170] usb 7-1: new high-speed USB device number 9 using xhci-hcd
+[   95.889220] usb 7-1: device descriptor read/64, error -71
+[   96.109233] usb 7-1: device descriptor read/64, error -71
+[   96.217399] usb usb7-port1: attempt power cycle
+[   96.841206] usb 7-1: new high-speed USB device number 10 using xhci-hcd
+[   96.841363] usb 7-1: Device not responding to setup address.
+[   97.045306] usb 7-1: Device not responding to setup address.
+[   97.249213] usb 7-1: device not accepting address 10, error -71
+[   97.365227] usb 7-1: new high-speed USB device number 11 using xhci-hcd
+[   97.365386] usb 7-1: Device not responding to setup address.
+[   97.569319] usb 7-1: Device not responding to setup address.
+[   97.774599] usb 7-1: device not accepting address 11, error -71
+[   97.781009] usb usb7-port1: unable to enumerate USB device
+[   97.897083] usb 7-1: new high-speed USB device number 12 using xhci-hcd
+[   98.009292] usb 7-1: device descriptor read/64, error -71
+[   98.233359] usb 7-1: device descriptor read/64, error -71
+[   98.453141] usb 7-1: new high-speed USB device number 13 using xhci-hcd
+[   98.565144] usb 7-1: device descriptor read/64, error -71
+[   98.785319] usb 7-1: device descriptor read/64, error -71
+[   98.893601] usb usb7-port1: attempt power cycle
+[   99.517298] usb 7-1: new high-speed USB device number 14 using xhci-hcd
+[   99.517459] usb 7-1: Device not responding to setup address.
+[   99.721310] usb 7-1: Device not responding to setup address.
+[   99.925294] usb 7-1: device not accepting address 14, error -71
+[  100.041313] usb 7-1: new high-speed USB device number 15 using xhci-hcd
+[  100.041471] usb 7-1: Device not responding to setup address.
+[  100.245410] usb 7-1: Device not responding to setup address.
+[  100.449324] usb 7-1: device not accepting address 15, error -71
+[  100.455567] usb usb7-port1: unable to enumerate USB device
+[  100.573143] usb 7-1: new high-speed USB device number 16 using xhci-hcd
+[  100.689759] usb 7-1: device descriptor read/64, error -71
+[  100.909743] usb 7-1: device descriptor read/64, error -71
+[  101.129211] usb 7-1: new high-speed USB device number 17 using xhci-hcd
+[  101.241782] usb 7-1: device descriptor read/64, error -71
+[  101.457802] usb 7-1: device descriptor read/64, error -71
+[  101.561417] usb usb7-port1: attempt power cycle
+[  102.185209] usb 7-1: new high-speed USB device number 18 using xhci-hcd
+[  102.185861] usb 7-1: Device not responding to setup address.
+[  102.389823] usb 7-1: Device not responding to setup address.
+[  102.593216] usb 7-1: device not accepting address 18, error -71
+[  102.705225] usb 7-1: new high-speed USB device number 19 using xhci-hcd
+[  102.705876] usb 7-1: Device not responding to setup address.
+[  102.910109] usb 7-1: Device not responding to setup address.
+[  103.113233] usb 7-1: device not accepting address 19, error -71
+[  103.116432] usb usb7-port1: unable to enumerate USB device
+[  103.229248] usb 7-1: new high-speed USB device number 20 using xhci-hcd
+[  103.341861] usb 7-1: device descriptor read/64, error -71
+[  103.561873] usb 7-1: device descriptor read/64, error -71
+[  103.781270] usb 7-1: new high-speed USB device number 21 using xhci-hcd
+[  103.893462] usb 7-1: device descriptor read/64, error -71
+[  104.109889] usb 7-1: device descriptor read/64, error -71
+[  104.213513] usb usb7-port1: attempt power cycle
+[  104.837302] usb 7-1: new high-speed USB device number 22 using xhci-hcd
+[  104.837953] usb 7-1: Device not responding to setup address.
+[  105.041921] usb 7-1: Device not responding to setup address.
+[  105.245315] usb 7-1: device not accepting address 22, error -71
+[  105.357318] usb 7-1: new high-speed USB device number 23 using xhci-hcd
+[  105.357970] usb 7-1: Device not responding to setup address.
+[  105.561935] usb 7-1: Device not responding to setup address.
+[  105.765334] usb 7-1: device not accepting address 23, error -71
+[  105.768529] usb usb7-port1: unable to enumerate USB device
+[  105.881339] usb 7-1: new high-speed USB device number 24 using xhci-hcd
+[  105.993955] usb 7-1: device descriptor read/64, error -71
+[  106.213958] usb 7-1: device descriptor read/64, error -71
+[  106.433491] usb 7-1: new high-speed USB device number 25 using xhci-hcd
+[  106.545969] usb 7-1: device descriptor read/64, error -71
+[  106.761977] usb 7-1: device descriptor read/64, error -71
+[  106.865600] usb usb7-port1: attempt power cycle
+[  107.489392] usb 7-1: new high-speed USB device number 26 using xhci-hcd
+[  107.490042] usb 7-1: Device not responding to setup address.
+[  107.694012] usb 7-1: Device not responding to setup address.
+[  107.897409] usb 7-1: device not accepting address 26, error -71
+[  108.009412] usb 7-1: new high-speed USB device number 27 using xhci-hcd
+[  108.010067] usb 7-1: Device not responding to setup address.
+[  108.214033] usb 7-1: Device not responding to setup address.
+[  108.417419] usb 7-1: device not accepting address 27, error -71
+[  108.420611] usb usb7-port1: unable to enumerate USB device
+[  108.537533] usb 7-1: new high-speed USB device number 28 using xhci-hcd
+[  108.649663] usb 7-1: device descriptor read/64, error -71
+[  108.869582] usb 7-1: device descriptor read/64, error -71
+[  109.089521] usb 7-1: new high-speed USB device number 29 using xhci-hcd
+[  109.201580] usb 7-1: device descriptor read/64, error -71
+[  109.421571] usb 7-1: device descriptor read/64, error -71
+[  109.529820] usb usb7-port1: attempt power cycle
+[  110.153660] usb 7-1: new high-speed USB device number 30 using xhci-hcd
+[  110.153820] usb 7-1: Device not responding to setup address.
+[  110.357742] usb 7-1: Device not responding to setup address.
+[  110.561519] usb 7-1: device not accepting address 30, error -71
+[  110.677534] usb 7-1: new high-speed USB device number 31 using xhci-hcd
+[  110.677717] usb 7-1: Device not responding to setup address.
+[  110.881880] usb 7-1: Device not responding to setup address.
+[  111.085455] usb 7-1: device not accepting address 31, error -71
+[  111.091581] usb usb7-port1: unable to enumerate USB device
+[  111.209451] usb 7-1: new high-speed USB device number 32 using xhci-hcd
+[  111.321558] usb 7-1: device descriptor read/64, error -71
+[  111.541541] usb 7-1: device descriptor read/64, error -71
+[  111.761468] usb 7-1: new high-speed USB device number 33 using xhci-hcd
+[  111.873509] usb 7-1: device descriptor read/64, error -71
+[  112.093515] usb 7-1: device descriptor read/64, error -71
+[  112.201958] usb usb7-port1: attempt power cycle
+[  112.825593] usb 7-1: new high-speed USB device number 34 using xhci-hcd
+[  112.825782] usb 7-1: Device not responding to setup address.
+[  113.029846] usb 7-1: Device not responding to setup address.
+[  113.233622] usb 7-1: device not accepting address 34, error -71
+[  113.349749] usb 7-1: new high-speed USB device number 35 using xhci-hcd
+[  113.349926] usb 7-1: Device not responding to setup address.
+[  113.553746] usb 7-1: Device not responding to setup address.
+[  113.757667] usb 7-1: device not accepting address 35, error -71
+[  113.763878] usb usb7-port1: unable to enumerate USB device
+[  113.881789] usb 7-1: new high-speed USB device number 36 using xhci-hcd
+[  113.993840] usb 7-1: device descriptor read/64, error -71
+[  114.213847] usb 7-1: device descriptor read/64, error -71
+[  114.433808] usb 7-1: new high-speed USB device number 37 using xhci-hcd
+[  114.545860] usb 7-1: device descriptor read/64, error -71
+[  114.765865] usb 7-1: device descriptor read/64, error -71
+[  114.874054] usb usb7-port1: attempt power cycle
+[  115.497753] usb 7-1: new high-speed USB device number 38 using xhci-hcd
+[  115.497928] usb 7-1: Device not responding to setup address.
+[  115.701941] usb 7-1: Device not responding to setup address.
+[  115.905723] usb 7-1: device not accepting address 38, error -71
+[  116.021759] usb 7-1: new high-speed USB device number 39 using xhci-hcd
+[  116.021931] usb 7-1: Device not responding to setup address.
+[  116.225838] usb 7-1: Device not responding to setup address.
+[  116.429861] usb 7-1: device not accepting address 39, error -71
+[  116.436045] usb usb7-port1: unable to enumerate USB device
+[  116.553860] usb 7-1: new high-speed USB device number 40 using xhci-hcd
+[  116.665932] usb 7-1: device descriptor read/64, error -71
+[  116.885937] usb 7-1: device descriptor read/64, error -71
+[  117.105897] usb 7-1: new high-speed USB device number 41 using xhci-hcd
+[  117.217947] usb 7-1: device descriptor read/64, error -71
+[  117.437959] usb 7-1: device descriptor read/64, error -71
+[  117.546128] usb usb7-port1: attempt power cycle
+[  118.169933] usb 7-1: new high-speed USB device number 42 using xhci-hcd
+[  118.170093] usb 7-1: Device not responding to setup address.
+[  118.374032] usb 7-1: Device not responding to setup address.
+[  118.577945] usb 7-1: device not accepting address 42, error -71
+[  118.693964] usb 7-1: new high-speed USB device number 43 using xhci-hcd
+[  118.694111] usb 7-1: Device not responding to setup address.
+[  118.897936] usb 7-1: Device not responding to setup address.
+[  119.101954] usb 7-1: device not accepting address 43, error -71
+[  119.108112] usb usb7-port1: unable to enumerate USB device
+[  119.225796] usb 7-1: new high-speed USB device number 44 using xhci-hcd
+[  119.338413] usb 7-1: device descriptor read/64, error -71
+[  119.480268] gpio-4 (sysfs): gpiod_request: status -16
+[  119.480297] export_store: status -16
+[  119.562415] usb 7-1: device descriptor read/64, error -71
+[  119.985805] usb 7-1: new high-speed USB device number 45 using xhci-hcd
+[  120.098652] usb 7-1: device descriptor read/64, error -71
+[  120.318320] usb 7-1: device descriptor read/64, error -71
+[  120.422069] usb usb7-port1: attempt power cycle
+[  121.045983] usb 7-1: new high-speed USB device number 46 using xhci-hcd
+[  121.046668] usb 7-1: Device not responding to setup address.
+[  121.250442] usb 7-1: Device not responding to setup address.
+[  121.453865] usb 7-1: device not accepting address 46, error -71
+[  121.565874] usb 7-1: new high-speed USB device number 47 using xhci-hcd
+[  121.566525] usb 7-1: Device not responding to setup address.
+[  121.770481] usb 7-1: Device not responding to setup address.
+[  121.973879] usb 7-1: device not accepting address 47, error -71
+[  121.977044] usb usb7-port1: unable to enumerate USB device
+[  122.093899] usb 7-1: new high-speed USB device number 48 using xhci-hcd
+[  122.206505] usb 7-1: device descriptor read/64, error -71
+[  122.426513] usb 7-1: device descriptor read/64, error -71
+[  122.646020] usb 7-1: new high-speed USB device number 49 using xhci-hcd
+[  122.758405] usb 7-1: device descriptor read/64, error -71
+[  122.974534] usb 7-1: device descriptor read/64, error -71
+[  123.078173] usb usb7-port1: attempt power cycle
+[  123.701945] usb 7-1: new high-speed USB device number 50 using xhci-hcd
+[  123.702596] usb 7-1: Device not responding to setup address.
+[  123.906560] usb 7-1: Device not responding to setup address.
+[  124.110073] usb 7-1: device not accepting address 50, error -71
+[  124.226077] usb 7-1: new high-speed USB device number 51 using xhci-hcd
+[  124.226192] usb 7-1: Device not responding to setup address.
+[  124.430580] usb 7-1: Device not responding to setup address.
+[  124.633969] usb 7-1: device not accepting address 51, error -71
+[  124.637138] usb usb7-port1: unable to enumerate USB device
+[  124.753986] usb 7-1: new high-speed USB device number 52 using xhci-hcd
+[  124.866599] usb 7-1: device descriptor read/64, error -71
+[  125.090636] usb 7-1: device descriptor read/64, error -71
+[  125.306004] usb 7-1: new high-speed USB device number 53 using xhci-hcd
+[  125.418616] usb 7-1: device descriptor read/64, error -71
+[  125.634605] usb 7-1: device descriptor read/64, error -71
+[  125.738248] usb usb7-port1: attempt power cycle
+[  126.362082] usb 7-1: new high-speed USB device number 54 using xhci-hcd
+[  126.362867] usb 7-1: Device not responding to setup address.
+[  126.566648] usb 7-1: Device not responding to setup address.
+[  126.770042] usb 7-1: device not accepting address 54, error -71
+[  126.882055] usb 7-1: new high-speed USB device number 55 using xhci-hcd
+[  126.882704] usb 7-1: Device not responding to setup address.
+[  127.086665] usb 7-1: Device not responding to setup address.
+[  127.290102] usb 7-1: device not accepting address 55, error -71
+[  127.293277] usb usb7-port1: unable to enumerate USB device
+[  127.410078] usb 7-1: new high-speed USB device number 56 using xhci-hcd
+[  127.522690] usb 7-1: device descriptor read/64, error -71
+[  127.742698] usb 7-1: device descriptor read/64, error -71
+[  127.962096] usb 7-1: new high-speed USB device number 57 using xhci-hcd
+[  128.074701] usb 7-1: device descriptor read/64, error -71
+[  128.290604] usb 7-1: device descriptor read/64, error -71
+[  128.394338] usb usb7-port1: attempt power cycle
+[  129.018128] usb 7-1: new high-speed USB device number 58 using xhci-hcd
+[  129.018778] usb 7-1: Device not responding to setup address.
+[  129.222705] usb 7-1: Device not responding to setup address.
+[  129.426140] usb 7-1: device not accepting address 58, error -71
+[  129.538145] usb 7-1: new high-speed USB device number 59 using xhci-hcd
+[  129.538798] usb 7-1: Device not responding to setup address.
+[  129.742762] usb 7-1: Device not responding to setup address.
+[  129.946136] usb 7-1: device not accepting address 59, error -71
+[  129.949323] usb usb7-port1: unable to enumerate USB device
+[  130.062166] usb 7-1: new high-speed USB device number 60 using xhci-hcd
+[  130.174775] usb 7-1: device descriptor read/64, error -71
+[  130.394782] usb 7-1: device descriptor read/64, error -71
+[  130.614171] usb 7-1: new high-speed USB device number 61 using xhci-hcd
+[  130.726787] usb 7-1: device descriptor read/64, error -71
+[  130.942788] usb 7-1: device descriptor read/64, error -71
+[  131.046427] usb usb7-port1: attempt power cycle
+[  131.670351] usb 7-1: new high-speed USB device number 62 using xhci-hcd
+[  131.670998] usb 7-1: Device not responding to setup address.
+[  131.874833] usb 7-1: Device not responding to setup address.
+[  132.078225] usb 7-1: device not accepting address 62, error -71
+[  132.190237] usb 7-1: new high-speed USB device number 63 using xhci-hcd
+[  132.190889] usb 7-1: Device not responding to setup address.
+[  132.394850] usb 7-1: Device not responding to setup address.
+[  132.598309] usb 7-1: device not accepting address 63, error -71
+[  132.601486] usb usb7-port1: unable to enumerate USB device
+[  132.718311] usb 7-1: new high-speed USB device number 64 using xhci-hcd
+[  132.830745] usb 7-1: device descriptor read/64, error -71
+[  133.050617] usb 7-1: device descriptor read/64, error -71
+[  133.270427] usb 7-1: new high-speed USB device number 65 using xhci-hcd
+[  133.382861] usb 7-1: device descriptor read/64, error -71
+[  133.602630] usb 7-1: device descriptor read/64, error -71
+[  133.710670] usb usb7-port1: attempt power cycle
+[  134.338320] usb 7-1: new high-speed USB device number 66 using xhci-hcd
+[  134.338858] usb 7-1: Device not responding to setup address.
+[  134.542809] usb 7-1: Device not responding to setup address.
+[  134.746400] usb 7-1: device not accepting address 66, error -71
+[  134.862387] usb 7-1: new high-speed USB device number 67 using xhci-hcd
+[  134.862875] usb 7-1: Device not responding to setup address.
+[  135.066814] usb 7-1: Device not responding to setup address.
+[  135.270400] usb 7-1: device not accepting address 67, error -71
+[  135.276566] usb usb7-port1: unable to enumerate USB device
+[  135.394375] usb 7-1: new high-speed USB device number 68 using xhci-hcd
+[  135.506846] usb 7-1: device descriptor read/64, error -71
+[  135.726815] usb 7-1: device descriptor read/64, error -71
+[  135.946399] usb 7-1: new high-speed USB device number 69 using xhci-hcd
+[  136.058655] usb 7-1: device descriptor read/64, error -71
+[  136.278869] usb 7-1: device descriptor read/64, error -71
+[  136.386701] usb usb7-port1: attempt power cycle
+[  137.010457] usb 7-1: new high-speed USB device number 70 using xhci-hcd
+[  137.010785] usb 7-1: Device not responding to setup address.
+[  137.214899] usb 7-1: Device not responding to setup address.
+[  137.418477] usb 7-1: device not accepting address 70, error -71
+[  137.534493] usb 7-1: new high-speed USB device number 71 using xhci-hcd
+[  137.534972] usb 7-1: Device not responding to setup address.
+[  137.738909] usb 7-1: Device not responding to setup address.
+[  137.942502] usb 7-1: device not accepting address 71, error -71
+[  137.948638] usb usb7-port1: unable to enumerate USB device
+[  138.066494] usb 7-1: new high-speed USB device number 72 using xhci-hcd
+[  138.178936] usb 7-1: device descriptor read/64, error -71
+[  138.398903] usb 7-1: device descriptor read/64, error -71
+[  138.618490] usb 7-1: new high-speed USB device number 73 using xhci-hcd
+[  138.730813] usb 7-1: device descriptor read/64, error -71
+[  138.951055] usb 7-1: device descriptor read/64, error -71
+[  139.058785] usb usb7-port1: attempt power cycle
+[  139.682575] usb 7-1: new high-speed USB device number 74 using xhci-hcd
+[  139.682717] usb 7-1: Device not responding to setup address.
+[  139.886984] usb 7-1: Device not responding to setup address.
+[  140.090556] usb 7-1: device not accepting address 74, error -71
+[  140.206584] usb 7-1: new high-speed USB device number 75 using xhci-hcd
+[  140.207063] usb 7-1: Device not responding to setup address.
+[  140.411013] usb 7-1: Device not responding to setup address.
+[  140.614594] usb 7-1: device not accepting address 75, error -71
+[  140.620718] usb usb7-port1: unable to enumerate USB device
+[  140.738538] usb 7-1: new high-speed USB device number 76 using xhci-hcd
+[  140.851139] usb 7-1: device descriptor read/64, error -71
+[  141.070959] usb 7-1: device descriptor read/64, error -71
+[  141.286547] usb 7-1: new high-speed USB device number 77 using xhci-hcd
+[  141.399325] usb 7-1: device descriptor read/64, error -71
+[  141.619176] usb 7-1: device descriptor read/64, error -71
+[  141.722795] usb usb7-port1: attempt power cycle
+[  142.346591] usb 7-1: new high-speed USB device number 78 using xhci-hcd
+[  142.347235] usb 7-1: Device not responding to setup address.
+[  142.551198] usb 7-1: Device not responding to setup address.
+[  142.754596] usb 7-1: device not accepting address 78, error -71
+[  142.866611] usb 7-1: new high-speed USB device number 79 using xhci-hcd
+[  142.867263] usb 7-1: Device not responding to setup address.
+[  143.071210] usb 7-1: Device not responding to setup address.
+[  143.274612] usb 7-1: device not accepting address 79, error -71
+[  143.277792] usb usb7-port1: unable to enumerate USB device
+[  143.390629] usb 7-1: new high-speed USB device number 80 using xhci-hcd
+[  143.502738] usb 7-1: device descriptor read/64, error -71
+[  143.718873] usb 7-1: device descriptor read/64, error -71
+[  143.934642] usb 7-1: new high-speed USB device number 81 using xhci-hcd
+[  144.047259] usb 7-1: device descriptor read/64, error -71
+[  144.263260] usb 7-1: device descriptor read/64, error -71
+[  144.366880] usb usb7-port1: attempt power cycle
+[  144.990678] usb 7-1: new high-speed USB device number 82 using xhci-hcd
+[  144.991331] usb 7-1: Device not responding to setup address.
+[  145.195295] usb 7-1: Device not responding to setup address.
+[  145.398680] usb 7-1: device not accepting address 82, error -71
+[  145.510697] usb 7-1: new high-speed USB device number 83 using xhci-hcd
+[  145.511347] usb 7-1: Device not responding to setup address.
+[  145.715301] usb 7-1: Device not responding to setup address.
+[  145.918821] usb 7-1: device not accepting address 83, error -71
+[  145.922005] usb usb7-port1: unable to enumerate USB device
+[  146.034715] usb 7-1: new high-speed USB device number 84 using xhci-hcd
+[  146.147331] usb 7-1: device descriptor read/64, error -71
+[  146.367335] usb 7-1: device descriptor read/64, error -71
+[  146.586736] usb 7-1: new high-speed USB device number 85 using xhci-hcd
+[  146.699344] usb 7-1: device descriptor read/64, error -71
+[  146.915355] usb 7-1: device descriptor read/64, error -71
+[  147.018975] usb usb7-port1: attempt power cycle
+[  147.642769] usb 7-1: new high-speed USB device number 86 using xhci-hcd
+[  147.643420] usb 7-1: Device not responding to setup address.
+[  147.847449] usb 7-1: Device not responding to setup address.
+[  148.050757] usb 7-1: device not accepting address 86, error -71
+[  148.162785] usb 7-1: new high-speed USB device number 87 using xhci-hcd
+[  148.163438] usb 7-1: Device not responding to setup address.
+[  148.367364] usb 7-1: Device not responding to setup address.
+[  148.570790] usb 7-1: device not accepting address 87, error -71
+[  148.573968] usb usb7-port1: unable to enumerate USB device
+[  148.690882] usb 7-1: new high-speed USB device number 88 using xhci-hcd
+[  148.802945] usb 7-1: device descriptor read/64, error -71
+[  149.022947] usb 7-1: device descriptor read/64, error -71
+[  149.242899] usb 7-1: new high-speed USB device number 89 using xhci-hcd
+[  149.354959] usb 7-1: device descriptor read/64, error -71
+[  149.574965] usb 7-1: device descriptor read/64, error -71
+[  149.683252] usb usb7-port1: attempt power cycle
+[  150.306928] usb 7-1: new high-speed USB device number 90 using xhci-hcd
+[  150.307100] usb 7-1: Device not responding to setup address.
+[  150.511144] usb 7-1: Device not responding to setup address.
+[  150.714915] usb 7-1: device not accepting address 90, error -71
+[  150.830932] usb 7-1: new high-speed USB device number 91 using xhci-hcd
+[  150.831105] usb 7-1: Device not responding to setup address.
+[  151.035052] usb 7-1: Device not responding to setup address.
+[  151.239051] usb 7-1: device not accepting address 91, error -71
+[  151.245222] usb usb7-port1: unable to enumerate USB device
+[  151.363072] usb 7-1: new high-speed USB device number 92 using xhci-hcd
+[  151.475105] usb 7-1: device descriptor read/64, error -71
+[  151.695133] usb 7-1: device descriptor read/64, error -71
+[  151.915092] usb 7-1: new high-speed USB device number 93 using xhci-hcd
+[  152.027145] usb 7-1: device descriptor read/64, error -71
+[  152.247054] usb 7-1: device descriptor read/64, error -71
+[  152.355342] usb usb7-port1: attempt power cycle
+[  152.979027] usb 7-1: new high-speed USB device number 94 using xhci-hcd
+[  152.979204] usb 7-1: Device not responding to setup address.
+[  153.183141] usb 7-1: Device not responding to setup address.
+[  153.387008] usb 7-1: device not accepting address 94, error -71
+[  153.503026] usb 7-1: new high-speed USB device number 95 using xhci-hcd
+[  153.503201] usb 7-1: Device not responding to setup address.
+[  153.707132] usb 7-1: Device not responding to setup address.
+[  153.911026] usb 7-1: device not accepting address 95, error -71
+[  153.917238] usb usb7-port1: unable to enumerate USB device
+[  154.035061] usb 7-1: new high-speed USB device number 96 using xhci-hcd
+[  154.147120] usb 7-1: device descriptor read/64, error -71
+[  154.367144] usb 7-1: device descriptor read/64, error -71
+[  154.791074] usb 7-1: new high-speed USB device number 97 using xhci-hcd
+[  154.903126] usb 7-1: device descriptor read/64, error -71
+[  155.123136] usb 7-1: device descriptor read/64, error -71
+[  155.231641] usb usb7-port1: attempt power cycle
+[  155.855105] usb 7-1: new high-speed USB device number 98 using xhci-hcd
+[  155.855280] usb 7-1: Device not responding to setup address.
+[  156.059232] usb 7-1: Device not responding to setup address.
+[  156.263148] usb 7-1: device not accepting address 98, error -71
+[  156.375103] usb 7-1: new high-speed USB device number 99 using xhci-hcd
+[  156.375285] usb 7-1: Device not responding to setup address.
+[  156.579262] usb 7-1: Device not responding to setup address.
+[  156.783146] usb 7-1: device not accepting address 99, error -71
+[  156.789317] usb usb7-port1: unable to enumerate USB device
+[  156.907144] usb 7-1: new high-speed USB device number 100 using xhci-hcd
+[  157.019218] usb 7-1: device descriptor read/64, error -71
+[  157.239230] usb 7-1: device descriptor read/64, error -71
+[  157.459179] usb 7-1: new high-speed USB device number 101 using xhci-hcd
+[  157.571238] usb 7-1: device descriptor read/64, error -71
+[  157.791230] usb 7-1: device descriptor read/64, error -71
+[  157.899680] usb usb7-port1: attempt power cycle
+[  158.523284] usb 7-1: new high-speed USB device number 102 using xhci-hcd
+[  158.523425] usb 7-1: Device not responding to setup address.
+[  158.727311] usb 7-1: Device not responding to setup address.
+[  158.931193] usb 7-1: device not accepting address 102, error -71
+[  159.047196] usb 7-1: new high-speed USB device number 103 using xhci-hcd
+[  159.047376] usb 7-1: Device not responding to setup address.
+[  159.252022] usb 7-1: Device not responding to setup address.
+[  159.455219] usb 7-1: device not accepting address 103, error -71
+[  159.462040] usb usb7-port1: unable to enumerate USB device
+[  159.579232] usb 7-1: new high-speed USB device number 104 using xhci-hcd
+[  159.691257] usb 7-1: device descriptor read/64, error -71
+[  159.911277] usb 7-1: device descriptor read/64, error -71
+[  160.131375] usb 7-1: new high-speed USB device number 105 using xhci-hcd
+[  160.243411] usb 7-1: device descriptor read/64, error -71
+[  160.463380] usb 7-1: device descriptor read/64, error -71
+[  160.571620] usb usb7-port1: attempt power cycle
+[  161.195193] usb 7-1: new high-speed USB device number 106 using xhci-hcd
+[  161.195375] usb 7-1: Device not responding to setup address.
+[  161.399429] usb 7-1: Device not responding to setup address.
+[  161.603280] usb 7-1: device not accepting address 106, error -71
+[  161.719313] usb 7-1: new high-speed USB device number 107 using xhci-hcd
+[  161.719483] usb 7-1: Device not responding to setup address.
+[  161.923416] usb 7-1: Device not responding to setup address.
+[  162.127763] usb 7-1: device not accepting address 107, error -71
+[  162.136680] usb usb7-port1: unable to enumerate USB device
+[  162.255342] usb 7-1: new high-speed USB device number 108 using xhci-hcd
+[  162.367375] usb 7-1: device descriptor read/64, error -71
+[  162.587418] usb 7-1: device descriptor read/64, error -71
+[  162.811359] usb 7-1: new high-speed USB device number 109 using xhci-hcd
+[  162.927272] usb 7-1: device descriptor read/64, error -71
+[  163.147425] usb 7-1: device descriptor read/64, error -71
+[  163.255705] usb usb7-port1: attempt power cycle
+[  163.879337] usb 7-1: new high-speed USB device number 110 using xhci-hcd
+[  163.879527] usb 7-1: Device not responding to setup address.
+[  164.083506] usb 7-1: Device not responding to setup address.
+[  164.287364] usb 7-1: device not accepting address 110, error -71
+[  164.403352] usb 7-1: new high-speed USB device number 111 using xhci-hcd
+[  164.403539] usb 7-1: Device not responding to setup address.
+[  164.607522] usb 7-1: Device not responding to setup address.
+[  164.811351] usb 7-1: device not accepting address 111, error -71
+[  164.817565] usb usb7-port1: unable to enumerate USB device
+[  164.935354] usb 7-1: new high-speed USB device number 112 using xhci-hcd
+[  165.047966] usb 7-1: device descriptor read/64, error -71
+[  165.271411] usb 7-1: device descriptor read/64, error -71
+[  165.487365] usb 7-1: new high-speed USB device number 113 using xhci-hcd
+[  165.599982] usb 7-1: device descriptor read/64, error -71
+[  165.815986] usb 7-1: device descriptor read/64, error -71
+[  165.919733] usb usb7-port1: attempt power cycle
+[  166.543402] usb 7-1: new high-speed USB device number 114 using xhci-hcd
+[  166.544051] usb 7-1: Device not responding to setup address.
+[  166.748006] usb 7-1: Device not responding to setup address.
+[  166.951552] usb 7-1: device not accepting address 114, error -71
+[  167.067691] usb 7-1: new high-speed USB device number 115 using xhci-hcd
+[  167.068292] usb 7-1: Device not responding to setup address.
+[  167.272026] usb 7-1: Device not responding to setup address.
+[  167.475403] usb 7-1: device not accepting address 115, error -71
+[  167.478597] usb usb7-port1: unable to enumerate USB device
+[  167.591437] usb 7-1: new high-speed USB device number 116 using xhci-hcd
+[  167.704043] usb 7-1: device descriptor read/64, error -71
+[  167.924010] usb 7-1: device descriptor read/64, error -71
+[  168.143445] usb 7-1: new high-speed USB device number 117 using xhci-hcd
+[  168.256063] usb 7-1: device descriptor read/64, error -71
+[  168.472064] usb 7-1: device descriptor read/64, error -71
+[  168.575809] usb usb7-port1: attempt power cycle
+[  169.199482] usb 7-1: new high-speed USB device number 118 using xhci-hcd
+[  169.200129] usb 7-1: Device not responding to setup address.
+[  169.404088] usb 7-1: Device not responding to setup address.
+[  169.607521] usb 7-1: device not accepting address 118, error -71
+[  169.719496] usb 7-1: new high-speed USB device number 119 using xhci-hcd
+[  169.720143] usb 7-1: Device not responding to setup address.
+[  169.924106] usb 7-1: Device not responding to setup address.
+[  170.127500] usb 7-1: device not accepting address 119, error -71
+[  170.130713] usb usb7-port1: unable to enumerate USB device
+[  170.243513] usb 7-1: new high-speed USB device number 120 using xhci-hcd
+[  170.356088] usb 7-1: device descriptor read/64, error -71
+[  170.576131] usb 7-1: device descriptor read/64, error -71
+[  170.795530] usb 7-1: new high-speed USB device number 121 using xhci-hcd
+[  170.908144] usb 7-1: device descriptor read/64, error -71
+[  171.124117] usb 7-1: device descriptor read/64, error -71
+[  171.227774] usb usb7-port1: attempt power cycle
+[  171.851546] usb 7-1: new high-speed USB device number 122 using xhci-hcd
+[  171.852194] usb 7-1: Device not responding to setup address.
+[  172.056329] usb 7-1: Device not responding to setup address.
+[  172.259566] usb 7-1: device not accepting address 122, error -71
+[  172.375580] usb 7-1: new high-speed USB device number 123 using xhci-hcd
+[  172.376227] usb 7-1: Device not responding to setup address.
+[  172.580198] usb 7-1: Device not responding to setup address.
+[  172.783581] usb 7-1: device not accepting address 123, error -71
+[  172.786794] usb usb7-port1: unable to enumerate USB device
+[  172.899597] usb 7-1: new high-speed USB device number 124 using xhci-hcd
+[  173.012207] usb 7-1: device descriptor read/64, error -71
+[  173.232215] usb 7-1: device descriptor read/64, error -71
+[  173.451597] usb 7-1: new high-speed USB device number 125 using xhci-hcd
+[  173.564379] usb 7-1: device descriptor read/64, error -71
+[  173.784123] usb 7-1: device descriptor read/64, error -71
+[  173.887876] usb usb7-port1: attempt power cycle
+[  174.511644] usb 7-1: new high-speed USB device number 126 using xhci-hcd
+[  174.512294] usb 7-1: Device not responding to setup address.
+[  174.716249] usb 7-1: Device not responding to setup address.
+[  174.919655] usb 7-1: device not accepting address 126, error -71
+[  175.035665] usb 7-1: new high-speed USB device number 127 using xhci-hcd
+[  175.036316] usb 7-1: Device not responding to setup address.
+[  175.240269] usb 7-1: Device not responding to setup address.
+[  175.443664] usb 7-1: device not accepting address 127, error -71
+[  175.446901] usb usb7-port1: unable to enumerate USB device
+[  175.559678] usb 7-1: new high-speed USB device number 2 using xhci-hcd
+[  175.672287] usb 7-1: device descriptor read/64, error -71
+[  175.892296] usb 7-1: device descriptor read/64, error -71
+[  176.111681] usb 7-1: new high-speed USB device number 3 using xhci-hcd
+[  176.224300] usb 7-1: device descriptor read/64, error -71
+[  176.440318] usb 7-1: device descriptor read/64, error -71
+[  176.543944] usb usb7-port1: attempt power cycle
+[  177.167730] usb 7-1: new high-speed USB device number 4 using xhci-hcd
+[  177.168380] usb 7-1: Device not responding to setup address.
+[  177.372340] usb 7-1: Device not responding to setup address.
+[  177.575740] usb 7-1: device not accepting address 4, error -71
+[  177.691758] usb 7-1: new high-speed USB device number 5 using xhci-hcd
+[  177.692372] usb 7-1: Device not responding to setup address.
+[  177.896508] usb 7-1: Device not responding to setup address.
+[  178.099747] usb 7-1: device not accepting address 5, error -71
+[  178.102980] usb usb7-port1: unable to enumerate USB device
+[  178.219815] usb 7-1: new high-speed USB device number 6 using xhci-hcd
+[  178.331878] usb 7-1: device descriptor read/64, error -71
+[  178.551976] usb 7-1: device descriptor read/64, error -71
+[  178.771855] usb 7-1: new high-speed USB device number 7 using xhci-hcd
+[  178.883914] usb 7-1: device descriptor read/64, error -71
+[  179.104148] usb 7-1: device descriptor read/64, error -71
+[  179.212204] usb usb7-port1: attempt power cycle
+[  179.835832] usb 7-1: new high-speed USB device number 8 using xhci-hcd
+[  179.836020] usb 7-1: Device not responding to setup address.
+[  180.039986] usb 7-1: Device not responding to setup address.
+[  180.244107] usb 7-1: device not accepting address 8, error -71
+[  180.360123] usb 7-1: new high-speed USB device number 9 using xhci-hcd
+[  180.360282] usb 7-1: Device not responding to setup address.
+[  180.564017] usb 7-1: Device not responding to setup address.
+[  180.767899] usb 7-1: device not accepting address 9, error -71
+[  180.774200] usb usb7-port1: unable to enumerate USB device
+[  180.891919] usb 7-1: new high-speed USB device number 10 using xhci-hcd
+[  181.003978] usb 7-1: device descriptor read/64, error -71
+[  181.224246] usb 7-1: device descriptor read/64, error -71
+[  181.444010] usb 7-1: new high-speed USB device number 11 using xhci-hcd
+[  181.556000] usb 7-1: device descriptor read/64, error -71
+[  181.775985] usb 7-1: device descriptor read/64, error -71
+[  181.884284] usb usb7-port1: attempt power cycle
+[  182.507974] usb 7-1: new high-speed USB device number 12 using xhci-hcd
+[  182.508148] usb 7-1: Device not responding to setup address.
+[  182.712085] usb 7-1: Device not responding to setup address.
+[  182.915935] usb 7-1: device not accepting address 12, error -71
+[  183.031947] usb 7-1: new high-speed USB device number 13 using xhci-hcd
+[  183.032131] usb 7-1: Device not responding to setup address.
+[  183.236104] usb 7-1: Device not responding to setup address.
+[  183.439987] usb 7-1: device not accepting address 13, error -71
+[  183.446280] usb usb7-port1: unable to enumerate USB device
+[  183.564008] usb 7-1: new high-speed USB device number 14 using xhci-hcd
+[  183.676066] usb 7-1: device descriptor read/64, error -71
+[  183.896032] usb 7-1: device descriptor read/64, error -71
+[  184.115979] usb 7-1: new high-speed USB device number 15 using xhci-hcd
+[  184.228062] usb 7-1: device descriptor read/64, error -71
+[  184.448070] usb 7-1: device descriptor read/64, error -71
+[  184.556373] usb usb7-port1: attempt power cycle
+[  185.180053] usb 7-1: new high-speed USB device number 16 using xhci-hcd
+[  185.180232] usb 7-1: Device not responding to setup address.
+[  185.384165] usb 7-1: Device not responding to setup address.
+[  185.588031] usb 7-1: device not accepting address 16, error -71
+[  185.704068] usb 7-1: new high-speed USB device number 17 using xhci-hcd
+[  185.704245] usb 7-1: Device not responding to setup address.
+[  185.907909] usb 7-1: Device not responding to setup address.
+[  186.112070] usb 7-1: device not accepting address 17, error -71
+[  186.118337] usb usb7-port1: unable to enumerate USB device
+[  186.236037] usb 7-1: new high-speed USB device number 18 using xhci-hcd
+[  186.348121] usb 7-1: device descriptor read/64, error -71
+[  186.568126] usb 7-1: device descriptor read/64, error -71
+[  186.788087] usb 7-1: new high-speed USB device number 19 using xhci-hcd
+[  186.900113] usb 7-1: device descriptor read/64, error -71
+[  187.120168] usb 7-1: device descriptor read/64, error -71
+[  187.228406] usb usb7-port1: attempt power cycle
+[  187.852241] usb 7-1: new high-speed USB device number 20 using xhci-hcd
+[  187.852398] usb 7-1: Device not responding to setup address.
+[  188.056250] usb 7-1: Device not responding to setup address.
+[  188.260134] usb 7-1: device not accepting address 20, error -71
+[  188.376152] usb 7-1: new high-speed USB device number 21 using xhci-hcd
+[  188.376328] usb 7-1: Device not responding to setup address.
+[  188.580244] usb 7-1: Device not responding to setup address.
+[  188.784156] usb 7-1: device not accepting address 21, error -71
+[  188.790383] usb usb7-port1: unable to enumerate USB device
+[  188.912141] usb 7-1: new high-speed USB device number 22 using xhci-hcd
+[  189.024219] usb 7-1: device descriptor read/64, error -71
+[  189.244209] usb 7-1: device descriptor read/64, error -71
+[  189.464168] usb 7-1: new high-speed USB device number 23 using xhci-hcd
+[  189.576234] usb 7-1: device descriptor read/64, error -71
+[  189.796255] usb 7-1: device descriptor read/64, error -71
+[  189.904522] usb usb7-port1: attempt power cycle
+[  190.528164] usb 7-1: new high-speed USB device number 24 using xhci-hcd
+[  190.528355] usb 7-1: Device not responding to setup address.
+[  190.732385] usb 7-1: Device not responding to setup address.
+[  190.936221] usb 7-1: device not accepting address 24, error -71
+[  191.052240] usb 7-1: new high-speed USB device number 25 using xhci-hcd
+[  191.052413] usb 7-1: Device not responding to setup address.
+[  191.256354] usb 7-1: Device not responding to setup address.
+[  191.460239] usb 7-1: device not accepting address 25, error -71
+[  191.466445] usb usb7-port1: unable to enumerate USB device
+[  191.584257] usb 7-1: new high-speed USB device number 26 using xhci-hcd
+[  191.696315] usb 7-1: device descriptor read/64, error -71
+[  191.916603] usb 7-1: device descriptor read/64, error -71
+[  192.136494] usb 7-1: new high-speed USB device number 27 using xhci-hcd
+[  192.248428] usb 7-1: device descriptor read/64, error -71
+[  192.468437] usb 7-1: device descriptor read/64, error -71
+[  192.576605] usb usb7-port1: attempt power cycle
+[  193.200302] usb 7-1: new high-speed USB device number 28 using xhci-hcd
+[  193.200477] usb 7-1: Device not responding to setup address.
+[  193.404505] usb 7-1: Device not responding to setup address.
+[  193.608309] usb 7-1: device not accepting address 28, error -71
+[  193.724323] usb 7-1: new high-speed USB device number 29 using xhci-hcd
+[  193.724498] usb 7-1: Device not responding to setup address.
+[  193.928500] usb 7-1: Device not responding to setup address.
+[  194.132090] usb 7-1: device not accepting address 29, error -71
+[  194.138271] usb usb7-port1: unable to enumerate USB device
+[  194.256336] usb 7-1: new high-speed USB device number 30 using xhci-hcd
+[  194.368403] usb 7-1: device descriptor read/64, error -71
+[  194.588351] usb 7-1: device descriptor read/64, error -71
+[  194.808315] usb 7-1: new high-speed USB device number 31 using xhci-hcd
+[  194.920545] usb 7-1: device descriptor read/64, error -71
+[  195.140518] usb 7-1: device descriptor read/64, error -71
+[  195.248706] usb usb7-port1: attempt power cycle
+[  195.872555] usb 7-1: new high-speed USB device number 32 using xhci-hcd
+[  195.872709] usb 7-1: Device not responding to setup address.
+[  196.076580] usb 7-1: Device not responding to setup address.
+[  196.280390] usb 7-1: device not accepting address 32, error -71
+[  196.396403] usb 7-1: new high-speed USB device number 33 using xhci-hcd
+[  196.396578] usb 7-1: Device not responding to setup address.
+[  196.600629] usb 7-1: Device not responding to setup address.
+[  196.804497] usb 7-1: device not accepting address 33, error -71
+[  196.811085] usb usb7-port1: unable to enumerate USB device
+[  196.928500] usb 7-1: new high-speed USB device number 34 using xhci-hcd
+[  197.040576] usb 7-1: device descriptor read/64, error -71
+[  197.260582] usb 7-1: device descriptor read/64, error -71
+[  197.480540] usb 7-1: new high-speed USB device number 35 using xhci-hcd
+[  197.592593] usb 7-1: device descriptor read/64, error -71
+[  197.812598] usb 7-1: device descriptor read/64, error -71
+[  197.920958] usb usb7-port1: attempt power cycle
+[  198.544572] usb 7-1: new high-speed USB device number 36 using xhci-hcd
+[  198.544733] usb 7-1: Device not responding to setup address.
+[  198.748654] usb 7-1: Device not responding to setup address.
+[  198.952473] usb 7-1: device not accepting address 36, error -71
+[  199.068591] usb 7-1: new high-speed USB device number 37 using xhci-hcd
+[  199.068750] usb 7-1: Device not responding to setup address.
+[  199.272496] usb 7-1: Device not responding to setup address.
+[  199.476482] usb 7-1: device not accepting address 37, error -71
+[  199.482662] usb usb7-port1: unable to enumerate USB device
+[  199.600620] usb 7-1: new high-speed USB device number 38 using xhci-hcd
+[  199.712558] usb 7-1: device descriptor read/64, error -71
+[  199.932551] usb 7-1: device descriptor read/64, error -71
+[  200.152625] usb 7-1: new high-speed USB device number 39 using xhci-hcd
+[  200.264675] usb 7-1: device descriptor read/64, error -71
+[  200.484684] usb 7-1: device descriptor read/64, error -71
+[  200.592873] usb usb7-port1: attempt power cycle
+[  201.216655] usb 7-1: new high-speed USB device number 40 using xhci-hcd
+[  201.216815] usb 7-1: Device not responding to setup address.
+[  201.420757] usb 7-1: Device not responding to setup address.
+[  201.624536] usb 7-1: device not accepting address 40, error -71
+[  201.741091] usb 7-1: new high-speed USB device number 41 using xhci-hcd
+[  201.741270] usb 7-1: Device not responding to setup address.
+[  201.944661] usb 7-1: Device not responding to setup address.
+[  202.148572] usb 7-1: device not accepting address 41, error -71
+[  202.154751] usb usb7-port1: unable to enumerate USB device
+[  202.272615] usb 7-1: new high-speed USB device number 42 using xhci-hcd
+[  202.384744] usb 7-1: device descriptor read/64, error -71
+[  202.604725] usb 7-1: device descriptor read/64, error -71
+[  202.660946] gpio-4 (sysfs): gpiod_request: status -16
+[  202.660976] export_store: status -16
+[  202.828595] usb 7-1: new high-speed USB device number 43 using xhci-hcd
+[  203.144739] usb 7-1: device descriptor read/64, error -71
+[  203.364682] usb 7-1: device descriptor read/64, error -71
+[  203.473136] usb usb7-port1: attempt power cycle
+[  204.096625] usb 7-1: new high-speed USB device number 44 using xhci-hcd
+[  204.096801] usb 7-1: Device not responding to setup address.
+[  204.300763] usb 7-1: Device not responding to setup address.
+[  204.504593] usb 7-1: device not accepting address 44, error -71
+[  204.620607] usb 7-1: new high-speed USB device number 45 using xhci-hcd
+[  204.620795] usb 7-1: Device not responding to setup address.
+[  204.824780] usb 7-1: Device not responding to setup address.
+[  205.028668] usb 7-1: device not accepting address 45, error -71
+[  205.035327] usb usb7-port1: unable to enumerate USB device
+[  205.152680] usb 7-1: new high-speed USB device number 46 using xhci-hcd
+[  205.264737] usb 7-1: device descriptor read/64, error -71
+[  205.484750] usb 7-1: device descriptor read/64, error -71
+[  205.704699] usb 7-1: new high-speed USB device number 47 using xhci-hcd
+[  205.816761] usb 7-1: device descriptor read/64, error -71
+[  206.036766] usb 7-1: device descriptor read/64, error -71
+[  206.145117] usb usb7-port1: attempt power cycle
+[  206.768733] usb 7-1: new high-speed USB device number 48 using xhci-hcd
+[  206.768910] usb 7-1: Device not responding to setup address.
+[  206.972934] usb 7-1: Device not responding to setup address.
+[  207.176833] usb 7-1: device not accepting address 48, error -71
+[  207.292848] usb 7-1: new high-speed USB device number 49 using xhci-hcd
+[  207.293006] usb 7-1: Device not responding to setup address.
+[  207.496948] usb 7-1: Device not responding to setup address.
+[  207.700850] usb 7-1: device not accepting address 49, error -71
+[  207.707021] usb usb7-port1: unable to enumerate USB device
+[  207.824848] usb 7-1: new high-speed USB device number 50 using xhci-hcd
+[  207.936915] usb 7-1: device descriptor read/64, error -71
+[  208.156925] usb 7-1: device descriptor read/64, error -71
+[  208.376784] usb 7-1: new high-speed USB device number 51 using xhci-hcd
+[  208.488838] usb 7-1: device descriptor read/64, error -71
+[  208.708662] usb 7-1: device descriptor read/64, error -71
+[  208.817114] usb usb7-port1: attempt power cycle
+[  209.440933] usb 7-1: new high-speed USB device number 52 using xhci-hcd
+[  209.441108] usb 7-1: Device not responding to setup address.
+[  209.644930] usb 7-1: Device not responding to setup address.
+[  209.848830] usb 7-1: device not accepting address 52, error -71
+[  209.964834] usb 7-1: new high-speed USB device number 53 using xhci-hcd
+[  209.965008] usb 7-1: Device not responding to setup address.
+[  210.169009] usb 7-1: Device not responding to setup address.
+[  210.372837] usb 7-1: device not accepting address 53, error -71
+[  210.379050] usb usb7-port1: unable to enumerate USB device
+[  210.496769] usb 7-1: new high-speed USB device number 54 using xhci-hcd
+[  210.609396] usb 7-1: device descriptor read/64, error -71
+[  210.829399] usb 7-1: device descriptor read/64, error -71
+[  211.048790] usb 7-1: new high-speed USB device number 55 using xhci-hcd
+[  211.161407] usb 7-1: device descriptor read/64, error -71
+[  211.377449] usb 7-1: device descriptor read/64, error -71
+[  211.481035] usb usb7-port1: attempt power cycle
+[  212.104838] usb 7-1: new high-speed USB device number 56 using xhci-hcd
+[  212.105494] usb 7-1: Device not responding to setup address.
+[  212.309435] usb 7-1: Device not responding to setup address.
+[  212.512825] usb 7-1: device not accepting address 56, error -71
+[  212.624822] usb 7-1: new high-speed USB device number 57 using xhci-hcd
+[  212.625474] usb 7-1: Device not responding to setup address.
+[  212.829453] usb 7-1: Device not responding to setup address.
+[  213.032833] usb 7-1: device not accepting address 57, error -71
+[  213.036025] usb usb7-port1: unable to enumerate USB device
+[  213.152868] usb 7-1: new high-speed USB device number 58 using xhci-hcd
+[  213.265641] usb 7-1: device descriptor read/64, error -71
+[  213.485479] usb 7-1: device descriptor read/64, error -71
+[  213.704878] usb 7-1: new high-speed USB device number 59 using xhci-hcd
+[  213.817492] usb 7-1: device descriptor read/64, error -71
+[  214.033499] usb 7-1: device descriptor read/64, error -71
+[  214.137124] usb usb7-port1: attempt power cycle
+[  214.760909] usb 7-1: new high-speed USB device number 60 using xhci-hcd
+[  214.761565] usb 7-1: Device not responding to setup address.
+[  214.965523] usb 7-1: Device not responding to setup address.
+[  215.168919] usb 7-1: device not accepting address 60, error -71
+[  215.284679] usb 7-1: new high-speed USB device number 61 using xhci-hcd
+[  215.284890] usb 7-1: Device not responding to setup address.

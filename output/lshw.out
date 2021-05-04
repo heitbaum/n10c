@@ -1,0 +1,166 @@
+n10c
+    description: Computer
+    product: Radxa ROCK Pi N10
+    serial: 327aXXXXXXXXXXXX
+    width: 64 bits
+    capabilities: smp tagged_addr_disabled
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-cpu:0
+          description: CPU
+          product: cpu
+          physical id: 1
+          bus info: cpu@0
+          size: 816MHz
+          capacity: 1416MHz
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid cpufreq
+     *-cpu:1
+          description: CPU
+          product: cpu
+          physical id: 2
+          bus info: cpu@1
+          size: 816MHz
+          capacity: 1416MHz
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid cpufreq
+     *-cpu:2
+          description: CPU
+          product: cpu
+          physical id: 3
+          bus info: cpu@2
+          size: 816MHz
+          capacity: 1416MHz
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid cpufreq
+     *-cpu:3
+          description: CPU
+          product: cpu
+          physical id: 4
+          bus info: cpu@3
+          size: 816MHz
+          capacity: 1416MHz
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid cpufreq
+     *-cpu:4
+          description: CPU
+          product: cpu
+          physical id: 5
+          bus info: cpu@4
+          size: 1008MHz
+          capacity: 1800MHz
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid cpufreq
+     *-cpu:5
+          description: CPU
+          product: cpu
+          physical id: 6
+          bus info: cpu@5
+          size: 1008MHz
+          capacity: 1800MHz
+          capabilities: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid cpufreq
+     *-cpu:6 DISABLED
+          description: CPU
+          product: cpu-map
+          physical id: 7
+          bus info: cpu@6
+     *-cpu:7 DISABLED
+          description: CPU
+          product: idle-states
+          physical id: 8
+          bus info: cpu@7
+     *-memory
+          description: System memory
+          physical id: 9
+          size: 3871MiB
+     *-pci
+          description: PCI bridge
+          product: RK3399 PCI Express Root Port
+          vendor: Fuzhou Rockchip Electronics Co., Ltd
+          physical id: 0
+          bus info: pci@0000:00:00.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          capabilities: pci pm msi msix pciexpress normal_decode bus_master cap_list
+          configuration: driver=pcieport
+          resources: irq:99 memory:fa000000-fa0fffff
+        *-storage
+             description: Non-Volatile memory controller
+             product: Micron Technology Inc
+             vendor: Micron Technology Inc
+             physical id: 0
+             bus info: pci@0000:01:00.0
+             version: 01
+             width: 64 bits
+             clock: 33MHz
+             capabilities: storage pciexpress msix msi pm nvm_express bus_master cap_list
+             configuration: driver=nvme latency=0
+             resources: irq:98 memory:fa000000-fa003fff
+           *-nvme0
+                description: NVMe device
+                product: MTFDHBA256TCK-1AS1AABHA
+                physical id: 0
+                logical name: /dev/nvme0
+                version: HPS0V23
+                serial: UHPVXXXXXXXXXXXX
+                configuration: nqn=nqn.2014-08.org.nvmexpress:1344134419462506C218        MTFDHBA256TCK-1AS1AABHA state=live
+  *-usbhost:0
+       product: EHCI Host Controller
+       vendor: Linux 5.12.0 ehci_hcd
+       physical id: 1
+       bus info: usb@1
+       logical name: usb1
+       version: 5.12
+       capabilities: usb-2.00
+       configuration: driver=hub slots=1 speed=480Mbit/s
+  *-usbhost:1
+       product: EHCI Host Controller
+       vendor: Linux 5.12.0 ehci_hcd
+       physical id: 2
+       bus info: usb@2
+       logical name: usb2
+       version: 5.12
+       capabilities: usb-2.00
+       configuration: driver=hub slots=1 speed=480Mbit/s
+  *-usbhost:2
+       product: Generic Platform OHCI controller
+       vendor: Linux 5.12.0 ohci_hcd
+       physical id: 3
+       bus info: usb@3
+       logical name: usb3
+       version: 5.12
+       capabilities: usb-1.10
+       configuration: driver=hub slots=1 speed=12Mbit/s
+  *-usbhost:3
+       product: Generic Platform OHCI controller
+       vendor: Linux 5.12.0 ohci_hcd
+       physical id: 4
+       bus info: usb@4
+       logical name: usb4
+       version: 5.12
+       capabilities: usb-1.10
+       configuration: driver=hub slots=1 speed=12Mbit/s
+  *-usbhost:4
+       product: xHCI Host Controller
+       vendor: Linux 5.12.0 xhci-hcd
+       physical id: 5
+       bus info: usb@5
+       logical name: usb5
+       version: 5.12
+       capabilities: usb-2.00
+       configuration: driver=hub slots=1 speed=480Mbit/s
+  *-usbhost:5
+       product: xHCI Host Controller
+       vendor: Linux 5.12.0 xhci-hcd
+       physical id: 6
+       bus info: usb@6
+       logical name: usb6
+       version: 5.12
+       capabilities: usb-3.00
+       configuration: driver=hub slots=1 speed=5000Mbit/s
+  *-network
+       description: Ethernet interface
+       physical id: 7
+       logical name: eth0
+       serial: serial: 0a:66:bb:xx:xx:xx
+       size: 1Gbit/s
+       capacity: 1Gbit/s
+       capabilities: ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+       configuration: autonegotiation=on broadcast=yes driver=st_gmac driverversion=Jan_2016 duplex=full ip=192.168.42.66 link=yes multicast=yes port=MII speed=1Gbit/s
